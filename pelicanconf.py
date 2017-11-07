@@ -1,19 +1,31 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-
+# GENERAL
 AUTHOR = 'ccenzura'
 SITENAME = 'Around Python'
 SITEURL = ''
-
 PATH = 'content'
-
 TIMEZONE = 'Europe/Warsaw'
-
 DEFAULT_LANG = 'pl'
+SUMMARY_MAX_LENGTH = 50
 
-# Theme
-THEME='themes/pelican-twitchy'
+# THEME
+THEME = 'themes/pelican-twitchy'
+
+# PLUGINS
+MARKUP = ('md', 'ipynb')
+PLUGIN_PATHS = ['./plugins']
+PLUGINS = ['ipynb2pelican']
+IGNORE_FILES = ['.ipynb_checkpoints']
+IPYNB_IGNORE = True # ignorowanie cells z tagiem #ignore
+
+# CONTENT
+USE_FOLDER_AS_CATEGORY = True
+STATIC_PATHS = ['images', 'articles']
+ARTICLE_PATHS = ['articles']
+ARTICLE_URL = 'articles/{category}/{slug}.html'
+ARTICLE_SAVE_AS = 'articles/{category}/{slug}.html'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None

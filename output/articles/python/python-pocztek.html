@@ -1,222 +1,53 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="author" content="ccenzura" />
-        <meta name="keywords" content="pelican,publishing" />
-        <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus bibendum libero ac placerat. Vestibulum volutpat pulvinar iaculis. Aliquam sollicitudin in ante vitae accumsan. Suspendisse bibendum a odio at hendrerit. Mauris et libero ut ante finibus sodales. Curabitur faucibus aliquam elit. Vivamus porta malesuada nisi id pulvinar. Duis dignissim purus …" />
+          <title>Around Python</title>
+        <meta charset="utf-8" />
 
 
-    <title>Pythno początek - Around Python</title>
+    <meta name="tags" content="pelican" />
+    <meta name="tags" content="publishing" />
 
-        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
-
-    <link href="/theme/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="/theme/css/pygments/native.css" rel="stylesheet" />
-    
-    <link href="/theme/css/pelican-twitchy.min.css" rel="stylesheet" />
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
-    <!-- Feeds -->
 </head>
-<body data-spy="scroll" data-target="#scrollspy">
-    <div id="wrapper">
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper-small" class="twitchy-background">
-            <ul id="accordion-small" class="sidebar-nav sidebar-nav-small">
-                <li>
-        <a href="" title="Around Python" class="collapsed">
-            <span class="glyphicon glyphicon-home"></span>
-        </a>
-    </li>
-                <li class="nav-divider"></li>
-                <li>
-        <a href="/archives.html" title="Recent Articles" class="collapsed">
-            <span class="glyphicon glyphicon-th-list"></span>
-        </a>
-    </li>
-                
-                <li class="nav-divider"></li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion-small" href="#collapse-social-small" title="Social" class="collapsed">
-                        <i class="fa fa-users padding-small"></i>
-                    </a>
-                </li>
-                <li class="panel anti-panel"><ul id="collapse-social-small" class="collapse ">
-                    <li>
-                        <a href="#" title="Another social link"><i class="fa fa-another-social-link-square fa-lg padding-small"></i></a>
-                    </li>
-                    <li>
-                        <a href="#" title="You can add links in your config file"><i class="fa fa-you-can-add-links-in-your-config-file-square fa-lg padding-small"></i></a>
-                    </li>
-                </ul></li>
-                <li class="nav-divider"></li>
-                <li>
-        <a href="#" title="Back to top" class="collapsed">
-            <span class="fa fa-arrow-up"></span>
-        </a>
-    </li>
-            </ul>
-        </div>
-        <div id="sidebar-wrapper" class="twitchy-background">
-            <ul id="accordion" class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="/">
-                            <span class="glyphicon glyphicon-home padding-small"></span>
-                            Around Python
-                    </a>
-                </li>
-                    <li>
-                        <a href="/archives.html">
-                            <span class="glyphicon glyphicon-th-list padding-small"></span>
-                            Recent Articles
-                        </a>
-                    </li>
-                <li class="nav-divider"></li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-social">
-                        <i class="fa fa-users padding-small"></i>
-                        Contact
-                    </a>
-                </li>
-                <li class="panel anti-panel"><ul id="collapse-social" class="sidebar_submenu collapse ">
-                    <li>
-                        <a href="#" title="Another social link">
-                            <i class="fa fa-another-social-link-square fa-lg padding-small"></i>
-                            Another social link
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" title="You can add links in your config file">
-                            <i class="fa fa-you-can-add-links-in-your-config-file-square fa-lg padding-small"></i>
-                            You can add links in your config file
-                        </a>
-                    </li>
-                </ul></li>
-                
-                <li class="nav-divider"></li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-pages">
-                        <i class="fa fa-folder-open padding-small"></i>
-                        Pages
-                    </a>
-                </li>
-                <li class="panel anti-panel"><ul id="collapse-pages" class="sidebar_submenu collapse ">
-                    <li>
-                        <a href="/pages/about-me.html">
-                            <i class="fa fa-file-text padding-small"></i>
-                            About Me
-                        </a>
-                    </li>
-                </ul></li>
-                
-                <li class="nav-divider"></li>
-                <li>
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-categories">
-                        <i class="fa fa-folder-open padding-small"></i>
-                        Categories
-                    </a>
-                </li>
-                <li class="panel anti-panel"><ul id="collapse-categories" class="sidebar_submenu collapse ">
-                    <li class="active">
-                        <a href="/category/python.html">
-                            <i class="fa fa-folder-open padding-small"></i>
-                            python
-                            <span class="badge pull-right categorybadge">2</span>
-                        </a>
-                    </li>
-                </ul></li>
-                
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-        <!-- open/close sidebar -->
-        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
-            <span id="right-arrow" class="glyphicon glyphicon-chevron-right"  title="expand sidebar"></span>
-            <span id="left-arrow" class="glyphicon glyphicon-chevron-left" title="minimize sidebar"></span>
-        </a>
-       <!-- /open/close sidebar -->
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-<section id="content">
-    <article>
-        <div class="row">
-            <div class="col-lg-9">
-                <header class="page-header">
-                    <h1>
-                        <a href="/articles/python/python-pocztek.html"
-                           rel="bookmark"
-                           title="Permalink to Pythno początek">
-                            Pythno początek
-                        </a>
-                        <small>
-<div class="post-info">
-    <div class="publish-info-block">
-        <small>
-            <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2017-10-30T19:30:00+01:00"> pon 30 październik 2017</time>
-            </span>
-            <span class="category">
-                <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">Python</a>
-            </span>
-            <span class="tags">
-                <i class="fa fa-tags padding-small"></i>
-                <a href="/tag/pelican.html">pelican</a> /                 <a href="/tag/publishing.html">publishing</a>            </span>
-        </small>
-    </div>
-</div><!-- /.post-info -->                        </small>
-                    </h1>
-                </header>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-9">
-                <div class="entry-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus bibendum libero ac placerat. Vestibulum volutpat pulvinar iaculis. Aliquam sollicitudin in ante vitae accumsan. Suspendisse bibendum a odio at hendrerit. Mauris et libero ut ante finibus sodales. Curabitur faucibus aliquam elit. Vivamus porta malesuada nisi id pulvinar. Duis dignissim purus eu varius luctus. Integer faucibus orci vitae est interdum venenatis. Morbi urna ipsum, eleifend rutrum ex nec, pharetra sodales magna.</p>
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Around Python <strong></strong></a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+            <li><a href="/pages/about-me.html">About Me</a></li>
+        </ul></nav><!-- /#menu -->
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="/articles/python/python-pocztek.html" rel="bookmark"
+         title="Permalink to Pythno początek">Pythno początek</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <time class="published" datetime="2017-10-30T19:30:00+01:00">
+      pon 30 październik 2017
+    </time>
+    <time class="modified" datetime="2017-10-30T19:30:00+01:00">
+      pon 30 październik 2017
+    </time>
+    <address class="vcard author">
+      By           <a class="url fn" href="/author/ccenzura.html">ccenzura</a>
+    </address>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus bibendum libero ac placerat. Vestibulum volutpat pulvinar iaculis. Aliquam sollicitudin in ante vitae accumsan. Suspendisse bibendum a odio at hendrerit. Mauris et libero ut ante finibus sodales. Curabitur faucibus aliquam elit. Vivamus porta malesuada nisi id pulvinar. Duis dignissim purus eu varius luctus. Integer faucibus orci vitae est interdum venenatis. Morbi urna ipsum, eleifend rutrum ex nec, pharetra sodales magna.</p>
 <p>Nullam eu arcu vehicula ante imperdiet commodo. Praesent viverra tincidunt sagittis. In hac habitasse platea dictumst. Pellentesque ultrices accumsan tincidunt. Nullam posuere elit non arcu luctus, ac condimentum felis commodo. Duis ullamcorper et nisl ac tristique. Maecenas a convallis est, sit amet malesuada est. Donec molestie ipsum vel tortor accumsan, non mollis mi lacinia. Mauris neque augue, porta et sapien et, tincidunt vehicula justo. Aliquam pretium pulvinar quam vitae fringilla. Ut aliquet, risus sed accumsan consequat, leo turpis eleifend ante, vitae aliquam magna diam id metus. Donec imperdiet, nulla eget dapibus tincidunt, nulla odio finibus enim, eget mattis risus nibh non dui. Sed vulputate nec quam bibendum convallis. Ut aliquet tortor augue, a suscipit erat suscipit eget. Vivamus pretium convallis gravida.</p>
 <p>Fusce ultrices quis mauris et efficitur. Proin mollis, magna nec feugiat interdum, dui odio eleifend eros, in lacinia neque justo a leo. Sed nisl felis, placerat a dui quis, porttitor blandit risus. Curabitur ac purus mauris. In sollicitudin, neque in maximus elementum, neque turpis feugiat massa, eget placerat sem odio at leo. Pellentesque finibus libero consequat augue fermentum, eu aliquam lacus aliquet. Curabitur pellentesque vehicula sem in semper. Donec non dignissim ipsum. Praesent felis augue, elementum molestie lectus et, euismod vulputate ex. Sed eu dictum erat. Etiam mollis sapien felis, sit amet tristique sapien lobortis a. Maecenas rhoncus nisl nec tellus mattis lobortis. Donec et nulla non nisi interdum commodo in vitae neque. Suspendisse congue vel purus quis auctor. Praesent faucibus diam a dolor sagittis sagittis. Vivamus ultricies felis orci, id luctus enim luctus euismod.</p>
 <p>Pellentesque eleifend enim in est sodales, in sagittis augue tincidunt. Aliquam magna ante, lobortis eu semper sit amet, aliquet ac tortor. Maecenas faucibus vitae augue ac convallis. Quisque sollicitudin felis nibh, id accumsan lectus pellentesque sit amet. Sed consectetur sapien eget velit elementum, quis imperdiet velit iaculis. Nam lacus velit, placerat nec semper vel, sodales non sapien. Praesent luctus lobortis ligula in molestie. Phasellus pharetra nunc lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras maximus, justo nec sagittis suscipit, enim orci vehicula velit, eget pellentesque dolor dui quis augue. Nam scelerisque efficitur est, id pretium sapien malesuada et. Vestibulum id gravida felis.</p>
 <p>Aenean aliquam odio vel justo aliquam, eu ornare tortor congue. Nulla facilisi. Sed sed porta nulla. Sed eleifend aliquet tellus vitae suscipit. Nullam malesuada laoreet ornare. Nulla posuere quam vitae libero elementum, eu mollis metus iaculis. Quisque vitae pulvinar est, sit amet egestas ipsum. Phasellus vel purus in velit interdum posuere. Vivamus auctor quam quis lorem maximus, eget aliquam velit pharetra. Mauris tortor nisi, rutrum sit amet neque ut, dignissim faucibus erat. Nunc elit sapien, faucibus vel nulla ac, vehicula rutrum urna. Donec sapien sem, tempor nec luctus at, cursus sed magna. Sed massa lectus, mollis efficitur risus id, mattis posuere purus. Pellentesque ut urna quis massa lacinia laoreet nec auctor diam. </p>
-                </div>
-                <footer class="text-right">
-                    <p>- ccenzura</p>
-                </footer>
-            </div>
-        </div>
-    </article>
+  </div><!-- /.entry-content -->
 </section>
-<footer>
-    <hr>
-    <div class="row">
-        <div class="col-lg-9 text-center">
-            <p><small>
-                Built by <a href="http://docs.getpelican.com/en/latest">Pelican</a> / <a href="https://github.com/ingwinlu/pelican-twitchy">pelican-twitchy</a>
-                &middot;                    &copy; 2020 ccenzura
-            </small></p>
-        </div>
-    </div>
-</footer>            </div>
-        </div>
-        <!-- /#page-content-wrapper -->
-    </div>
-    <!-- /#wrapper -->
-    <!-- jQuery Version 1.11.2 -->
-    <script src="/theme/js/jquery-1.11.2.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/theme/js/bootstrap.min.js"></script>
-    <!-- twitchy Script -->
-    <script src="/theme/js/pelican_twitchy.min.js"></script>
-
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
 </body>
 </html>

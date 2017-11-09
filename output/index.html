@@ -89,6 +89,12 @@
                             </a>
                         </li>
                         <li class="">
+                            <a class="hide-overflow" href="/articles/python/how-to-configure-pelican-static-blog-to-use-jupyter-notebook-and-github-pages.html" title="How to configure pelican static blog to use jupyter notebook and github pages?">
+                                <i class="fa fa-file-text padding-small"></i>
+                                How to configure pelican static blog to use jupyter notebook and github pages?
+                            </a>
+                        </li>
+                        <li class="">
                             <a class="hide-overflow" href="/articles/python/python-pocztek.html" title="Pythno początek">
                                 <i class="fa fa-file-text padding-small"></i>
                                 Pythno początek
@@ -151,7 +157,7 @@
                         <a href="/category/python.html">
                             <i class="fa fa-folder-open padding-small"></i>
                             python
-                            <span class="badge pull-right categorybadge">2</span>
+                            <span class="badge pull-right categorybadge">3</span>
                         </a>
                     </li>
                 </ul></li>
@@ -279,6 +285,109 @@
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
     mathjaxscript[(window …</script>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2>
+                    <a href="/articles/python/how-to-configure-pelican-static-blog-to-use-jupyter-notebook-and-github-pages.html">How to configure pelican static blog to use jupyter notebook and github pages?</a>
+<div class="post-info">
+    <div class="publish-info-block">
+        <small>
+            <span class="published">
+                <i class="fa fa-calendar padding-small"></i><time datetime="2017-11-09T00:00:00+01:00"> czw 09 listopad 2017</time>
+            </span>
+            <span class="category">
+                <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
+            </span>
+            <span class="tags">
+                <i class="fa fa-tags padding-small"></i>
+                <a href="/tag/pelican.html">pelican</a> /                 <a href="/tag/python.html">python</a>            </span>
+        </small>
+    </div>
+</div><!-- /.post-info -->                </h2>
+                <div class="summary">
+                    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="My-system-configuration">My system configuration<a class="anchor-link" href="#My-system-configuration">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I have got installed python 3.6 and I used virtualenv with virtualenvwrapper. My case is based on those settings.
+Let's start.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Create project</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mkproject</span> <span class="n">project_name</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">workon</span> <span class="n">project_name</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Install all dependencies</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pelican</span> <span class="n">markdown</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="nn">jupyter</span> <span class="n">nbconvert</span> <span class="n">ipyhton</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Create repository on github …</p></div></div></div>
                 </div>
             </article>
             <hr/>

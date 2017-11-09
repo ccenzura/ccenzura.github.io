@@ -10,7 +10,7 @@ TIMEZONE = 'Europe/Warsaw'
 DEFAULT_LANG = 'pl'
 SUMMARY_MAX_LENGTH = 50
 
-# THEME
+#THEME
 THEME = 'themes/pelican-twitchy'
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = True

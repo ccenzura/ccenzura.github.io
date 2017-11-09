@@ -12,6 +12,10 @@ SUMMARY_MAX_LENGTH = 50
 
 # THEME
 THEME = 'themes/pelican-twitchy'
+DISPLAY_PAGES_ON_MENU = True
+DISPLAY_CATEGORIES_ON_MENU = True
+DISPLAY_RECENT_POSTS_ON_MENU = True
+DISPLAY_TAGS_ON_MENU = True
 
 # PLUGINS
 MARKUP = ('md', 'ipynb')
@@ -20,7 +24,7 @@ PLUGINS = ['ipynb2pelican']
 IGNORE_FILES = ['.ipynb_checkpoints']
 IPYNB_IGNORE = True # ignorowanie cells z tagiem #ignore
 
-# CONTENT
+# CONTENTc
 USE_FOLDER_AS_CATEGORY = True
 STATIC_PATHS = ['images', 'articles']
 ARTICLE_PATHS = ['articles']

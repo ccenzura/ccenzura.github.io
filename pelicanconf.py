@@ -15,7 +15,9 @@ THEME = 'themes/pelican-twitchy'
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = True
 DISPLAY_RECENT_POSTS_ON_MENU = True
-DISPLAY_TAGS_ON_MENU = True
+DISPLAY_TAGS_ON_MENU = False
+PYGMENTS_STYLE = "default"
+BOOTSTRAP_THEME = "slate"
 
 # PLUGINS
 MARKUP = ('md', 'ipynb')
@@ -45,8 +47,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('Bitbucket', 'https://bitbucket.org/ccenzura/'),)
 
 DEFAULT_PAGINATION = 10
 

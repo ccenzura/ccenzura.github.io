@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="ccenzura" />
-        <meta name="keywords" content="python,numbers" />
-        <meta name="description" content="Podczas tej lekcji poznamy jak pracować z liczbami w Pythonie. Poruszymy poniższe zagadnienia: ) Typy liczb w Pythonie ) Podstawy arytmetyki ) Rożnice pomiędzy Python 2 a Python 3 w dzieleniu ) Przypisywanie zmiennych (ang. variables ) Typy liczb¶Python ma różne &#34;typy&#34; liczb. Skupimy się głównie na liczbach typu integer (liczby całkowite) oraz float …" />
+        <meta name="keywords" content="python,print" />
+        <meta name="description" content="W tej lekcji krótko omówimy różne sposoby formatowania instrukcji wywołania. W miarę jak będziesz kodował coraz więcej, prawdopodobnie będziesz potrzebował mieć instrukcje wywołania, które mogą przyjmować zmienną do wywoływanej instrukcji string. Najprostszym przykładem polecenia print jest: In [1]: print &#39;To jest string&#39; # pamiętaj, że w python 3 print jest funkcją …" />
 
 
-    <title>Liczby i nieco więcej w Pythonie! - Around Python</title>
+    <title>Print Formatting - Around Python</title>
 
         <link rel="stylesheet" href="/theme/css/bootstrap.slate.min.css" type="text/css"/>
 
@@ -80,7 +80,7 @@
                         </a>
                     </li>
                     <li class="panel anti-panel"><ul id="collapse-latest" class="sidebar_submenu collapse in">
-                        <li class="active">
+                        <li class="">
                             <a class="hide-overflow" href="/articles/python/liczby-i-nieco-wiecej-w-pythonie.html" title="Liczby i nieco więcej w Pythonie!">
                                 <i class="fa fa-file-text padding-small"></i>
                                 Liczby i nieco więcej w Pythonie!
@@ -92,7 +92,7 @@
                                 Lists
                             </a>
                         </li>
-                        <li class="">
+                        <li class="active">
                             <a class="hide-overflow" href="/articles/python/print-formatting.html" title="Print Formatting">
                                 <i class="fa fa-file-text padding-small"></i>
                                 Print Formatting
@@ -185,10 +185,10 @@
             <div class="col-lg-9">
                 <header class="page-header">
                     <h1>
-                        <a href="/articles/python/liczby-i-nieco-wiecej-w-pythonie.html"
+                        <a href="/articles/python/print-formatting.html"
                            rel="bookmark"
-                           title="Permalink to Liczby i nieco więcej w Pythonie!">
-                            Liczby i nieco więcej w Pythonie!
+                           title="Permalink to Print Formatting">
+                            Print Formatting
                         </a>
                         <small>
 <div class="post-info">
@@ -202,7 +202,7 @@
             </span>
             <span class="tags">
                 <i class="fa fa-tags padding-small"></i>
-                <a href="/tag/python.html">python</a> /                 <a href="/tag/numbers.html">numbers</a>            </span>
+                <a href="/tag/python.html">python</a> /                 <a href="/tag/print.html">print</a>            </span>
         </small>
     </div>
 </div><!-- /.post-info -->                        </small>
@@ -218,77 +218,18 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Podczas tej lekcji poznamy jak pracować z liczbami w Pythonie.</p>
-<p>Poruszymy poniższe zagadnienia:</p>
-<ol>
-<li>) Typy liczb w Pythonie</li>
-<li>) Podstawy arytmetyki</li>
-<li>) Rożnice pomiędzy Python 2 a Python 3 w dzieleniu</li>
-<li>) Przypisywanie zmiennych (ang. <em> variables </em>)</li>
-</ol>
+<p>W tej lekcji krótko omówimy różne sposoby formatowania instrukcji wywołania. W miarę jak będziesz kodował coraz więcej, prawdopodobnie będziesz potrzebował mieć instrukcje wywołania, które mogą przyjmować zmienną do wywoływanej instrukcji string.</p>
+<p>Najprostszym przykładem polecenia print jest:</p>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Typy-liczb">Typy liczb<a class="anchor-link" href="#Typy-liczb">&#182;</a></h2><p>Python ma różne "typy" liczb. Skupimy się głównie na liczbach typu integer (liczby całkowite) oraz float (liczby zmiennoprzecinkowe).</p>
-<p>Integer to liczby całkowite dodatnie lub ujemne, np.: 2 i -2.
-Float to liczby zmiennoprzecinkowe. W Pythonie są godne uwagi, ponieważ posiadają kropkę dziesiętną lub używają funkcji wykładniczej (e) do zdefiniowania liczby. Na przykład 2.0 i -2.1 są przykładami liczb zmiennoprzecinkowych. 4E2 (4 razy 10 do potęgi 2) jest również przykładem liczby zmiennoprzecinkowej w Pythonie.</p>
-<p>W poniższej tabeli znajdują się przykładowe liczby obu typów.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<table>
-<tr>
-    <th>przykłady</th> 
-    <th>Typ liczby</th>
-</tr>
-
-<tr>
-    <td>1,2,-5,1000</td>
-    <td>Integers</td> 
-</tr>
-
-<tr>
-    <td>1.2,-0.5,2e2,3E2</td> 
-    <td>Floating-point numbers</td> 
-</tr>
- </table>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Zacznijmy prostą arytmetykę.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Podstawowa-arytmetyka">Podstawowa arytmetyka<a class="anchor-link" href="#Podstawowa-arytmetyka">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Dodawanie</span>
-<span class="mi">2</span><span class="o">+</span><span class="mi">1</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;To jest string&#39;</span> <span class="c1"># pamiętaj, że w python 3 print jest funkcją print(&#39;To jest string&#39;)</span>
 </pre></div>
 
 </div>
@@ -301,28 +242,35 @@ Float to liczby zmiennoprzecinkowe. W Pythonie są godne uwagi, ponieważ posiad
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[11]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>3</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>To jest string
+</pre>
 </div>
-
 </div>
 
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Strings">Strings<a class="anchor-link" href="#Strings">&#182;</a></h2><p>Możesz użyć %s aby sformatować string w instrukcji wywołania.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Odejmowanie</span>
-<span class="mi">2</span><span class="o">-</span><span class="mi">1</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;STRING&#39;</span>
+<span class="k">print</span> <span class="s1">&#39;Umieść kolejny string za pomocą procent i s: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -335,83 +283,13 @@ Float to liczby zmiennoprzecinkowe. W Pythonie są godne uwagi, ponieważ posiad
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[3]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Umieść kolejny string za pomocą procent i s: STRING
+</pre>
 </div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Mnożenie</span>
-<span class="mi">2</span><span class="o">*</span><span class="mi">2</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[4]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>4</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Dzielenie</span>
-<span class="mi">3</span><span class="o">/</span><span class="mi">2</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[5]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1</pre>
-</div>
-
 </div>
 
 </div>
@@ -422,24 +300,17 @@ Float to liczby zmiennoprzecinkowe. W Pythonie są godne uwagi, ponieważ posiad
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Uwaga-Python-3!"><font color="red">Uwaga Python 3!</font><a class="anchor-link" href="#Uwaga-Python-3!">&#182;</a></h3><p>** Co własnie się stało? Przecież dzieląc 3/2 powinno być 1.5 a nie 1!</p>
-<p>Powodem, dla którego uzyskaliśmy ten wynik, jest to, że używamy Pythona 2. W Pythonie 2 symbol "/" wykonuje dzielenie "<em> klasyczne </em>". Oznacza to, że punkty dziesiętne są obcięte. Jednak w Pythonie 3 pojedynczy / wykonuje dzielenie "<em> prawdziwe </em>". W Pythonie 3 jeśli wprowadzisz 3/2 otrzymasz 1.5.</p>
-<p>Co więc zrobimy aby tego uniknąć używając Pythona 2?</p>
-<p>Dostępne są dwie możliwości:</p>
-<ul>
-<li>Podaj jedną z liczb, jako float:</li>
-</ul>
+<h2 id="Floating-Point-Numbers">Floating Point Numbers<a class="anchor-link" href="#Floating-Point-Numbers">&#182;</a></h2><p>Liczby zmiennoprzecinkowe używają formatu %n1.n2f, gdzie n1 jest całkowitą minimalną liczbą cyfr, które powinien zawierać ciąg znaków (mogą one być wypełnione białymi spacjami, jeśli cały numer nie ma tak wielu cyfr). Symbol n2 oznacza ilość liczb po przecinku odzielającym wartości całkowite od wartości dziesiętnych (ułamkowych). Zobaczmy kilka przykładów:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Jedną z liczb podaj typu float</span>
-<span class="mf">3.0</span><span class="o">/</span><span class="mi">2</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%1.2f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -452,15 +323,44 @@ Float to liczby zmiennoprzecinkowe. W Pythonie są godne uwagi, ponieważ posiad
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[6]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1.5</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Liczby zmiennoprzecinkowe: 13.14
+</pre>
+</div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%1.0f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Liczby zmiennoprzecinkowe: 13
+</pre>
+</div>
 </div>
 
 </div>
@@ -472,8 +372,7 @@ Float to liczby zmiennoprzecinkowe. W Pythonie są godne uwagi, ponieważ posiad
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Działa też kiedy podamy drugą liczbę typu float</span>
-<span class="mi">3</span><span class="o">/</span><span class="mf">2.0</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%1.5f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -486,39 +385,26 @@ Float to liczby zmiennoprzecinkowe. W Pythonie są godne uwagi, ponieważ posiad
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1.5</pre>
-</div>
-
-</div>
-
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Liczby zmiennoprzecinkowe: 13.14400
+</pre>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Możemy także "rzucić" (and. cast) ten typ za pomocą funkcji, która zasadniczo zamienia liczby całkowite w zmiennoprzecinkowe. Ta funkcja, co nie jest zaskoczeniem, nazywa się float ().</li>
-</ul>
 
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Możemy użyć funkcji float() aby rzucić integers na floats:</span>
-<span class="nb">float</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># jeżeli ilość cyfr liczby całkowitej jest mniejsza niż określone w  automatycznie dowane są spacje</span>
+<span class="k">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%10.2f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span> 
 </pre></div>
 
 </div>
@@ -531,15 +417,44 @@ Float to liczby zmiennoprzecinkowe. W Pythonie są godne uwagi, ponieważ posiad
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[8]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1.5</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Liczby zmiennoprzecinkowe:      13.14
+</pre>
+</div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%25.2f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Liczby zmiennoprzecinkowe:                     13.14
+</pre>
+</div>
 </div>
 
 </div>
@@ -550,9 +465,125 @@ Float to liczby zmiennoprzecinkowe. W Pythonie są godne uwagi, ponieważ posiad
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>W dalszej części zajmiemy się bardziej szczegółowo szczegółami związanymi z wykorzystywaniem funkcji, więc nie martw się, jeśli nie masz pojęcia o składni. Potraktuj to jako zapowiedź.</p>
-<p>Jeszcze jedena zapowiedź, którą możemy wykorzystać przy klasycznym dzieleniu w Pythonie 2, jest importowany z modułu future.
-Jest to moduł w Pythonie 2, który ma funkcje Pythona 3, to zasadniczo pozwala na importowanie funkcji Pythona 3 do Pythona 2. W dalszej częsci kursu omówimy import i moduły, więc nie martw się o pełne zrozumienie instrukcji importu!</p>
+<h2 id="Metody-konwersji">Metody konwersji<a class="anchor-link" href="#Metody-konwersji">&#182;</a></h2><p>Zwróć uwagę, że dwie metody %s i %r faktycznie konwertują dowolny obiekt Pythona na ciąg znaków przy użyciu dwóch oddzielnych metod: str() i repr(). Dowiesz się więcej o tych funkcjach w dalszej części kursu, ale powinieneś zauważyć, że możesz przekazać prawie każdy obiekt w Pythonie za pomocą tych dwóch metod:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Tu jest liczba: </span><span class="si">%s</span><span class="s1">. Tu jest string: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">123.1</span><span class="p">,</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tu jest liczba: 123.1. Tu jest string: hi
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Tu jest liczba: </span><span class="si">%r</span><span class="s1">. Tu jest string: </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">123.1</span><span class="p">,</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tu jest liczba: 123.1. Tu jest string: &#39;hi&#39;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Formatowanie-wielokrotne">Formatowanie wielokrotne<a class="anchor-link" href="#Formatowanie-wielokrotne">&#182;</a></h2><p>Aby zastosować formatowanie wielokrotne po string w ( ) (tuple pl. <em>krotka</em>, lecz o tym później), poniższy przykład wyjaśni sposób działania.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Pierwszy: </span><span class="si">%s</span><span class="s1">, Drugi: </span><span class="si">%1.2f</span><span class="s1">, Trzeci: </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="s1">&#39;hi!&#39;</span><span class="p">,</span><span class="mf">3.14</span><span class="p">,</span><span class="mi">22</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Pierwszy: hi!, Drugi: 3.14, Trzeci: 22
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Stosowanie-metody-string-.format()">Stosowanie metody string .format()<a class="anchor-link" href="#Stosowanie-metody-string-.format()">&#182;</a></h2><p>Najlepszym sposobem do wstawienia zawartości obiektu do string przy użyciu print jest zastosowanie metody .format(). Składnia przedstawia się następująco:</p>
+
+<pre><code>'String tutaj {zmienna1} tutaj też {zmienna2}'.format(zmienna1='coś1',zmienna2='coś2')'
+lub
+'String {} tutaj też {}'.format(nazwa_zmiennej,'coś') 
+
+</code></pre>
+<p>Poniżej kilka przykładów:</p>
 
 </div>
 </div>
@@ -562,8 +593,7 @@ Jest to moduł w Pythonie 2, który ma funkcje Pythona 3, to zasadniczo pozwala 
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
-<span class="mi">3</span><span class="o">/</span><span class="mi">2</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;To jest string z {p}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="s1">&#39;insert&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -576,15 +606,175 @@ Jest to moduł w Pythonie 2, który ma funkcje Pythona 3, to zasadniczo pozwala 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1.5</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>To jest string z insert
+</pre>
+</div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Wileokrotne użycie</span>
+<span class="k">print</span> <span class="s1">&#39;Pierwszy: {p}, Drugi: {p}, Trzeci: {p}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="s1">&#39;Hi!&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Pierwszy: Hi!, Drugi: Hi!, Trzeci: Hi!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Kilka obiektów</span>
+<span class="k">print</span> <span class="s1">&#39;Obiekt 1: {a}, Obiekt 2: {b}, Obiekt 3: {c}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="s1">&#39;two&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="mf">12.3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Obiekt 1: 1, Obiekt 2: two, Obiekt 3: 12.3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Bez definiowania formatowia</span>
+<span class="k">print</span> <span class="s1">&#39;Pierwszy {}, Drugi {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;raz&#39;</span><span class="p">,</span> <span class="s1">&#39;dwa&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Pierwszy raz, Drugi dwa
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Wykorzystanie w metodzie .format() wcześniej stworzonych zmiennych</span>
+<span class="n">zmienna</span> <span class="o">=</span> <span class="s1">&#39;kota&#39;</span>
+<span class="k">print</span> <span class="s1">&#39;Ala ma {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">zmienna</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Ala ma kota
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Wykorzystanie w metodzie .format() wcześniej stworzonych zmiennych</span>
+<span class="n">zmienna</span> <span class="o">=</span> <span class="s1">&#39;kota&#39;</span>
+<span class="k">print</span> <span class="s1">&#39;Ala ma {a}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">zmienna</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Ala ma kota
+</pre>
+</div>
 </div>
 
 </div>
@@ -595,452 +785,9 @@ Jest to moduł w Pythonie 2, który ma funkcje Pythona 3, to zasadniczo pozwala 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Po zaimportowaniu division (dzielenie) z modułu future nie musisz więcej przejmować się problemami związanymi z klasycznym dzielniem w swoim kodzie.</p>
+<p>To są podstawy formatowania print. Pamiętaj, że w Pythonie 3 print jest metodą i stosuje się ją print().
+<a href="https://pyformat.info/">Nieco więcej o formatowaniu print</a></p>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Kontynuacja-arytmetyki">Kontynuacja arytmetyki<a class="anchor-link" href="#Kontynuacja-arytmetyki">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Silnie</span>
-<span class="mi">2</span><span class="o">**</span><span class="mi">3</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[9]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>8</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># W ten sposób możesz wyciągnać także pierwiastek</span>
-<span class="mi">4</span><span class="o">**</span><span class="mf">0.5</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[10]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>2.0</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Kolejność wykonywania działań w Pythonie</span>
-<span class="mi">2</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">3</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[11]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>105</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Możesz użyć nawiasów do zmiany kolejność wykonywania działania</span>
-<span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">10</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[12]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>156</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Przypisywanie-zmiennych">Przypisywanie zmiennych<a class="anchor-link" href="#Przypisywanie-zmiennych">&#182;</a></h2><p>Teraz, gdy zobaczyliśmy, jak używać liczb w Pythonie, zobaczmy, jak możemy przypisać im nazwy i tworzyć zmienne.</p>
-<p>Używamy pojedynczego znaku równości, aby przypisać etykiety do zmiennych. Zobaczmy kilka przykładów tego, jak możemy to zrobić.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Stwórzmy obiekt o nazwie &quot;a&quot; o rzypiszmy do niego liczbę 5</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now if I call <em>a</em> in my Python script, Python will treat it as the number 5.
-Teraz, kiedy wywołam zmienną "a" w moim skrypcie, Python potraktuje ją jako 5.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Dodawanie obiektów</span>
-<span class="n">a</span><span class="o">+</span><span class="n">a</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[14]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>10</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Co dzieje się przy zmianie przypisanej wartości? Czy Python pozwoli nam to nadpisać?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Zmiana przypisanej wartości</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Weryfikacja</span>
-<span class="n">a</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[4]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>10</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Tak! Python umożliwia nadpisanie wartości istniejącej zmiennej. Możemy również użyć samych zmiennych podczas nadpisywania. Oto przykład tego, co mam na myśli:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Weryfikacja</span>
-<span class="n">a</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[5]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>10</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Użyjmy zmiennej a do nadpisania jej wartości</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">a</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Weryfikacja</span>
-<span class="n">a</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>20</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Nazwy używane podczas tworzenia etykiet muszą spełniać kilka zasad:</p>
-<p>     1. Nazwy nie mogą zaczynać się od numeru.
-     2. W nazwie nie może być spacji, zamiast tego użyj _.
-     3. Nie można użyć żadnego z następujących symboli: "", &lt;&gt; /? | \ ()! @ # $% ^ &amp; * ~ - +
-     3. Uważa się za najlepszą praktykę (PEP8), że nazwy zmiennych są pisane małymi literami.</p>
-<p>Używanie nazw zmiennych może być bardzo przydatnym sposobem śledzenia różnych zmiennych w Pythonie. Na przykład:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Używaj nazw, które pomogą śledzić to co dzieje się w Twoim kodzie!</span>
-<span class="n">moj_wplyw</span> <span class="o">=</span> <span class="mi">100</span>
-
-<span class="n">wysokosc_podatku</span> <span class="o">=</span> <span class="mf">0.1</span>
-
-<span class="n">moje_podatki</span> <span class="o">=</span> <span class="n">moj_wplyw</span><span class="o">*</span><span class="n">wysokosc_podatku</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Pokaż moje podatki</span>
-<span class="n">moje_podatki</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[24]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>10.0</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Czego się nauczyliśmy? Nauczyliśmy się podstaw pracy z liczbami w Pythonie. Nauczyliśmy się także, jak proste działania arytmetyczne i używać Pythona jako podstawowego kalkulatora. Następnie opublikowaliśmy to, ucząc się o przypisywaniu zmiennych w Pythonie.
-W następnej kolejności będziemy uczyć się o typie danych typu string(pl. <em>ciąg znaków</em>)!</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Next---Strings-(pl.-ci&#261;gi-znak&#243;w)">Next - Strings (pl. <em>ci&#261;gi znak&#243;w</em>)<a class="anchor-link" href="#Next---Strings-(pl.-ci&#261;gi-znak&#243;w)">&#182;</a></h2>
 </div>
 </div>
 </div>

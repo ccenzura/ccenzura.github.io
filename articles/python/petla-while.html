@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="ccenzura" />
-        <meta name="keywords" content="python,set,boolean" />
-        <meta name="description" content="Python posługuje się jeszcze dwoma innymi typami obiektów - sets i booleans. Sets¶Sets są nieuporządkowaną kolekcją unikalnych elementów. Możemy je konstruować za pomocą fukncji set(). Stwórzmy set iz obaczmy jak się z nim pracuje. In [2]: # Tworzenie set x = set() In [3]: # Dodajmy element do set za pomocą metody add …" />
+        <meta name="keywords" content="python,while,loop" />
+        <meta name="description" content="Instrukcja while w Pythonie jest jedną z najczęściej wykorzystywaną instrukcją do iteracji. Pętla while jest wykonuje zawarte w niej instrukcje tak długo jak jej warunek nie jest True. Stąd też nazwa loop (pl. pętla), ponieważ instrukcja jest wykonywana w pętli. Ogólny format pętli while wygląda następująco: while warunek: powtarzana instrukcja …" />
 
 
-    <title>Sets and Booleans (pl. *zbiory i boleans*) - Around Python</title>
+    <title>Pętla while - Around Python</title>
 
         <link rel="stylesheet" href="/theme/css/bootstrap.slate.min.css" type="text/css"/>
 
@@ -92,7 +92,7 @@
                                 List comprehensions (pl. *wyrażenia listowe*)
                             </a>
                         </li>
-                        <li class="">
+                        <li class="active">
                             <a class="hide-overflow" href="/articles/python/petla-while.html" title="Pętla while">
                                 <i class="fa fa-file-text padding-small"></i>
                                 Pętla while
@@ -192,24 +192,24 @@
             <div class="col-lg-9">
                 <header class="page-header">
                     <h1>
-                        <a href="/articles/python/sets-and-booleans-pl-zbiory-i-boleans.html"
+                        <a href="/articles/python/petla-while.html"
                            rel="bookmark"
-                           title="Permalink to Sets and Booleans (pl. *zbiory i boleans*)">
-                            Sets and Booleans (pl. *zbiory i boleans*)
+                           title="Permalink to Pętla while">
+                            Pętla while
                         </a>
                         <small>
 <div class="post-info">
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2017-11-21T00:00:00+01:00"> wto 21 listopad 2017</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2017-11-28T00:00:00+01:00"> wto 28 listopad 2017</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
             </span>
             <span class="tags">
                 <i class="fa fa-tags padding-small"></i>
-                <a href="/tag/python.html">python</a> /                 <a href="/tag/set.html">set</a> /                 <a href="/tag/boolean.html">boolean</a>            </span>
+                <a href="/tag/python.html">python</a> /                 <a href="/tag/while.html">while</a> /                 <a href="/tag/loop.html">loop</a>            </span>
         </small>
     </div>
 </div><!-- /.post-info -->                        </small>
@@ -225,47 +225,31 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Python posługuje się jeszcze dwoma innymi typami obiektów - sets i booleans.</p>
-<h2 id="Sets">Sets<a class="anchor-link" href="#Sets">&#182;</a></h2><p>Sets są nieuporządkowaną kolekcją <strong>unikalnych</strong> elementów. Możemy je konstruować za pomocą fukncji set(). Stwórzmy set iz obaczmy jak się z nim pracuje.</p>
+<p>Instrukcja <strong>while</strong> w Pythonie jest jedną z najczęściej wykorzystywaną instrukcją do iteracji. Pętla <strong>while</strong> jest wykonuje zawarte w niej instrukcje tak długo jak jej warunek nie jest True. Stąd też nazwa loop (pl. <em>pętla</em>), ponieważ instrukcja jest wykonywana w pętli.</p>
+<p>Ogólny format pętli while wygląda następująco:</p>
+
+<pre><code>while warunek:
+    powtarzana instrukcja
+else:
+    finalna instrukcja
+
+</code></pre>
+<p>Zobaczmy tereaz kilka przykładów.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Tworzenie set</span>
-<span class="n">x</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-</pre></div>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
 
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Dodajmy element do set za pomocą metody add()</span>
-<span class="n">x</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Wyświetl</span>
-<span class="n">x</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s1">&#39;x aktualne: &#39;</span><span class="p">,</span><span class="n">x</span>
+    <span class="k">print</span> <span class="s1">&#39; x jest nadal mniejsze niż 10, dodaj 1 do x&#39;</span>
+    <span class="n">x</span><span class="o">+=</span><span class="mi">1</span>
 </pre></div>
 
 </div>
@@ -278,15 +262,32 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[4]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{1}</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>x aktualne:  0
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+x aktualne:  1
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+x aktualne:  2
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+x aktualne:  3
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+x aktualne:  4
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+x aktualne:  5
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+x aktualne:  6
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+x aktualne:  7
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+x aktualne:  8
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+x aktualne:  9
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -297,113 +298,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Zwróć uwagę na nawiasy klamrowe. To nie jest dictionary! Chociaż można zauważyć analogię i traktować set jak dictionary, lecz z samymi kluczami.</p>
-<p>Zapamiętaliśmy, że sets przechowują wyłacznie unikalne elmenety. Jednak co się stanie kiedy będziemy chcieli dodać element znajdujący się już w set?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Dodajmy inny element</span>
-<span class="n">x</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Wyświetl</span>
-<span class="n">x</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[6]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{1, 2}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Spróbujmy dodać taki sam element</span>
-<span class="n">x</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Wyświetl</span>
-<span class="n">x</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[8]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{1, 2}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Zauważ, że nie pojawił się tam kolejna 1. Jest to spowodowane tym, że sets przechowują wyłącznie unikalne elemnety! Możemy rzucić listę z powtórzonymi elementami aby uzyskać set z unikalnymi. Poniżej przykład:</p>
+<p>Zwróć uwagę, ile razy została wykonana instaukcja print i jak działa pętla while, dopóki nie zostanie spełniony warunek True, który został spełniony raz x == 10. Ważne jest, aby pamiętać, że po wystąpieniu tego zdarzenia kod zatrzymuje się. Zobaczmy, jak możemy dodać instrukcję else:</p>
 
 </div>
 </div>
@@ -413,22 +308,15 @@
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Stwórzmy listę z powtórzonymi elementami</span>
-<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
 
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Rzucami listę na set aby uzyskać wyłacznie unikalne elementy</span>
-<span class="nb">set</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s1">&#39;x akrualne: &#39;</span><span class="p">,</span><span class="n">x</span>
+    <span class="k">print</span> <span class="s1">&#39; x jest nadal mniejsze niż 10, dodaj 1 do x&#39;</span>
+    <span class="n">x</span><span class="o">+=</span><span class="mi">1</span>
+    
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s1">&#39;Zrobione!&#39;</span>
 </pre></div>
 
 </div>
@@ -441,15 +329,33 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[10]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{1, 2, 3, 4, 5, 6}</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>x akrualne:  0
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+x akrualne:  1
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+x akrualne:  2
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+x akrualne:  3
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+x akrualne:  4
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+x akrualne:  5
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+x akrualne:  6
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+x akrualne:  7
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+x akrualne:  8
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+x akrualne:  9
+ x jest nadal mniejsze niż 10, dodaj 1 do x
+Zrobione!
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -460,16 +366,27 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Booleans">Booleans<a class="anchor-link" href="#Booleans">&#182;</a></h2><p>Python  comes with Booleans (with predefined True and False displays that are basically just the integers 1 and 0). It also has a placeholder object called None. Let's walk through a few quick examples of Booleans (we will dive deeper into them later in this course).</p>
+<h2 id="break,-continue,-pass">break, continue, pass<a class="anchor-link" href="#break,-continue,-pass">&#182;</a></h2><p>Możemy użyć instrukcji break, continue i pass w naszej pętli w celu rozszerzenia funkcjonalności w różnych przypadkach. Definista tych trzech instrukcji jest nastepująca:</p>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Booleans">Booleans<a class="anchor-link" href="#Booleans">&#182;</a></h2><p>Python korzysta z Booleans (z odpowiedziami - True i False, które są po prostu liczbami całkowitymi 1 i 0), a także z obiektów zastępczych - None. Przeanalizujmy kilka szybkich przykładów Booleans (zagłębimy się w nie później).</p>
+<pre><code>break: Powoduje zakończenie pętli.
+continue: Umożliwia pominięcie bloku instrukcji poniżej continue.
+pass: Nic nie robi.
+
+
+</code></pre>
+<p>Mówiąc o instrukcjach <strong>break</strong> i <strong>continue</strong>, mam na myśli poniższy format pętli:</p>
+
+<pre><code>while warunek: 
+    powtarzana instrukcja
+    if warunek: 
+        break
+    if warunek: 
+        continue 
+else:
+
+</code></pre>
+<p>Instrukcje <strong>break</strong> i <strong>continue</strong> mogą występować gdziekolwiek wewnątrz pętli, lecz będziemy je najczęsciej stosować w zagnieżdżonych koniunkcjach z instrukcją <strong>if</strong> aby zostały wykonane w przypadku spełnienia określonego warunku.</p>
+<p>Poniższe przykłądy powinny przybiżyć Ci sposób działania pętli:</p>
 
 </div>
 </div>
@@ -479,22 +396,17 @@
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Ustawmy obiekt aby był boolean</span>
-<span class="n">a</span> <span class="o">=</span> <span class="bp">True</span>
-</pre></div>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
 
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Wyświetl</span>
-<span class="n">a</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s1">&#39;x aktualne: &#39;</span><span class="p">,</span><span class="n">x</span>
+    <span class="k">print</span> <span class="s1">&#39; x nadal jest mniejsze niż 10, dodaj 1 do x&#39;</span>
+    <span class="n">x</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span><span class="mi">3</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s1">&#39;x==3&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s1">&#39;kontynuuj...&#39;</span>
+        <span class="k">continue</span>
 </pre></div>
 
 </div>
@@ -507,15 +419,42 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[12]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>x aktualne:  0
+ x nadal jest mniejsze niż 10, dodaj 1 do x
+kontynuuj...
+x aktualne:  1
+ x nadal jest mniejsze niż 10, dodaj 1 do x
+kontynuuj...
+x aktualne:  2
+ x nadal jest mniejsze niż 10, dodaj 1 do x
+x==3
+x aktualne:  3
+ x nadal jest mniejsze niż 10, dodaj 1 do x
+kontynuuj...
+x aktualne:  4
+ x nadal jest mniejsze niż 10, dodaj 1 do x
+kontynuuj...
+x aktualne:  5
+ x nadal jest mniejsze niż 10, dodaj 1 do x
+kontynuuj...
+x aktualne:  6
+ x nadal jest mniejsze niż 10, dodaj 1 do x
+kontynuuj...
+x aktualne:  7
+ x nadal jest mniejsze niż 10, dodaj 1 do x
+kontynuuj...
+x aktualne:  8
+ x nadal jest mniejsze niż 10, dodaj 1 do x
+kontynuuj...
+x aktualne:  9
+ x nadal jest mniejsze niż 10, dodaj 1 do x
+kontynuuj...
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -526,7 +465,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Możemy także użyć operatorów porówniania w celu stwotrzenia booleans. W dalszej części kurs poznamy wszystkie operatory.</p>
+<p>Zwróć uwagę, że mamy wywołaną instrukcję print kiedy x==3 i kontynuujemy pętlę przechodząc przez zewnętrzną pętlę. Wstawmy break przy warunku x==3 i sprawdźmy jaki bedzie wynik:</p>
 
 </div>
 </div>
@@ -536,8 +475,17 @@
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Wynik jest booleans</span>
-<span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s1">&#39;x aktualny: &#39;</span><span class="p">,</span><span class="n">x</span>
+    <span class="k">print</span> <span class="s1">&#39; x nadal jest mniejszy niż 10, dodaj 1 do x&#39;</span>
+    <span class="n">x</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span><span class="mi">3</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s1">&#39;zatrzymaj (break) ponieważ x==3&#39;</span>
+        <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s1">&#39;kontynuuj...&#39;</span>
+        <span class="k">continue</span>
 </pre></div>
 
 </div>
@@ -550,15 +498,21 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[13]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>x aktualny:  0
+ x nadal jest mniejszy niż 10, dodaj 1 do x
+kontynuuj...
+x aktualny:  1
+ x nadal jest mniejszy niż 10, dodaj 1 do x
+kontynuuj...
+x aktualny:  2
+ x nadal jest mniejszy niż 10, dodaj 1 do x
+zatrzymaj (break) ponieważ x==3
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -569,33 +523,27 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Możemy używać None w zastępstwie dla obiektów, których nie chcemy aktualnie nadpisać:</p>
+<p>Teraz wnętrze instrukcji else nie zostało wywołane!</p>
+<p>Po tym krótkim wprowadzeniu powinieneś już potrafić wykorzystywać intrukcję <strong>while</strong> w swoim kodzie.</p>
+<p><strong>Uwaga!! Możliwe jest też utowrzenie pętli nieskończonej z wykorzystaniem instrukcji while. Przykład poniżej:</strong></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># None jako wartość zastępcza</span>
-<span class="n">b</span> <span class="o">=</span> <span class="bp">None</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Nie uruchamiaj tego kodu!!!! </span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s1">&#39;O nie to jest pętla nieskończona&#39;</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Teraz posiadasz już podstawową wiedzę na temat obiektów oraz struktury typów w Pythonie.</p>
-<h2 id="Next-assessment-test-(pl.-test-oceniaj&#261;ce)">Next assessment test (pl. <em>test oceniaj&#261;ce</em>)<a class="anchor-link" href="#Next-assessment-test-(pl.-test-oceniaj&#261;ce)">&#182;</a></h2>
-</div>
-</div>
 </div>
  
 

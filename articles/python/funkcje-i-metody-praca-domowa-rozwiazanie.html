@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="ccenzura" />
-        <meta name="keywords" content="python,dictionary" />
-        <meta name="description" content="Uczyliśmy się o sekwencjach w Pythonie, ale teraz zmienimy zagadnienia i zgłebimy mapowanie w Pythonie. Jeśli znasz inne języki, możesz uważać te słowniki za tabele mieszające. Ta sekcja posłuży jako krótkie wprowadzenie do słowników i składa się z: 1.) Tworzenie dictionaries 2.) Dostęp do obiektów z dictionary 3.) Zagnieżdżanie dictionaries …" />
+        <meta name="keywords" content="homework" />
+        <meta name="description" content="Napisz funkcję, która oblicza objętość kuli na podstwaie jej promienia In [25]: def obj(promien): return (4/3)*(3.14)*(promien**3) Napisz funkcję, która sprawdza czy podana wartość znajduje się w podanym zakresie (włączając najniższą i najwyższą wartość) In [1]: def spr_zakres(num,low,high): if num in range …" />
 
 
-    <title>Dictionaries (pl. *Słowniki*) - Around Python</title>
+    <title>Funkcje i metody - praca domowa - rozwiązanie - Around Python</title>
 
         <link rel="stylesheet" href="/theme/css/bootstrap.slate.min.css" type="text/css"/>
 
@@ -86,7 +86,7 @@
                                 Funkcje i metody - praca domowa
                             </a>
                         </li>
-                        <li class="">
+                        <li class="active">
                             <a class="hide-overflow" href="/articles/python/funkcje-i-metody-praca-domowa-rozwiazanie.html" title="Funkcje i metody - praca domowa - rozwiązanie">
                                 <i class="fa fa-file-text padding-small"></i>
                                 Funkcje i metody - praca domowa - rozwiązanie
@@ -185,24 +185,24 @@
             <div class="col-lg-9">
                 <header class="page-header">
                     <h1>
-                        <a href="/articles/python/dictionaries-pl-slowniki.html"
+                        <a href="/articles/python/funkcje-i-metody-praca-domowa-rozwiazanie.html"
                            rel="bookmark"
-                           title="Permalink to Dictionaries (pl. *Słowniki*)">
-                            Dictionaries (pl. *Słowniki*)
+                           title="Permalink to Funkcje i metody - praca domowa - rozwiązanie">
+                            Funkcje i metody - praca domowa - rozwiązanie
                         </a>
                         <small>
 <div class="post-info">
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2017-11-21T00:00:00+01:00"> wto 21 listopad 2017</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2017-12-14T00:00:00+01:00"> czw 14 grudzień 2017</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
             </span>
             <span class="tags">
                 <i class="fa fa-tags padding-small"></i>
-                <a href="/tag/python.html">python</a> /                 <a href="/tag/dictionary.html">dictionary</a>            </span>
+                <a href="/tag/homework.html">homework</a>            </span>
         </small>
     </div>
 </div><!-- /.post-info -->                        </small>
@@ -218,15 +218,32 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Uczyliśmy się o <em> sekwencjach </em> w Pythonie, ale teraz zmienimy zagadnienia i zgłebimy <em>mapowanie</em> w Pythonie. Jeśli znasz inne języki, możesz uważać te słowniki za tabele mieszające.</p>
-<p>Ta sekcja posłuży jako krótkie wprowadzenie do słowników i składa się z:</p>
-<p>     1.) Tworzenie dictionaries
-     2.) Dostęp do obiektów z dictionary
-     3.) Zagnieżdżanie dictionaries
-     4.) Podstawowe metody dictionaries</p>
-<p>Więc czym jest Dictionaries? Dictionaries są zbiorami obiektów przechowywanych z użyciem <em>klucza</em>, w przeciwieństwie do sekwencji przechowującej obiekty według ich względnej pozycji. Jest to ważna różnica, ponieważ dictionaries nie zachowują porządku (kolejności), ponieważ obiekty są zdefiniowane przez klucz.</p>
-<p>Dictionary w języku Python składa się z klucza, a następnie z powiązanej wartości. Ta wartość może być prawie dowolnym obiektem Pythona.</p>
-<h2 id="Tworzenie-dictionaries">Tworzenie dictionaries<a class="anchor-link" href="#Tworzenie-dictionaries">&#182;</a></h2><p>Stwórzmy pierwszy dictionary, w ten sposób zrozumiemy jak działają.</p>
+<hr>
+<p><strong>Napisz funkcję, która oblicza objętość kuli na podstwaie jej promienia</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">obj</span><span class="p">(</span><span class="n">promien</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mi">4</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">3.14</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">promien</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<p><strong> Napisz funkcję, która sprawdza czy podana wartość znajduje się w podanym zakresie (włączając najniższą i najwyższą wartość)</strong></p>
 
 </div>
 </div>
@@ -236,45 +253,14 @@
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Stwórz dictionary używając { } oraz : do oznaczenia klucza oraz wartość</span>
-<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;klucz1&#39;</span><span class="p">:</span><span class="s1">&#39;wartosc1&#39;</span><span class="p">,</span><span class="s1">&#39;klucz2&#39;</span><span class="p">:</span><span class="s1">&#39;wartosc2&#39;</span><span class="p">}</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">spr_zakres</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="n">low</span><span class="p">,</span><span class="n">high</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">low</span><span class="p">,</span><span class="n">high</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>  
+        <span class="k">print</span> <span class="s2">&quot; </span><span class="si">%s</span><span class="s2"> jest w zakresie&quot;</span> <span class="o">%</span><span class="k">str</span>(num)  
+    <span class="k">else</span> <span class="p">:</span>  
+        <span class="k">print</span> <span class="s2">&quot;Liczba jest poza zakresem.&quot;</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Wywołaj wartość klucza</span>
-<span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;klucz2&#39;</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[3]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;wartosc2&#39;</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -283,7 +269,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Bardzo ważne jest, że słowniki są bardzo elestyczne i mogą przechowywać różne typy danych. Poniżej kilka przykładów:</p>
+<p>Rozwiązanie kiedy chcesz otrzymać odpowiedź w postaci boolean:</p>
 
 </div>
 </div>
@@ -293,7 +279,8 @@
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;klucz1&#39;</span><span class="p">:</span><span class="mi">123</span><span class="p">,</span><span class="s1">&#39;klucz2&#39;</span><span class="p">:[</span><span class="mi">12</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">33</span><span class="p">],</span><span class="s1">&#39;klucz3&#39;</span><span class="p">:[</span><span class="s1">&#39;elem0&#39;</span><span class="p">,</span><span class="s1">&#39;elem1&#39;</span><span class="p">,</span><span class="s1">&#39;elem2&#39;</span><span class="p">]}</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">spr_bool</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="n">low</span><span class="p">,</span><span class="n">high</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">low</span><span class="p">,</span><span class="n">high</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -303,11 +290,10 @@
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Wywołaj elementy ze słownika</span>
-<span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;klucz3&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">spr_bool</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -320,81 +306,13 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[6]:</div>
+<div class="prompt output_prompt">Out[5]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&#39;elem0&#39;, &#39;elem1&#39;, &#39;elem2&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Możesz wywołać wartość konkretnego elementu z listy stanowiacej wartość jednego z kluczy</span>
-<span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;klucz3&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;elem0&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Wywołując ten element możesz wykorzystać nawet metody</span>
-<span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;klucz3&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[8]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;ELEM0&#39;</pre>
+<pre>True</pre>
 </div>
 
 </div>
@@ -407,17 +325,51 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Możemy takżw wywołać samą wartość klucza</p>
+<hr>
+<p><strong>Napisz funkcję, która przyjmuje wyłacznie string i oblicza liczbę wielkich i małych liter w zdaniu.</strong></p>
+
+<pre><code>Przykładowy String : 'Hello Mr. Rogers, how are you this fine Tuesday?'
+Oczekiwany wynik : 
+Liczba liter napisanych Uppercase : 4
+Liczba liter napisanych Lowecase : 33
+
+</code></pre>
+<p>Jeżeli jesteś abitny, wykorzystaj moduł Collection do rozwiazania tego zadania!</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;klucz1&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">up_low</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">d</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;upper&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;lower&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isupper</span><span class="p">():</span>
+            <span class="n">d</span><span class="p">[</span><span class="s2">&quot;upper&quot;</span><span class="p">]</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">c</span><span class="o">.</span><span class="n">islower</span><span class="p">():</span>
+            <span class="n">d</span><span class="p">[</span><span class="s2">&quot;lower&quot;</span><span class="p">]</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">pass</span>
+    <span class="k">print</span> <span class="s2">&quot;Oryginalny ciąg znaków : &quot;</span><span class="p">,</span> <span class="n">s</span>
+    <span class="k">print</span> <span class="s2">&quot;Liczba wielkich liter : &quot;</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;upper&quot;</span><span class="p">]</span>
+    <span class="k">print</span> <span class="s2">&quot;Liczba małych liter : &quot;</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;lower&quot;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello Mr. Rogers, how are you this fine Tuesday?&#39;</span>
+<span class="n">up_low</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -430,28 +382,49 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[9]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>123</pre>
-</div>
-
-</div>
-
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Oryginalny ciąg znaków :  Hello Mr. Rogers, how are you this fine Tuesday?
+Liczba wielkich liter :  4
+Liczba małych liter :  33
+</pre>
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<p><strong>Napisz funkcję, która wykorzystuję pewną listę i zwraca nową listę z unikalnymi elementami z pierwszej listy</strong></p>
+
+<pre><code>Przykładowa List : [1,1,1,1,2,2,3,3,3,3,4,5]
+Unikalna List : [1, 2, 3, 4, 5]</code></pre>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Odejmowanie 123 od wartości klucza</span>
-<span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;klucz1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;klucz1&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">123</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">unique_list</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">element</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="k">def</span> <span class="nf">unique_list2</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">l</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">x</span>
 </pre></div>
 
 </div>
@@ -461,11 +434,43 @@
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">unique_list</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, 4, 5]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Check</span>
-<span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;klucz1&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">unique_list2</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -484,7 +489,7 @@
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0</pre>
+<pre>[1, 2, 3, 4, 5]</pre>
 </div>
 
 </div>
@@ -497,7 +502,11 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Zwróć uwagę, na fakt że Python posiada wbudowane metody self subtraction oraz addition (multiplication i division). Nie wiem jak to przetłumaczyć, także zobacz przykład a zrozumiesz.</p>
+<hr>
+<p><strong>Napisz funkcję, która mnoży wszystkie liczby z listy</strong></p>
+
+<pre><code>Przykładowa List : [1, 2, 3, -4]
+Oczekiwany Output : -24</code></pre>
 
 </div>
 </div>
@@ -507,94 +516,24 @@
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Ustaw wartość obiektu, jego wartość - 123</span>
-<span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;klucz1&#39;</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">123</span>
-<span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;klucz1&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">mnozenie</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>  
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">*=</span> <span class="n">x</span>  
+    <span class="k">return</span> <span class="n">total</span>  
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[12]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>-123</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Istnieje możliwość tworzenie klucza poprzez przypisanie. Na przykład, jeżeli utworzymy pusty słownik możemy do neigo dodawać pary klucz:wartość</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Stwórz nowy słownik</span>
-<span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Dodaj nowy klucz wraz w wartościa</span>
-<span class="n">d</span><span class="p">[</span><span class="s1">&#39;animal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Dog&#39;</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Można tak robić z rożnymi obiektami</span>
-<span class="n">d</span><span class="p">[</span><span class="s1">&#39;answer&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Wyświetl</span>
-<span class="n">d</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">mnozenie</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -607,13 +546,13 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[18]:</div>
+<div class="prompt output_prompt">Out[13]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;animal&#39;: &#39;Dog&#39;, &#39;answer&#39;: 42}</pre>
+<pre>-24</pre>
 </div>
 
 </div>
@@ -626,18 +565,21 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zagnie&#380;d&#380;anie-dictionaries">Zagnie&#380;d&#380;anie dictionaries<a class="anchor-link" href="#Zagnie&#380;d&#380;anie-dictionaries">&#182;</a></h2><p>Mam nadzieję, że zaczynasz widzieć, jak potężny jest Python dzięki możliwości elestycznego zagnieżdżania obiektów oraz możliwości wywoływania na nich metod. Zobaczmy dictionary zagnieżdżony w dictionary:</p>
+<hr>
+<p><strong>Napisz funkcję, która sprawdza czy dany ciąg znaków jest palindromem czy nie.</strong></p>
+<p>Uwaga: Palindrom to wyraz, fraza lub zdania którą czyta się tak samo od tyłu i od przodu, np. madam, oko, kajak.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Dictionary zagnieżdżony w dictionary zagnieżdżony w dictionary</span>
-<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;klucz1&#39;</span><span class="p">:{</span><span class="s1">&#39;zagklucz&#39;</span><span class="p">:{</span><span class="s1">&#39;zagnieklucz&#39;</span><span class="p">:</span><span class="s1">&#39;wartosc&#39;</span><span class="p">}}}</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">palindrome</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1"># Likwiduje wszystkie spacje, tj. zastępuje spacje &#39; &#39; brakiem spacji &#39;&#39;</span>
+    <span class="k">return</span> <span class="n">s</span> <span class="o">==</span> <span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># weryfikuje czy ciąg znaków jest palidromem wykoszytując slicing</span>
 </pre></div>
 
 </div>
@@ -645,11 +587,85 @@
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">palindrome</span><span class="p">(</span><span class="s1">&#39;nurses run&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">palindrome</span><span class="p">(</span><span class="s1">&#39;abcba&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To jest podstawowa funkcjonalność i koncepcja używania dictionaries. Czas wyciągnać wartość z powyższego słownika:</p>
+<hr>
+<p><strong>TRUDNE</strong>
+Napisz funkcję, która sprawdza czy ciąg znaków jest pangramem czy nie.</p>
+
+<pre><code>Uwaga: Panagram to wyrazy lub zdania, które wykorzystują wszytkie listery alfabetu na raz. Skupmimy się na anglojęzycznym alfabecie a nie polskim.
+Na przykład : "The quick brown fox jumps over the lazy dog"
+
+</code></pre>
+<p>Podpowiedź: Sprawdź moduł string</p>
 
 </div>
 </div>
@@ -659,8 +675,24 @@
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Keep calling the keys</span>
-<span class="n">d</span><span class="p">[</span><span class="s1">&#39;klucz1&#39;</span><span class="p">][</span><span class="s1">&#39;zagklucz&#39;</span><span class="p">][</span><span class="s1">&#39;zagnieklucz&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
+
+<span class="k">def</span> <span class="nf">ispangram</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span> <span class="n">alphabet</span><span class="o">=</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span><span class="p">):</span>  
+    <span class="n">alphaset</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">alphabet</span><span class="p">)</span>  
+    <span class="k">return</span> <span class="n">alphaset</span> <span class="o">&lt;=</span> <span class="nb">set</span><span class="p">(</span><span class="n">str1</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>  
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">ispangram</span><span class="p">(</span><span class="s2">&quot;The quick brown fox jumps over the lazy dog&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -673,40 +705,17 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[21]:</div>
+<div class="prompt output_prompt">Out[22]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;wartosc&#39;</pre>
+<pre>True</pre>
 </div>
 
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Kilka-metod-dictionaries">Kilka metod dictionaries<a class="anchor-link" href="#Kilka-metod-dictionaries">&#182;</a></h2><p>Poniżej możesz zobaczyć kilka podstawowych metod jakie można wykorzystać pracując z dictionaries. Zerknij poniżej, a polubisz je jeszcze bardziej:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Stwórz typowy dictionary</span>
-<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;klucz1&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;klucz2&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;klucz3&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
-</pre></div>
-
-</div>
 </div>
 </div>
 
@@ -716,8 +725,7 @@
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Metoda zwracająca wszytkie klucze z dictionary</span>
-<span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span>
 </pre></div>
 
 </div>
@@ -736,7 +744,7 @@
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&#39;klucz1&#39;, &#39;klucz3&#39;, &#39;klucz2&#39;]</pre>
+<pre>&#39;abcdefghijklmnopqrstuvwxyz&#39;</pre>
 </div>
 
 </div>
@@ -744,83 +752,6 @@
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Metoda zwracająca wszystkie wartości dictionary</span>
-<span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[24]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[1, 3, 2]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Metoda zwracająca w postaci tupli (pl. krotki) wszsytkie elementy dictionary (o tuplach niebawem)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[25]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[(&#39;klucz1&#39;, 1), (&#39;klucz3&#39;, 3), (&#39;klucz2&#39;, 2)]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Sądzę, żep osaidasz już podstawową wiedzę na temat sposobu budowy oraz pracy z dictionaries. Znacznie więcej o dictionaries nauczymy się w dalszej części kursu. Po tej lekcji najważniejsze jest abyś wiedział jak tworzyć dictionary oraz jak odczytywać z niego wartości.</p>
-
-</div>
-</div>
 </div>
  
 

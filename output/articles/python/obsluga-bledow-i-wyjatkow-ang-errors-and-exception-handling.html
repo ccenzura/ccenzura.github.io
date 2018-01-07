@@ -1,0 +1,839 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="ccenzura" />
+        <meta name="keywords" content="error,exception" />
+        <meta name="description" content="Podczas tej lekcji nauczymy się jak obsługiwać błędy i wyjątki w Pythonie. Na pewno w czasie tego kursu miałeś już styczność z errors, np.: In [1]: print &#39;Hello File &#34;&lt;ipython-input-1-23e01f0d17c8&gt;&#34;, line 1 print &#39;Hello ^ SyntaxError: EOL while scanning string literal Zwróć uwagę, w jaki sposób otrzymujemy błąd SyntaxError, z dalszym …" />
+
+
+    <title>Obsługa Błędów i Wyjątków (ang. *Errors and Exception Handling*) - Around Python</title>
+
+        <link rel="stylesheet" href="/theme/css/bootstrap.slate.min.css" type="text/css"/>
+
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/theme/css/pygments/default.css" rel="stylesheet" />
+    
+    <link href="/theme/css/pelican-twitchy.min.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Feeds -->
+</head>
+<body data-spy="scroll" data-target="#scrollspy">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper-small" class="twitchy-background">
+            <ul id="accordion-small" class="sidebar-nav sidebar-nav-small">
+                <li>
+        <a href="" title="Around Python" class="collapsed">
+            <span class="glyphicon glyphicon-home"></span>
+        </a>
+    </li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="/archives.html" title="Recent Articles" class="collapsed">
+            <span class="glyphicon glyphicon-th-list"></span>
+        </a>
+    </li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion-small" href="#collapse-social-small" title="Social" class="collapsed">
+                        <i class="fa fa-users padding-small"></i>
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social-small" class="collapse ">
+                    <li>
+                        <a href="https://bitbucket.org/ccenzura/" title="Bitbucket"><i class="fa fa-bitbucket-square fa-lg padding-small"></i></a>
+                    </li>
+                </ul></li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="#" title="Back to top" class="collapsed">
+            <span class="fa fa-arrow-up"></span>
+        </a>
+    </li>
+            </ul>
+        </div>
+        <div id="sidebar-wrapper" class="twitchy-background">
+            <ul id="accordion" class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="/">
+                            <span class="glyphicon glyphicon-home padding-small"></span>
+                            Around Python
+                    </a>
+                </li>
+                    <li class="nav-divider"></li>
+                    <li>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-latest">
+                            <span class="glyphicon glyphicon-th-list padding-small"></span>
+                            Recent Articles
+                        </a>
+                    </li>
+                    <li class="panel anti-panel"><ul id="collapse-latest" class="sidebar_submenu collapse in">
+                        <li class="">
+                            <a class="hide-overflow" href="/articles/python/funkcja-map.html" title="Funkcja map()">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Funkcja map()
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="hide-overflow" href="/articles/python/bledy-i-wyjatki-praca-domowa.html" title="Błędy i wyjątki - praca domowa">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Błędy i wyjątki - praca domowa
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="hide-overflow" href="/articles/python/bledy-i-wyjatki-praca-domowa-rozwiazanie.html" title="Błędy i wyjątki - praca domowa - rozwiązanie">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Błędy i wyjątki - praca domowa - rozwiązanie
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a class="hide-overflow" href="/articles/python/obsluga-bledow-i-wyjatkow-ang-errors-and-exception-handling.html" title="Obsługa Błędów i Wyjątków (ang. *Errors and Exception Handling*)">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Obsługa Błędów i Wyjątków (ang. *Errors and Exception Handling*)
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="hide-overflow" href="/articles/python/programowanie-obiektowe-praca-domowa.html" title="Programowanie obiektowe - praca domowa">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Programowanie obiektowe - praca domowa
+                            </a>
+                        </li>
+                    <li>
+                        <a href="/archives.html">
+                            <i class="fa fa-arrow-right padding-small"></i>
+                            More
+                        </a>
+                    </li>
+                    </ul></li>
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-social">
+                        <i class="fa fa-users padding-small"></i>
+                        Contact
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="https://bitbucket.org/ccenzura/" title="Bitbucket">
+                            <i class="fa fa-bitbucket-square fa-lg padding-small"></i>
+                            Bitbucket
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-pages">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Pages
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-pages" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="/pages/about-me.html">
+                            <i class="fa fa-file-text padding-small"></i>
+                            About Me
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-categories">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Categories
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-categories" class="sidebar_submenu collapse ">
+                    <li class="active">
+                        <a href="/category/python.html">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            python
+                            <span class="badge pull-right categorybadge">34</span>
+                        </a>
+                    </li>
+                </ul></li>
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- open/close sidebar -->
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+            <span id="right-arrow" class="glyphicon glyphicon-chevron-right"  title="expand sidebar"></span>
+            <span id="left-arrow" class="glyphicon glyphicon-chevron-left" title="minimize sidebar"></span>
+        </a>
+       <!-- /open/close sidebar -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+<section id="content">
+    <article>
+        <div class="row">
+            <div class="col-lg-9">
+                <header class="page-header">
+                    <h1>
+                        <a href="/articles/python/obsluga-bledow-i-wyjatkow-ang-errors-and-exception-handling.html"
+                           rel="bookmark"
+                           title="Permalink to Obsługa Błędów i Wyjątków (ang. *Errors and Exception Handling*)">
+                            Obsługa Błędów i Wyjątków (ang. *Errors and Exception Handling*)
+                        </a>
+                        <small>
+<div class="post-info">
+    <div class="publish-info-block">
+        <small>
+            <span class="published">
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-02T00:00:00+01:00"> wto 02 styczeń 2018</time>
+            </span>
+            <span class="category">
+                <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
+            </span>
+            <span class="tags">
+                <i class="fa fa-tags padding-small"></i>
+                <a href="/tag/error.html">error</a> /                 <a href="/tag/exception.html">exception</a>            </span>
+        </small>
+    </div>
+</div><!-- /.post-info -->                        </small>
+                    </h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="entry-content">
+                    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Podczas tej lekcji nauczymy się jak obsługiwać błędy i wyjątki w Pythonie. Na pewno w czasie tego kursu miałeś już styczność z errors, np.:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Hello</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-1-23e01f0d17c8&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
+<span class="ansi-red-fg">    print &#39;Hello</span>
+               ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> EOL while scanning string literal
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Zwróć uwagę, w jaki sposób otrzymujemy błąd SyntaxError, z dalszym opisem, że był to błąd EOL (błąd końca linii) wywołany podczas skanowania string. Jest to wystarczająco szczegółowe, abyśmy mogli zauważyć, że zapomnieliśmy o pojedynczym cudzysłowie na końcu linii. Zrozumienie różnych typów błędów pomoże znacznie szybciej debugować kod.</p>
+<p>Ten typ błędu i opis jest znany jako wyjątek. Nawet jeśli instrukcja lub wyrażenie jest poprawne pod względem składni, może spowodować błąd podczas próby wykonania. Błędy wykryte podczas wykonywania są nazywane Exceptions i nie powodują przerwania działania kodu.</p>
+<p>Możesz przejrzeć pełną listę wbudowanych wyjątków <a href="https://docs.python.org/2/library/exceptions.html">tutaj</a>. Teraz nauczmy się obsługi błędów (ang. <em> errors</em>) i wyjątków (ang. <em>exceptions</em>) w naszym własnym kodzie.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="try-and-except">try and except<a class="anchor-link" href="#try-and-except">&#182;</a></h2><p>Podstawową terminologią i składnią używaną do obsługi błędów w Pythonie są instrukcje <strong>try</strong> i <strong>except</strong>. Kod, który może powodować wyjątek, jest umieszczany w bloku <strong>try</strong>, a obsługa wyjątku jest zaimplementowana w bloku <strong>except</strong> kodu. Składnia to:</p>
+
+<pre><code>try:
+   Twoje operacje, które mogą powodować wyjątek
+   ...
+except WyjątekI: # możemy tuaj określać dokładny rodzaj wyjątków, który wywoła dany blok
+   Jeżeli jest wyjątekI to wykonaj ten blok.
+except WyjątekII:
+   Jeżeli jest wyjątekII to wykonaj ten blok.
+   ...
+else:
+   Jeżeli brak wyjątków wykonaj ten blok.
+
+</code></pre>
+<p>Możemy również sprawdzić, czy nie ma wyjątków z użyciem tylko except: Aby lepiej zrozumieć to wszystkiego, sprawdźmy przykład: Przyjrzymy się kodowi, który otwiera i zapisuje plik:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;testfile&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Test zapisywania tekstu w pliku&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+    <span class="c1"># Ten blok except zostanie aktywowany wyłacznie w przypadku wywołania wyjątku IOError </span>
+    <span class="k">print</span> <span class="s2">&quot;Error: Nie mogę znaleźć pliku lub źródła danych&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="k">print</span> <span class="s2">&quot;Zapisywanie pliku zakończyło się sukcesem&quot;</span>
+   <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Zapisywanie pliku zakończyło się sukcesem
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Zobaczmy co się stanie, kiedy nie będziemy mieli dostępu do zapisu pliku (otwarcie pliku w trybie 'r'):</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;testfile&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Test zapisywania tekstu w pliku&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+    <span class="c1"># Ten blok except zostanie aktywowany wyłacznie w przypadku wywołania wyjątku IOError </span>
+   <span class="k">print</span> <span class="s2">&quot;Error: Nie mogę znaleźć pliku lub źródła danych&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="k">print</span> <span class="s2">&quot;Zapisywanie pliku zakończyło się sukcesem&quot;</span>
+   <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Error: Nie mogę znaleźć pliku lub źródła danych
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Wspaniale! Zwróć uwagę, jak wywołaliśmy komnunikat! Kod nadal działał i mogliśmy kontynuować działania i uruchamiać bloki kodu. Jest to niezwykle przydatne, gdy musisz uwzględnić możliwe błędy podczas wprowadzania kodu. Możesz przygotować się na błąd i nie przrywać kodu, tak jak widzieliśmy to powyżej.</p>
+<p>Moglibyśmy też po prostu powiedzieć z wyjątkiem: gdybyśmy nie byli pewni, jaki wyjątek się pojawi. Na przykład:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;testfile&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Test zapisywania tekstu w pliku&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="c1"># Ten blok except zostanie aktywowany wyłacznie w przypadku wywołania jakiegokolwiek wyjątku </span>
+   <span class="k">print</span> <span class="s2">&quot;Error: Nie mogę znaleźć pliku lub źródła danych&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="k">print</span> <span class="s2">&quot;Zapisywanie pliku zakończyło się sukcesem&quot;</span>
+   <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Error: Nie mogę znaleźć pliku lub źródła danych
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Swietnie! Teraz nie musimy zapamiętywać listy wszystkich typów wyjątków! Co się stanie, jeśli będziemy chcieli uruchomić kod po wystąpieniu wyjątku? Tutaj zastosowanie ma <strong>finally</strong>.</p>
+<h3 id="finally">finally<a class="anchor-link" href="#finally">&#182;</a></h3><p><strong>Finally</strong>: kod znajdujący się w tym bloku zostanie zawsze wywołany, nawet w przypadku wystąpienia wyjątku w bloku <strong>try</strong>
+    try:
+       kod bloku try
+       ...
+       Z powodu jakiegokolwiek wyjątku ten kod może zostać pominięty!
+    finally:
+       Ten blok kody zawsze będzie wykonany.</p>
+<p>Przykład:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">try</span><span class="p">:</span>
+   <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;testfile&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+   <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Zdanie testowe&quot;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+   <span class="k">print</span> <span class="s2">&quot;Kod bloku finally zawsze jest wykonywany&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Kod bloku finally zawsze jest wykonywany
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Możemy użyć tego połączenia z except. Przanalizujmy przykład, który pobiera informację od użytkownika i może zostać błednie podana:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">askint</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;Proszę podać liczbę: &quot;</span><span class="p">))</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s2">&quot;Wygląda na to że nie podałeś liczby!&quot;</span>
+            
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s2">&quot;Finally, wykonane!&quot;</span>
+        <span class="k">print</span> <span class="n">val</span>       
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">askint</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Proszę podać liczbę: 5
+Finally, wykonane!
+5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">askint</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Proszę podać liczbę: five
+Wygląda na to że nie podałeś liczby!
+Finally, wykonane!
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">UnboundLocalError</span>                         Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-10-6ee53d339e7e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>askint<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">&lt;ipython-input-7-49b80b7b5c78&gt;</span> in <span class="ansi-cyan-fg">askint</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span>             <span class="ansi-green-fg">print</span> <span class="ansi-blue-fg">&#34;Finally, wykonane!&#34;</span>
+<span class="ansi-green-fg">----&gt; 9</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">print</span> val
+
+<span class="ansi-red-fg">UnboundLocalError</span>: local variable &#39;val&#39; referenced before assignment</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Zwróć uwagę na błąd, który wystąpił podczas próby wywołania wartości val (ponieważ nigdy nie została poprawnie przypisana). Zwrócmy się do użytkownika i sprawdźmy, czy typ wejściowy jest liczbą całkowitą:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">askint</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;Proszę podać liczbę: &quot;</span><span class="p">))</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s2">&quot;Wygląda na to że nie podałeś liczby!&quot;</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;Try again-Proszę podać liczbę: &quot;</span><span class="p">))</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s2">&quot;Finally, wykonane&quot;</span>
+        <span class="k">print</span> <span class="n">val</span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">askint</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Proszę podać liczbę: f
+Wygląda na to że nie podałeś liczby!
+Try again-Proszę podać liczbę: f
+Finally, wykonane
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-13-6ee53d339e7e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>askint<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">&lt;ipython-input-11-c8aecf827c5e&gt;</span> in <span class="ansi-cyan-fg">askint</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span>         <span class="ansi-green-fg">except</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>             <span class="ansi-green-fg">print</span> <span class="ansi-blue-fg">&#34;Wygląda na to że nie podałeś liczby!&#34;</span>
+<span class="ansi-green-fg">----&gt; 6</span><span class="ansi-red-fg">             </span>val <span class="ansi-blue-fg">=</span> int<span class="ansi-blue-fg">(</span>raw_input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Try again-Proszę podać liczbę: &#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span>             <span class="ansi-green-fg">print</span> <span class="ansi-blue-fg">&#34;Finally, wykonane&#34;</span>
+
+<span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 10: &#39;f&#39;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Hmmm... weryfikacja podawanej wartości zmiennej jest tylko raz. Jak możemy kontynuować weryfikację do momentu podania poprawnej wartości? Możemy oczywiście zastoswać pętlę <strong>while</strong>!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">askint</span><span class="p">():</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>    
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;Proszę podać liczbę: &quot;</span><span class="p">))</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s2">&quot;Wygląda na to że nie podałeś liczby!&quot;</span>
+            <span class="k">continue</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s1">&#39;Tak, to jest liczba naturalna&#39;</span>
+            <span class="k">break</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s2">&quot;Finally, wykonane&quot;</span>
+
+            <span class="k">print</span> <span class="n">val</span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">askint</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Proszę podać liczbę: q
+Wygląda na to że nie podałeś liczby!
+Finally, wykonane
+Proszę podać liczbę: w
+Wygląda na to że nie podałeś liczby!
+Finally, wykonane
+Proszę podać liczbę: e
+Wygląda na to że nie podałeś liczby!
+Finally, wykonane
+Proszę podać liczbę: r
+Wygląda na to że nie podałeś liczby!
+Finally, wykonane
+Proszę podać liczbę: 6
+Tak, to jest liczba naturalna
+Finally, wykonane
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Wspaniale! Teraz już wiesz jak posługiwać się błedami i wyjątkami w Pythonie z wykorzystaniem notacji try, except, else i finally!</strong></p>
+
+</div>
+</div>
+</div>
+ 
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        processEnvironments: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+                </div>
+                <footer class="text-right">
+                    <p>- ccenzura</p>
+                </footer>
+            </div>
+        </div>
+    </article>
+</section>
+<footer>
+    <hr>
+    <div class="row">
+        <div class="col-lg-9 text-center">
+            <p><small>
+                Built by <a href="http://docs.getpelican.com/en/latest">Pelican</a> / <a href="https://github.com/ingwinlu/pelican-twitchy">pelican-twitchy</a>
+                &middot;                    &copy; 2018 ccenzura
+            </small></p>
+        </div>
+    </div>
+</footer>            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery Version 1.11.2 -->
+    <script src="/theme/js/jquery-1.11.2.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/theme/js/bootstrap.min.js"></script>
+    <!-- twitchy Script -->
+    <script src="/theme/js/pelican_twitchy.min.js"></script>
+
+</body>
+</html>

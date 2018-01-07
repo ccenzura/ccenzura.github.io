@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="ccenzura" />
-        <meta name="keywords" content="python,comparison,operators" />
-        <meta name="description" content="Ciekawą cechą Python jest możliwość łączenia wielu porównań do budowy bardziej złożonych testów. Możesz użyć łączenia porównań w celu skrócenia bardziej skomplikowanych wyrażeń logicznych. Podczas tej lekcji dowiesz sie jak łączyć operatory porównania oraz poznasz inne dwa ważne wyrażenia w Pythonie: and oraz or. Przeanalizujmy kilka przykładów poniżej: In [1 …" />
+        <meta name="keywords" content="error,except,homework" />
+        <meta name="description" content="Zadanie 1¶Zajmij się wyjątkiem wygenerowanym przez poniższy kod, używając bloków try i except. In [1]: for i in [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]: print i**2 --------------------------------------------------------------------------- TypeError Traceback (most recent call last) &lt;ipython-input-1-908335551eea&gt; in &lt;module&gt;() 1 for i in [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]: ----&gt; 2 print i**2 TypeError: unsupported operand type(s …" />
 
 
-    <title>Łączenie operatorów porównania - Around Python</title>
+    <title>Błędy i wyjątki - praca domowa - Around Python</title>
 
         <link rel="stylesheet" href="/theme/css/bootstrap.slate.min.css" type="text/css"/>
 
@@ -86,7 +86,7 @@
                                 Funkcja map()
                             </a>
                         </li>
-                        <li class="">
+                        <li class="active">
                             <a class="hide-overflow" href="/articles/python/bledy-i-wyjatki-praca-domowa.html" title="Błędy i wyjątki - praca domowa">
                                 <i class="fa fa-file-text padding-small"></i>
                                 Błędy i wyjątki - praca domowa
@@ -185,24 +185,24 @@
             <div class="col-lg-9">
                 <header class="page-header">
                     <h1>
-                        <a href="/articles/python/laczenie-operatorow-porownania.html"
+                        <a href="/articles/python/bledy-i-wyjatki-praca-domowa.html"
                            rel="bookmark"
-                           title="Permalink to Łączenie operatorów porównania">
-                            Łączenie operatorów porównania
+                           title="Permalink to Błędy i wyjątki - praca domowa">
+                            Błędy i wyjątki - praca domowa
                         </a>
                         <small>
 <div class="post-info">
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2017-11-22T00:00:00+01:00"> śro 22 listopad 2017</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-02T00:00:00+01:00"> wto 02 styczeń 2018</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
             </span>
             <span class="tags">
                 <i class="fa fa-tags padding-small"></i>
-                <a href="/tag/python.html">python</a> /                 <a href="/tag/comparison.html">comparison</a> /                 <a href="/tag/operators.html">operators</a>            </span>
+                <a href="/tag/error.html">error</a> /                 <a href="/tag/except.html">except</a> /                 <a href="/tag/homework.html">homework</a>            </span>
         </small>
     </div>
 </div><!-- /.post-info -->                        </small>
@@ -218,9 +218,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Ciekawą cechą Python jest możliwość <em>łączenia</em> wielu porównań do budowy bardziej złożonych testów. Możesz użyć łączenia porównań w celu skrócenia bardziej skomplikowanych wyrażeń logicznych.</p>
-<p>Podczas tej lekcji dowiesz sie jak łączyć operatory porównania oraz poznasz inne dwa ważne wyrażenia w Pythonie: <strong>and</strong> oraz <strong>or</strong>.</p>
-<p>Przeanalizujmy kilka przykładów poniżej:</p>
+<h2 id="Zadanie-1">Zadanie 1<a class="anchor-link" href="#Zadanie-1">&#182;</a></h2><p>Zajmij się wyjątkiem wygenerowanym przez poniższy kod, używając bloków try i except.</p>
 
 </div>
 </div>
@@ -230,7 +228,8 @@
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">3</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">]:</span>
+    <span class="k">print</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span>
 </pre></div>
 
 </div>
@@ -243,57 +242,19 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[1]:</div>
+<div class="prompt"></div>
 
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-908335551eea&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">for</span> i <span class="ansi-green-fg">in</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;a&#39;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;b&#39;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;c&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">print</span> i<span class="ansi-blue-fg">**</span><span class="ansi-cyan-fg">2</span>
 
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<span class="ansi-red-fg">TypeError</span>: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;</pre>
 </div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Wyrażenie powyżej sprawdza czy 1 jest mniejsze od 2 <strong>and</strong> czy 2 jest mniejsze od 3. Możemy napisać to takie samo wyrażenia używając <strong>and</strong>, tak jak poniżej:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">1</span><span class="o">&lt;</span><span class="mi">2</span> <span class="ow">and</span> <span class="mi">2</span><span class="o">&lt;</span><span class="mi">3</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[1]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
 </div>
 
 </div>
@@ -304,49 +265,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Operator <strong>and</strong> jest stosowany do sprawdzenia czy oba warunki są spełnione, jeżeli tak to całę wyrażenie jest True.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[3]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Powyżej sprawdzamy czy 3 jest większe niż pozostałe liczby, w tym przypadku także możemy użyć operatora <strong>and</strong>:</p>
+<h2 id="Zadanie-2">Zadanie 2<a class="anchor-link" href="#Zadanie-2">&#182;</a></h2><p>Zajmij się wyjątkiem wygenerowanym przez poniższy kod, używając bloków <strong>try</strong> i <strong>except</strong>. Następnie użyj bloku <strong>finally</strong>, aby wywołać "All Done".</p>
 
 </div>
 </div>
@@ -356,7 +275,10 @@
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">1</span><span class="o">&lt;</span><span class="mi">3</span> <span class="ow">and</span> <span class="mi">3</span><span class="o">&gt;</span><span class="mi">2</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="o">/</span><span class="n">y</span>
 </pre></div>
 
 </div>
@@ -369,15 +291,20 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[2]:</div>
+<div class="prompt"></div>
 
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ZeroDivisionError</span>                         Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-2-3effb78be709&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> y <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">0</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> 
+<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>z <span class="ansi-blue-fg">=</span> x<span class="ansi-blue-fg">/</span>y
 
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<span class="ansi-red-fg">ZeroDivisionError</span>: integer division or modulo by zero</pre>
 </div>
-
 </div>
 
 </div>
@@ -388,17 +315,31 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Istotne jest to że Python sprawdza oba przypadki porównania. Możemy także użyć operatora <strong>or</strong> pisząc wyrażenie w Pythonie.</p>
+<h2 id="Zadanie-3">Zadanie 3<a class="anchor-link" href="#Zadanie-3">&#182;</a></h2><p>Napisz funkcję, która prosi o liczbę całkowitą i wypisuje jej kwadrat. Użyj pętli while z blokami try, except, else, aby uwzględnić niepoprawne dane wejściowe.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">1</span><span class="o">==</span><span class="mi">2</span> <span class="ow">or</span> <span class="mi">2</span><span class="o">&lt;</span><span class="mi">3</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">ask</span><span class="p">():</span>
+    <span class="k">pass</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">ask</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -411,57 +352,16 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[3]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Input an integer: null
+An error occurred! Please try again!
+Input an integer: 2
+Thank you, you number squared is:  4
+</pre>
 </div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Zwróc uwagę, że całe wrażenie jest True. Wynika to z tego, że dzięki opreatorowi <strong>or</strong> tylko jeden przypadek musi być spełniony aby całe wyrażenie było True. Przeanalizujmy poniższy przykład:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">1</span><span class="o">==</span><span class="mi">1</span> <span class="ow">or</span> <span class="mi">100</span><span class="o">==</span><span class="mi">1</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[4]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
 </div>
 
 </div>

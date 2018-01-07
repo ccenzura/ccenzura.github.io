@@ -1,0 +1,1084 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="ccenzura" />
+        <meta name="keywords" content="oop" />
+        <meta name="description" content="Object Oriented Programmin (OOP) jest jedną w głównych przeszkód dla poczatkujących, którzy zaczynają przygodę z programowaniem. W siecie jest bardzo dużo tutoriali i materiałów tłumaczacych zasdany OOP. Śmiało poszukaj w Google, praca programisty wiąże się ze stałą nauką... Podczas tej lekcji zdobędziesz wiedzę na temat OOP w Pythonie, obejmującą poniższe …" />
+
+
+    <title>Object Oriented Programming (pl. *Programowanie obiektowe*) - Around Python</title>
+
+        <link rel="stylesheet" href="/theme/css/bootstrap.slate.min.css" type="text/css"/>
+
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/theme/css/pygments/default.css" rel="stylesheet" />
+    
+    <link href="/theme/css/pelican-twitchy.min.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Feeds -->
+</head>
+<body data-spy="scroll" data-target="#scrollspy">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper-small" class="twitchy-background">
+            <ul id="accordion-small" class="sidebar-nav sidebar-nav-small">
+                <li>
+        <a href="" title="Around Python" class="collapsed">
+            <span class="glyphicon glyphicon-home"></span>
+        </a>
+    </li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="/archives.html" title="Recent Articles" class="collapsed">
+            <span class="glyphicon glyphicon-th-list"></span>
+        </a>
+    </li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion-small" href="#collapse-social-small" title="Social" class="collapsed">
+                        <i class="fa fa-users padding-small"></i>
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social-small" class="collapse ">
+                    <li>
+                        <a href="https://bitbucket.org/ccenzura/" title="Bitbucket"><i class="fa fa-bitbucket-square fa-lg padding-small"></i></a>
+                    </li>
+                </ul></li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="#" title="Back to top" class="collapsed">
+            <span class="fa fa-arrow-up"></span>
+        </a>
+    </li>
+            </ul>
+        </div>
+        <div id="sidebar-wrapper" class="twitchy-background">
+            <ul id="accordion" class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="/">
+                            <span class="glyphicon glyphicon-home padding-small"></span>
+                            Around Python
+                    </a>
+                </li>
+                    <li class="nav-divider"></li>
+                    <li>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-latest">
+                            <span class="glyphicon glyphicon-th-list padding-small"></span>
+                            Recent Articles
+                        </a>
+                    </li>
+                    <li class="panel anti-panel"><ul id="collapse-latest" class="sidebar_submenu collapse in">
+                        <li class="">
+                            <a class="hide-overflow" href="/articles/python/funkcja-map.html" title="Funkcja map()">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Funkcja map()
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="hide-overflow" href="/articles/python/bledy-i-wyjatki-praca-domowa.html" title="Błędy i wyjątki - praca domowa">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Błędy i wyjątki - praca domowa
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="hide-overflow" href="/articles/python/bledy-i-wyjatki-praca-domowa-rozwiazanie.html" title="Błędy i wyjątki - praca domowa - rozwiązanie">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Błędy i wyjątki - praca domowa - rozwiązanie
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="hide-overflow" href="/articles/python/obsluga-bledow-i-wyjatkow-ang-errors-and-exception-handling.html" title="Obsługa Błędów i Wyjątków (ang. *Errors and Exception Handling*)">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Obsługa Błędów i Wyjątków (ang. *Errors and Exception Handling*)
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="hide-overflow" href="/articles/python/programowanie-obiektowe-praca-domowa.html" title="Programowanie obiektowe - praca domowa">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Programowanie obiektowe - praca domowa
+                            </a>
+                        </li>
+                    <li>
+                        <a href="/archives.html">
+                            <i class="fa fa-arrow-right padding-small"></i>
+                            More
+                        </a>
+                    </li>
+                    </ul></li>
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-social">
+                        <i class="fa fa-users padding-small"></i>
+                        Contact
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="https://bitbucket.org/ccenzura/" title="Bitbucket">
+                            <i class="fa fa-bitbucket-square fa-lg padding-small"></i>
+                            Bitbucket
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-pages">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Pages
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-pages" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="/pages/about-me.html">
+                            <i class="fa fa-file-text padding-small"></i>
+                            About Me
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-categories">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Categories
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-categories" class="sidebar_submenu collapse ">
+                    <li class="active">
+                        <a href="/category/python.html">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            python
+                            <span class="badge pull-right categorybadge">34</span>
+                        </a>
+                    </li>
+                </ul></li>
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- open/close sidebar -->
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+            <span id="right-arrow" class="glyphicon glyphicon-chevron-right"  title="expand sidebar"></span>
+            <span id="left-arrow" class="glyphicon glyphicon-chevron-left" title="minimize sidebar"></span>
+        </a>
+       <!-- /open/close sidebar -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+<section id="content">
+    <article>
+        <div class="row">
+            <div class="col-lg-9">
+                <header class="page-header">
+                    <h1>
+                        <a href="/articles/python/object-oriented-programming-pl-programowanie-obiektowe.html"
+                           rel="bookmark"
+                           title="Permalink to Object Oriented Programming (pl. *Programowanie obiektowe*)">
+                            Object Oriented Programming (pl. *Programowanie obiektowe*)
+                        </a>
+                        <small>
+<div class="post-info">
+    <div class="publish-info-block">
+        <small>
+            <span class="published">
+                <i class="fa fa-calendar padding-small"></i><time datetime="2017-12-22T00:00:00+01:00"> pią 22 grudzień 2017</time>
+            </span>
+            <span class="category">
+                <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
+            </span>
+            <span class="tags">
+                <i class="fa fa-tags padding-small"></i>
+                <a href="/tag/oop.html">oop</a>            </span>
+        </small>
+    </div>
+</div><!-- /.post-info -->                        </small>
+                    </h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="entry-content">
+                    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Object Oriented Programmin (OOP) jest jedną w głównych przeszkód dla poczatkujących, którzy zaczynają przygodę z programowaniem.</p>
+<p>W siecie jest bardzo dużo tutoriali i materiałów tłumaczacych zasdany OOP. Śmiało poszukaj w Google, praca programisty wiąże się ze stałą nauką...</p>
+<p>Podczas tej lekcji zdobędziesz wiedzę na temat OOP w Pythonie, obejmującą poniższe zagadnienia:</p>
+<ul>
+<li>Obiekty</li>
+<li>Używanie słowa kluczowego <em>class</em> (pl. <em>klasa</em>)</li>
+<li>Tworzenie atrybutów class</li>
+<li>Tworzenie methods w class</li>
+<li>Podstawy Inheritance (pl. <em>dziedziczenie</em>)</li>
+<li>Podstawy Special Methods for class (pl. <em> metody specjalne klas</em>)</li>
+</ul>
+<p>Przypominam, że w Pythonie wszysko jest obiektem, np. lista, tuple, dictionary. Czas zacząć od kilku przykładów:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pamiętasz jak się wywołuje methods na listach?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">l</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># liczy ile razy w liście występuje liczba 2</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Podczas tej lekcji dowiemy się jak tworzyć obiekty takie jak lista. Do tej pory dowiedzieliśmy się jak tworzyć funkcje. Poznajmy obiekty:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Obiekty">Obiekty<a class="anchor-link" href="#Obiekty">&#182;</a></h2><p>W Pythonie, <strong>wszystko jest obiektem</strong>. Przypomnij sobie jak podczas jednej z poprzednich lekcji wyżywaliśmy funkcji type() aby sprawdzić typ obiektu...</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">([])</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">(())</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">({})</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;type &#39;int&#39;&gt;
+&lt;type &#39;list&#39;&gt;
+&lt;type &#39;tuple&#39;&gt;
+&lt;type &#39;dict&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Już wiemu, że wszystko co wymieniliśmny powyżej jest obiektem, lecz jak stowrzyć własny typ obiektów? Tutaj najistotniejsze jest słowo kluczowe <em>class</em>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="class-(pl.-klasa)">class (pl. <em>klasa</em>)<a class="anchor-link" href="#class-(pl.-klasa)">&#182;</a></h2><p>Obiekty zdefiniowane przez użytkownika tworzone są za pomocą słowa kluczowego class. Class to "plan", który definiuje naturę przyszłego obiektu. Za pomocą class możemy stowrzyć instances (pl. <em>instancje</em>). Instancja jest specyficznym obiektem utworzonym na podstawie danej classy. Dla przykładu, powyżej stworzyliśmy obiekt 'l', który jest instancją obiektu list.</p>
+<p>Sprawdźmy jak używać <strong>class</strong>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Stwórz nowy typ obiektów Przyklad</span>
+<span class="k">class</span> <span class="nc">Przyklad</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="c1"># W ten sposób tworzymy obiekt typu Przyklad</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">Przyklad</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;__main__.Przyklad&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Zachowując konwencję tworząc class stosuje się nazwy zaczynające się wielką literą (ang. <em>capital letter</em>). Zwróć uwagę, że x jest teraz odniesieniem nasze nowej instancji klasy Przyklad. Innymi słowy stworzyliśmy nową instancję (ang. <em>instantiate</em>) klasy Przyklad.</p>
+<p>Wewnątrz naszej class nic nie zaplanowaliśmy, lecz możemy zdefinować atrybuty class i methods.</p>
+<ul>
+<li><strong>Atrybut</strong> to właściwość obiektu.</li>
+<li><strong>Method</strong> to operacja, którą mozemy wykonać z obiektm danej class.</li>
+</ul>
+<p>Na przykład, możemy stowrzyć classę o nazwie Pies. Antrybutem psa może być jestgo rasa lub jego imię, podczas gdy metodą może być szczekanie, które zwraca znaki imitujace głos.</p>
+<p>Aby lepiej zrozumieć atrybuty przyjżyjmy się przykładowi.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Atrybuty">Atrybuty<a class="anchor-link" href="#Atrybuty">&#182;</a></h2><p>Aby utworzyć atrybut należy trzymać się poniżeszej składni:</p>
+
+<pre><code>self.atrybut = coś
+
+</code></pre>
+<p>Jest specjalna metoda o nazwie:</p>
+
+<pre><code>__init__()
+
+</code></pre>
+<p>Metoda ta służy do inicjalizacji atrybutów (w innych językach określa się tak kontruktor) obiektu danej class, np:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">Pies</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">rasa</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rasa</span> <span class="o">=</span> <span class="n">rasa</span>
+        
+<span class="n">pikus</span> <span class="o">=</span> <span class="n">Pies</span><span class="p">(</span><span class="n">rasa</span><span class="o">=</span><span class="s1">&#39;Lab&#39;</span><span class="p">)</span>
+<span class="n">kapsel</span> <span class="o">=</span> <span class="n">Pies</span><span class="p">(</span><span class="n">rasa</span><span class="o">=</span><span class="s1">&#39;Husky&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Przanalizujmy to co zrobiliśmy powyżej. 
+Special Method</p>
+
+<pre><code>__init__ 
+
+</code></pre>
+<p>jest automatycznie wywoływana zaraz po stworzeniu obiektu danej klasy.</p>
+
+<pre><code>def __init__(self, breed):
+
+</code></pre>
+<p>Każdy atrybut w definicji class zaczyna się od odwołania do instancji obiektu. Zgodnie z konwencją odwołujemy się stosując zwrot <strong>self</strong>. Rasa jest atrybutem. Wartość atrybutu jest przekazywana podczs tworzenia instancji class.</p>
+
+<pre><code> self.breed = breed</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Powyżej stworzyliśmy dwie instancje class Pies. Każda z nich posiada inną rasę. Za pomocą poniższej składni możemy uzyskać dostęp do tych atrybutów:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pikus</span><span class="o">.</span><span class="n">rasa</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Lab&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">kapsel</span><span class="o">.</span><span class="n">rasa</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Husky&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Zauważ, że po rasa nie ma żadnych nawiasów, jest tak ponieważ jest to atrybut i nie przyjmuje żadnych argumentów.</p>
+<p>W Pythonie są także <strong>class object attributes</strong> (pl. <em>atrybuty obiektów klasowych</em>). Atrybuty obiektów klasowych są takie dla wszystkich instancji danej classy. Dla przykładu, możemy utowrzyć atrybut <em>gatunek</em> dla klasy Pies. Każdy pies, poza rasą czy imieniem zawsze będzie ssakiem. W poniższym kodzie zaimplementujemy tę logikę:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">Pies</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    
+    <span class="c1"># Class Object Attribute</span>
+    <span class="n">gatunek</span> <span class="o">=</span> <span class="s1">&#39;ssak&#39;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rasa</span><span class="p">,</span> <span class="n">imie</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rasa</span> <span class="o">=</span> <span class="n">rasa</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">imie</span> <span class="o">=</span> <span class="n">imie</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pikus</span> <span class="o">=</span> <span class="n">Pies</span><span class="p">(</span><span class="s1">&#39;Lab&#39;</span><span class="p">,</span><span class="s1">&#39;Pikus&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pikus</span><span class="o">.</span><span class="n">imie</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[22]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Pikus&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Zwróć uwagę, że Class Object Attribute jest zdefiniowany poza jakąkolwiek metodą w klasie. Zgodnie z konwencją definiujemy je jako pierwsze przed metodą  <strong>init</strong>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pikus</span><span class="o">.</span><span class="n">gatunek</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[23]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;ssak&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Methods-(pl.-metody)">Methods (pl. <em>metody</em>)<a class="anchor-link" href="#Methods-(pl.-metody)">&#182;</a></h2><p>Metody są funkcjami definiowanymi wewnątrz ciała class. Metody są wykorzystywane do wykonywania operacji z wykorzystaniem atrybutów naszych obiektów. metody są esncją koncepcji <a href="https://pl.wikipedia.org/wiki/Programowanie_obiektowe">hermetyzacji</a> w paradygmacie OOP. Jest to niezbędne przy dzieleniu obowiązków w programowaniu, szczególnie przy dużych projektach.</p>
+<p>Zasadniczo można myśleć o metodach jako funkcjach działających na Obiekt, które wykorzystują jego <strong>self</strong> (pl. <em>własne</em>) argumenty.</p>
+<p>Przeanalizujmy przykład tworzenia class Kolo:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">Kolo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+
+    <span class="c1"># Kolo otrzyma instancję z wartością promienia (domyślnie 1)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">promien</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">promien</span> <span class="o">=</span> <span class="n">promien</span> 
+
+    <span class="c1"># Metoda powierzchnia obiecza powierzchnię. Zauważ, że używamy self!</span>
+    <span class="k">def</span> <span class="nf">powierzchnia</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">promien</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">promien</span> <span class="o">*</span> <span class="n">Kolo</span><span class="o">.</span><span class="n">pi</span>
+
+    <span class="c1"># Metoda unożliwiająca zmiane wartości promienia</span>
+    <span class="k">def</span> <span class="nf">set_promien</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nowy_promien</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">promien</span> <span class="o">=</span> <span class="n">nowy_promien</span>
+
+    <span class="c1"># Metoda zwracająca promien (to samo co wywołanie .promien)</span>
+    <span class="k">def</span> <span class="nf">get_promien</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">promien</span>
+
+
+<span class="n">k</span> <span class="o">=</span> <span class="n">Kolo</span><span class="p">()</span>
+
+<span class="n">k</span><span class="o">.</span><span class="n">set_promien</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="s1">&#39;Promien wynosi: &#39;</span><span class="p">,</span> <span class="n">k</span><span class="o">.</span><span class="n">get_promien</span><span class="p">()</span>
+<span class="k">print</span> <span class="s1">&#39;Powierzchnia wynosi: &#39;</span><span class="p">,</span> <span class="n">k</span><span class="o">.</span><span class="n">powierzchnia</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Promien wynosi:  2
+Powierzchnia wynosi:  12.56
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Super! Powinienś już siedzieć jak sotsować notację <em>self</em> aby nadawać referencję atrybutom w metodach. Przejrzyj jeszcze raz kod powyżej i spróbuj napisać własne metody.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Inheritance-(pl.-dziedziczenie)">Inheritance (pl. <em>dziedziczenie</em>)<a class="anchor-link" href="#Inheritance-(pl.-dziedziczenie)">&#182;</a></h2><p>Dziedziczenie to sposób tworzenia nowych klas za pomocą klas, które zostały już wcześniej zdefiniowane. Nowo utworzone klasy są nazywane klasami pochodnymi, a klasy, na podstawie których powstają to klasy podstawowowe. Zaletą dziedziczenia jest ponowne użycie kodu i ograniczenie złożoności programu. Klasy pochodne (potomkowie) zastępują lub rozszerzają funkcjonalność klas podstawowych (przodków).</p>
+<p>Zobacz przykład, włączając naszą poprzednią pracę do klasy Dog:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s2">&quot;Animal created&quot;</span>
+
+    <span class="k">def</span> <span class="nf">whoAmI</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s2">&quot;Animal&quot;</span>
+
+    <span class="k">def</span> <span class="nf">eat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s2">&quot;Eating&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">Animal</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">print</span> <span class="s2">&quot;Dog created&quot;</span>
+
+    <span class="k">def</span> <span class="nf">whoAmI</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s2">&quot;Dog&quot;</span>
+
+    <span class="k">def</span> <span class="nf">bark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s2">&quot;Woof!&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Animal created
+Dog created
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">whoAmI</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Dog
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">eat</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Eating
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Woof!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>W tym przykłądzie mamy dwie klasy: Animal i Dog. Animal jest klasą podstawową, a Dog jest klasą pochodną.</p>
+<p>Klasa pochodna dziedziczy metody z klasy bazowej.</p>
+<ul>
+<li>Zostało to udowodnione poprzez wykorzystanie metody eat().</li>
+</ul>
+<p>Klasa pochodna może zmodyfikować metody klasy podstawowej.</p>
+<ul>
+<li>Zostało to zaprezentowane poprzez użycie metody whoAmI().</li>
+</ul>
+<p>Ponadto, klasa pochodna może tworzy własne metody.</p>
+<ul>
+<li>Nowa metoda bark().</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Metody-Specjalne-(ang.-Special-Methods)">Metody Specjalne (ang. <em>Special Methods</em>)<a class="anchor-link" href="#Metody-Specjalne-(ang.-Special-Methods)">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Na koniec omówmy Special Methods. Klasy w Pythonie mogą implementować pewne operacje ze specjalnymi nazwami metod. Te metody nie są w rzeczywistości wywoływane bezpośrednio, lecz w oparciu o specyficzną składnię języka Python. Na przykład,  stworzmy klasę Book:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">Book</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">author</span><span class="p">,</span> <span class="n">pages</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s2">&quot;A book is created&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="n">author</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pages</span> <span class="o">=</span> <span class="n">pages</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Title:</span><span class="si">%s</span><span class="s2"> , author:</span><span class="si">%s</span><span class="s2">, pages:</span><span class="si">%s</span><span class="s2"> &quot;</span> <span class="o">%</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pages</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pages</span>
+
+    <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s2">&quot;A book is destroyed&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">book</span> <span class="o">=</span> <span class="n">Book</span><span class="p">(</span><span class="s2">&quot;Python!&quot;</span><span class="p">,</span> <span class="s2">&quot;Jan Rosa&quot;</span><span class="p">,</span> <span class="mi">155</span><span class="p">)</span>
+
+<span class="c1">#Special Methods</span>
+<span class="k">print</span> <span class="n">book</span>
+<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">book</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">book</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A book is created
+Title:Python! , author:Jan Rosa, pages:155 
+155
+A book is destroyed
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+ 
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        processEnvironments: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+                </div>
+                <footer class="text-right">
+                    <p>- ccenzura</p>
+                </footer>
+            </div>
+        </div>
+    </article>
+</section>
+<footer>
+    <hr>
+    <div class="row">
+        <div class="col-lg-9 text-center">
+            <p><small>
+                Built by <a href="http://docs.getpelican.com/en/latest">Pelican</a> / <a href="https://github.com/ingwinlu/pelican-twitchy">pelican-twitchy</a>
+                &middot;                    &copy; 2018 ccenzura
+            </small></p>
+        </div>
+    </div>
+</footer>            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery Version 1.11.2 -->
+    <script src="/theme/js/jquery-1.11.2.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/theme/js/bootstrap.min.js"></script>
+    <!-- twitchy Script -->
+    <script src="/theme/js/pelican_twitchy.min.js"></script>
+
+</body>
+</html>

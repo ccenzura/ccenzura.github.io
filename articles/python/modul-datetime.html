@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="ccenzura" />
-        <meta name="keywords" content="python,range" />
-        <meta name="description" content="POdczas tej krótkiej lekcji omówimy działanie funkcji range(). Dotychczas nie poznaliśmy jeszcze dokładnego sposobu tworzenia i działania funkcji, lecz możemy poznać jedną z prostrzych (ale bardzo użytecznych) funkcji. Funkcja range() tworzy listę liczb od zera do określonej wartości w parametrze. Możemy także za pomocą parametrów określić początkową wartość oraz wartość …" />
+        <meta name="keywords" content="datetime,module" />
+        <meta name="description" content="Python ma moduł datetime, który pomaga w radzeniu sobie z oznaczeniami czasu w kodzie. Wartości czasu są reprezentowane przez klasę time. Time ma atrybuty: godzina, minuta, sekunda i mikrosekunda. Mogą również zawierać informacje o strefie czasowej. Argumenty inicjujące instancję czasu są opcjonalne, ale domyślna wartość 0 jest mało prawdopodobna. time …" />
 
 
-    <title>Funkcja range() - Around Python</title>
+    <title>Moduł datetime - Around Python</title>
 
         <link rel="stylesheet" href="/theme/css/bootstrap.slate.min.css" type="text/css"/>
 
@@ -92,7 +92,7 @@
                                 Moduł collections
                             </a>
                         </li>
-                        <li class="">
+                        <li class="active">
                             <a class="hide-overflow" href="/articles/python/modul-datetime.html" title="Moduł datetime">
                                 <i class="fa fa-file-text padding-small"></i>
                                 Moduł datetime
@@ -185,24 +185,24 @@
             <div class="col-lg-9">
                 <header class="page-header">
                     <h1>
-                        <a href="/articles/python/funkcja-range.html"
+                        <a href="/articles/python/modul-datetime.html"
                            rel="bookmark"
-                           title="Permalink to Funkcja range()">
-                            Funkcja range()
+                           title="Permalink to Moduł datetime">
+                            Moduł datetime
                         </a>
                         <small>
 <div class="post-info">
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2017-11-28T00:00:00+01:00"> wto 28 listopad 2017</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-12T00:00:00+01:00"> pią 12 styczeń 2018</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
             </span>
             <span class="tags">
                 <i class="fa fa-tags padding-small"></i>
-                <a href="/tag/python.html">python</a> /                 <a href="/tag/range.html">range</a>            </span>
+                <a href="/tag/datetime.html">datetime</a> /                 <a href="/tag/module.html">module</a>            </span>
         </small>
     </div>
 </div><!-- /.post-info -->                        </small>
@@ -218,51 +218,36 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>POdczas tej krótkiej lekcji omówimy działanie funkcji range(). Dotychczas nie poznaliśmy jeszcze dokładnego sposobu tworzenia i działania funkcji, lecz możemy poznać jedną z prostrzych (ale bardzo użytecznych) funkcji.</p>
-<p>Funkcja range() tworzy listę liczb od zera do określonej wartości w parametrze. Możemy także za pomocą parametrów określić początkową wartość oraz wartość skoku/kroku liczb. Przyjrzyjmy się kilku przykładom aby lepiej to zrozumieć:</p>
+<p>Python ma moduł datetime, który pomaga w radzeniu sobie z oznaczeniami czasu w kodzie. Wartości czasu są reprezentowane przez klasę time. Time ma atrybuty: godzina, minuta, sekunda i mikrosekunda. Mogą również zawierać informacje o strefie czasowej. Argumenty inicjujące instancję czasu są opcjonalne, ale domyślna wartość 0 jest mało prawdopodobna.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="time">time<a class="anchor-link" href="#time">&#182;</a></h2><p>Przyjrzyjmy się, jak możemy wyodrębnić informacje o czasie z modułu datetime. Możemy stworzyć znacznik czasu, określając datetime.time(hour, minute, second, microsecond)</p>
 
 </div>
 </div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[1]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="c1"># Sprawdźmy inne komponenty </span>
+
+<span class="k">print</span> <span class="n">t</span>
+<span class="k">print</span> <span class="s1">&#39;hour  :&#39;</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">hour</span>
+<span class="k">print</span> <span class="s1">&#39;minute:&#39;</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">minute</span>
+<span class="k">print</span> <span class="s1">&#39;second:&#39;</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">second</span>
+<span class="k">print</span> <span class="s1">&#39;microsecond:&#39;</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">microsecond</span>
+<span class="k">print</span> <span class="s1">&#39;tzinfo:&#39;</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">tzinfo</span>
 </pre></div>
 
 </div>
@@ -275,131 +260,18 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[2]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>04:20:01
+hour  : 4
+minute: 20
+second: 1
+microsecond: 0
+tzinfo: None
+</pre>
 </div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[3]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[2, 3, 4, 5, 6, 7, 8, 9]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Przypisanie do zmiennej funkcji range tworzy dane typu list</span>
-<span class="n">x</span> <span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[5]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>list</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">start</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># domyślnie range zaczyna się od 0</span>
-<span class="n">stop</span> <span class="o">=</span> <span class="mi">20</span> 
-<span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">stop</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">x</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]</pre>
-</div>
-
 </div>
 
 </div>
@@ -410,8 +282,115 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Super! Zauważ, że liczby w utworzonej liście są <em>do</em> 20, lecz nie obejmują 20, dokładnie tak jak w przypadku indeksowania. Jak określić wartość skoku?</p>
-<p>Możemy określić skok za pomoca trzeciego argumentu:</p>
+<p>Uwaga: Instancja time przechowuje wyłącznie wartości czasu, nie jest związana z datą.</p>
+<p>Możemy takżę sprawdzić wartość mnimalną i maksymalną czasu dnia:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Earliest    :&#39;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">min</span>
+<span class="k">print</span> <span class="s1">&#39;Latest      :&#39;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">max</span>
+<span class="k">print</span> <span class="s1">&#39;Resolution  :&#39;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">resolution</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Earliest    : 00:00:00
+Latest      : 23:59:59.999999
+Resolution  : 0:00:00.000001
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Atrybuty klasy min i max odzwierciedlają prawidłowy zakres czasu w ciągu jednego dnia.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Daty">Daty<a class="anchor-link" href="#Daty">&#182;</a></h2><p>datetime (tak jak podejrzewasz) pozwala nam także pracować z datą. Wartość daty kalendarzowej jest reprezentowana przez klasę date. Instancje posiadają atrybuty: year, month i day. W prosty sposób możemy wykorzystać aktualną datę korzystając z metody today().</p>
+<p>Zobaczmy przykłady:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">today</span>
+<span class="k">print</span> <span class="s1">&#39;ctime:&#39;</span><span class="p">,</span> <span class="n">today</span><span class="o">.</span><span class="n">ctime</span><span class="p">()</span>
+<span class="k">print</span> <span class="s1">&#39;tuple:&#39;</span><span class="p">,</span> <span class="n">today</span><span class="o">.</span><span class="n">timetuple</span><span class="p">()</span>
+<span class="k">print</span> <span class="s1">&#39;ordinal:&#39;</span><span class="p">,</span> <span class="n">today</span><span class="o">.</span><span class="n">toordinal</span><span class="p">()</span>
+<span class="k">print</span> <span class="s1">&#39;Year:&#39;</span><span class="p">,</span> <span class="n">today</span><span class="o">.</span><span class="n">year</span>
+<span class="k">print</span> <span class="s1">&#39;Mon :&#39;</span><span class="p">,</span> <span class="n">today</span><span class="o">.</span><span class="n">month</span>
+<span class="k">print</span> <span class="s1">&#39;Day :&#39;</span><span class="p">,</span> <span class="n">today</span><span class="o">.</span><span class="n">day</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2018-01-16
+ctime: Tue Jan 16 00:00:00 2018
+tuple: time.struct_time(tm_year=2018, tm_mon=1, tm_mday=16, tm_hour=0, tm_min=0, tm_sec=0, tm_wday=1, tm_yday=16, tm_isdst=-1)
+ordinal: 736710
+Year: 2018
+Mon : 1
+Day : 16
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Tak jak w przypadku czasu, możemy poznać zakres dat używając atrybutów min i max.</p>
 
 </div>
 </div>
@@ -421,9 +400,9 @@
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">stop</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="c1"># Wypisz</span>
-<span class="n">x</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Earliest  :&#39;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">min</span>
+<span class="k">print</span> <span class="s1">&#39;Latest    :&#39;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">max</span>
+<span class="k">print</span> <span class="s1">&#39;Resolution:&#39;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">resolution</span>
 </pre></div>
 
 </div>
@@ -436,15 +415,15 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[8]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Earliest  : 0001-01-01
+Latest    : 9999-12-31
+Resolution: 1 day, 0:00:00
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -455,10 +434,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Uwaga-Python-3!"><font color="red">Uwaga Python 3!</font><a class="anchor-link" href="#Uwaga-Python-3!">&#182;</a></h3><p>Być może zastanawiałeś się, co się stanie, jeśli zechcesz użyć ogromnej liczby liczb? Czy Twój komputer przechowa wszystko w pamięci?</p>
-<p>Jest to dylemat, który można rozwiązać za pomocą generatora. Uproszczone wyjaśnienie: generator umożliwia generowanie wygenerowanych obiektów, które są dostarczane w tej instancji, ale nie przechowuje każdej instancji wygenerowanej w pamięci.</p>
-<p>Oznacza to, że generator nie utworzyłby listy do generowania jak range(), ale zamiast tego jednorazowo generuje liczby z tego zakresu. Python 2 ma wbudowany generator range o nazwie xrange(). Zalecane jest użycie xrange() dla pętli <strong>for</strong>  w Pythonie 2.</p>
-<p>Dobra wiadomość w wersji Python 3, range() zachowuje się jak generator i nie musisz się tym martwić. Zobaczmy szybki przykład z xrange():</p>
+<p>Innym sposobem utworzenie nowej instancji daty jest wykorzystanie metody replace() na istniejącej dacie. Na przykład, możesz zmienić rok, pozostawiając dzień i miesiąc bez zmian.</p>
 
 </div>
 </div>
@@ -468,8 +444,11 @@
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="k">print</span> <span class="n">num</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">d1</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+<span class="k">print</span> <span class="s1">&#39;d1:&#39;</span><span class="p">,</span> <span class="n">d1</span>
+
+<span class="n">d2</span> <span class="o">=</span> <span class="n">d1</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">1990</span><span class="p">)</span>
+<span class="k">print</span> <span class="s1">&#39;d2:&#39;</span><span class="p">,</span> <span class="n">d2</span>
 </pre></div>
 
 </div>
@@ -486,57 +465,8 @@
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0
-1
-2
-3
-4
-5
-6
-7
-8
-9
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="k">print</span> <span class="n">num</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0
-1
-2
-3
-4
-5
-6
-7
-8
-9
+<pre>d1: 2015-03-11
+d2: 1990-03-11
 </pre>
 </div>
 </div>
@@ -549,8 +479,117 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Tak więc podstawowym wyjściem w Pythonie 2 (jeśli używasz range() w taki sposób, że nie musisz zapisywać wyników na liście) jest użycie xrange(). W Pythonie 3 użyj range() w dowolnej instancji.</p>
-<p>Teraz powinieneś już dobrze rozumieć, jak używać range() w obu wersjach Pythona.</p>
+<h1 id="Arytmetyka">Arytmetyka<a class="anchor-link" href="#Arytmetyka">&#182;</a></h1><p>Możemy zastosować arytmetykę na obiektach daty aby srpawdzić różnicę w czasie. 
+Przykłady:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">d1</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>datetime.date(2015, 3, 11)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">d2</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>datetime.date(1990, 3, 11)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">d1</span><span class="o">-</span><span class="n">d2</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>datetime.timedelta(9131)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Jako wynik otrzymujemy różnicę w ilości dni pomiędzy dwoma datami. Możesz skorzystać z metody timedelta do sprecyzowania jednostek czasu (day, minutes, hours itp.)</p>
+<p>Super! Teraz powinieneś już rozumieć podstawy wykorzsytania modułu datetime!</p>
 
 </div>
 </div>

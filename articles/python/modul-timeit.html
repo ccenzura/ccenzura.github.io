@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="ccenzura" />
-        <meta name="description" content="" />
+        <meta name="keywords" content="timeit" />
+        <meta name="description" content="Czas twojego kodu¶Czasami ważne jest, aby wiedzieć, jak długo trwa wykonywanie kodu, lub przynajmniej wiedzieć, czy konkretna linia kodu spowalnia cały projekt. W tym celu Python ma wbudowany moduł czasowy. Ten moduł zapewnia prosty sposób na pomiar czasu małych bitów kodu Pythona. Ma zarówno interfejs wiersza poleceń, jak i …" />
 
 
-    <title>Around Python</title>
+    <title>Moduł timeit - Around Python</title>
 
         <link rel="stylesheet" href="/theme/css/bootstrap.slate.min.css" type="text/css"/>
 
@@ -79,7 +80,7 @@
                         </a>
                     </li>
                     <li class="panel anti-panel"><ul id="collapse-latest" class="sidebar_submenu collapse in">
-                        <li class="">
+                        <li class="active">
                             <a class="hide-overflow" href="/articles/python/modul-timeit.html" title="Moduł timeit">
                                 <i class="fa fa-file-text padding-small"></i>
                                 Moduł timeit
@@ -156,7 +157,7 @@
                     </a>
                 </li>
                 <li class="panel anti-panel"><ul id="collapse-categories" class="sidebar_submenu collapse ">
-                    <li >
+                    <li class="active">
                         <a href="/category/python.html">
                             <i class="fa fa-folder-open padding-small"></i>
                             python
@@ -178,30 +179,18 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-<section id="content" class="body">
-    <div class="row">
-        <div class="col-lg-9">
-            <div class="jumbotron">  
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>Around Python</h1>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-9">
-            <h2>Recent Articles:</h2>
-        </div>
-    </div>
-</section>
-<div class="row">
-    <div class="col-lg-9">
-            <article>
-                <h2>
-                    <a href="/articles/python/modul-timeit.html">Moduł timeit</a>
+<section id="content">
+    <article>
+        <div class="row">
+            <div class="col-lg-9">
+                <header class="page-header">
+                    <h1>
+                        <a href="/articles/python/modul-timeit.html"
+                           rel="bookmark"
+                           title="Permalink to Moduł timeit">
+                            Moduł timeit
+                        </a>
+                        <small>
 <div class="post-info">
     <div class="publish-info-block">
         <small>
@@ -216,132 +205,113 @@
                 <a href="/tag/timeit.html">timeit</a>            </span>
         </small>
     </div>
-</div><!-- /.post-info -->                </h2>
-                <div class="summary">
+</div><!-- /.post-info -->                        </small>
+                    </h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="entry-content">
                     
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Czas-twojego-kodu">Czas twojego kodu<a class="anchor-link" href="#Czas-twojego-kodu">&#182;</a></h2><p>Czasami ważne jest, aby wiedzieć, jak długo trwa wykonywanie kodu, lub przynajmniej wiedzieć, czy konkretna linia kodu spowalnia cały projekt. W tym celu Python ma wbudowany moduł czasowy.</p>
-<p>Ten moduł zapewnia prosty sposób na pomiar czasu małych bitów kodu Pythona. Ma zarówno interfejs wiersza poleceń, jak i …</p></div></div></div>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2>
-                    <a href="/articles/python/modul-collections.html">Moduł collections</a>
-<div class="post-info">
-    <div class="publish-info-block">
-        <small>
-            <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-12T00:00:00+01:00"> pią 12 styczeń 2018</time>
-            </span>
-            <span class="category">
-                <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
-            </span>
-            <span class="tags">
-                <i class="fa fa-tags padding-small"></i>
-                <a href="/tag/module.html">module</a> /                 <a href="/tag/collections.html">collections</a>            </span>
-        </small>
-    </div>
-</div><!-- /.post-info -->                </h2>
-                <div class="summary">
-                    
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Moduł collections jest wbudowanym modułem, który implementuje wyspecjalizowane typy danych kontenera, zapewniając alternatywę dla wbudowanych kontenerów ogólnego przeznaczenia Pythona. Poznaliśmy już podstawowe: dictionary, list, set and tuple.</p>
-<p>Teraz dowiemy się o alternatywach dostarczanych przez moduł collections.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Counter">Counter<a class="anchor-link" href="#Counter">&#182;</a></h2><p><em>Counter</em> jest podklasą <em>dictionary</em>, która pomaga liczyć obiekty. Wewnątrz tego elementu elementy są …</p></div></div></div>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2>
-                    <a href="/articles/python/modul-datetime.html">Moduł datetime</a>
-<div class="post-info">
-    <div class="publish-info-block">
-        <small>
-            <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-12T00:00:00+01:00"> pią 12 styczeń 2018</time>
-            </span>
-            <span class="category">
-                <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
-            </span>
-            <span class="tags">
-                <i class="fa fa-tags padding-small"></i>
-                <a href="/tag/datetime.html">datetime</a> /                 <a href="/tag/module.html">module</a>            </span>
-        </small>
-    </div>
-</div><!-- /.post-info -->                </h2>
-                <div class="summary">
-                    
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Python ma moduł datetime, który pomaga w radzeniu sobie z oznaczeniami czasu w kodzie. Wartości czasu są reprezentowane przez klasę time. Time ma atrybuty: godzina, minuta, sekunda i mikrosekunda. Mogą również zawierać informacje o strefie czasowej. Argumenty inicjujące instancję czasu są opcjonalne, ale domyślna wartość 0 jest mało prawdopodobna.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="time">time …</h2></div></div></div>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2>
-                    <a href="/articles/python/iteratory-i-generatory-praca-domowa.html">Iteratory i generatory - praca domowa</a>
-<div class="post-info">
-    <div class="publish-info-block">
-        <small>
-            <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-11T00:00:00+01:00"> czw 11 styczeń 2018</time>
-            </span>
-            <span class="category">
-                <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
-            </span>
-            <span class="tags">
-                <i class="fa fa-tags padding-small"></i>
-                <a href="/tag/iterator.html">iterator</a> /                 <a href="/tag/generator.html">generator</a>            </span>
-        </small>
-    </div>
-</div><!-- /.post-info -->                </h2>
-                <div class="summary">
-                    
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zadanie-1">Zadanie 1<a class="anchor-link" href="#Zadanie-1">&#182;</a></h2><p>Stwórz generetor, który generuje sekwencję liczb do liczy N.</p>
+<p>Ten moduł zapewnia prosty sposób na pomiar czasu małych bitów kodu Pythona. Ma zarówno interfejs wiersza poleceń, jak i wywoływany. Pozwala to uniknąć wielu typowych pułapek przy mierzeniu czasów wykonania.</p>
+<p>Poznajmy timeit!</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">gen_sekwencji</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="k">pass</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">timeit</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Użyjmy timeit do pomiaru czasu wykonania stringu '0-1-2-3-.....-99' za pomocą różnych metod.</p>
+<p>Przekażemy dwa argumenty, które przetestujemy, faktyczną linię kodu w postaci enkapsulowanej jako ciąg znaków oraz liczbę określającą ile raz chcemy uruchomić nasz kod w stringu. Tutaj wybieramy 10 000 razy, aby uzyskać wystarczająco wysokie liczby umożliwiające porównanie różnych metod.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Pętla for</span>
+<span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;&quot;-&quot;.join(str(n) for n in range(100))&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[2]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.21494603157043457</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># List comprehension</span>
+<span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;&quot;-&quot;.join([str(n) for n in range(100)])&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.21930599212646484</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -351,8 +321,53 @@
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">gen_sekwencji</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="k">print</span> <span class="n">x</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Map()</span>
+<span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;&quot;-&quot;.join(map(str, range(100)))&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.13242816925048828</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ekstra! <strong>Widzimy znaczną poprawę czasu przy wykorzystaniu funkcji map()! Dobrze o tym wiedzieć i powinniśmy o tym pamiętać.</strong></p>
+<p>Teraz wykorzystamy magiczną funkcję iPythona %timeit.</p>
+<p>% timeit programu iPython wykona kod w tej samej linii określoną liczbę razy (pętle) i zwróci najszybszy czas działania (najlepszy z 3).</p>
+<p>Powtórz powyższe badania używając magii iPythona!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">timeit</span> &quot;-&quot;.join(str(n) for n in range(100))
 </pre></div>
 
 </div>
@@ -369,16 +384,7 @@
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0
-2
-4
-6
-8
-10
-12
-14
-16
-18
+<pre>100000 loops, best of 3: 16.2 µs per loop
 </pre>
 </div>
 </div>
@@ -387,65 +393,12 @@
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zadanie-2">Zadanie 2<a class="anchor-link" href="#Zadanie-2">&#182;</a></h2><p>Stwórz generator, który wygenruje "n" losowych liczbę pomiędzy minimalną a maksymalną liczbą …</p></div></div></div>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2>
-                    <a href="/articles/python/iteratory-i-generatory-praca-domowa-rozwiazanie.html">Iteratory i generatory - praca domowa - rozwiązanie</a>
-<div class="post-info">
-    <div class="publish-info-block">
-        <small>
-            <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-11T00:00:00+01:00"> czw 11 styczeń 2018</time>
-            </span>
-            <span class="category">
-                <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
-            </span>
-            <span class="tags">
-                <i class="fa fa-tags padding-small"></i>
-                <a href="/tag/iterator.html">iterator</a> /                 <a href="/tag/generator.html">generator</a>            </span>
-        </small>
-    </div>
-</div><!-- /.post-info -->                </h2>
-                <div class="summary">
-                    
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zadanie-1">Zadanie 1<a class="anchor-link" href="#Zadanie-1">&#182;</a></h2><p>Stwórz generetor, który generuje sekwencję kwadratu liczb do liczy N.</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">gen_sekwencji</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-        <span class="k">yield</span> <span class="n">i</span><span class="o">*</span><span class="mi">2</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">gensquares</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="k">print</span> <span class="n">x</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">timeit</span> &quot;-&quot;.join([str(n) for n in range(100)])
 </pre></div>
 
 </div>
@@ -462,16 +415,38 @@
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0
-1
-4
-9
-16
-25
-36
-49
-64
-81
+<pre>100000 loops, best of 3: 15.2 µs per loop
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">timeit</span> &quot;-&quot;.join(map(str, range(100)))
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>100000 loops, best of 3: 10.4 µs per loop
 </pre>
 </div>
 </div>
@@ -484,16 +459,54 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zadanie-2">Zadanie 2<a class="anchor-link" href="#Zadanie-2">&#182;</a></h2><p>Stwórz generator, który wygenruje …</p></div></div></div>
+<p>Super! Ważne jest również, aby pamiętać, że iPython ogranicza ilość <em>czasu rzeczywistego</em> wydanego na procedurę timeit. Na przykład, jeśli uruchomienie 100000 pętli zajęło 10 minut, iPython automatycznie zmniejszyłby liczbę pętli do czegoś bardziej sensownego, np. 100 lub 1000.</p>
+<p>Powinieneś teraz czuć się komfortowo w pracy z pomiarę czasu, zarówno w iPythonie, jak i poza nim. Sprawdź dokumentację, aby uzyskać więcej informacji:
+<a href="https://docs.python.org/2/library/timeit.html">https://docs.python.org/2/library/timeit.html</a></p>
+<p><a href="https://pl.wikibooks.org/wiki/Zanurkuj_w_Pythonie/Korzystanie_z_modu%C5%82u_timeit">Tutaj też zerknij</a></p>
+
+</div>
+</div>
+</div>
+ 
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        processEnvironments: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
                 </div>
-            </article>
-        <div class="btn-more text-right">
-            <a class="btn btn-default btn-xs twitchy-background" href="/archives.html">
-                View all Articles ...
-            </a>
+                <footer class="text-right">
+                    <p>- ccenzura</p>
+                </footer>
+            </div>
         </div>
-    </div>
-</div>
+    </article>
+</section>
 <footer>
     <hr>
     <div class="row">
@@ -515,22 +528,6 @@
     <script src="/theme/js/bootstrap.min.js"></script>
     <!-- twitchy Script -->
     <script src="/theme/js/pelican_twitchy.min.js"></script>
-<script>
-    function FadeInOnScroll(ObjectList){
-        ObjectList.each(function(i) {
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
 
-            if( bottom_of_window > bottom_of_object ){
-                $(this).fadeTo(750,1);
-            }
-        });
-    }
-    articles = $("article").fadeTo(0, 0.05);
-    FadeInOnScroll(articles)
-    $(window).scroll(function() {
-        FadeInOnScroll(articles)
-    });
-</script>
 </body>
 </html>

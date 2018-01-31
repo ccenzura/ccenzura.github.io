@@ -1,0 +1,1008 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="ccenzura" />
+        <meta name="keywords" content="regular expressions,regular,expressions" />
+        <meta name="description" content="Wyrażenia regularne to wzorce pasujące do tekstu opisane za pomocą formalnej składni. W rozmowach zapewne często słyszałeś wyrażenia regularne, nazywane &#34;regex&#34; lub &#34;regexp&#34;. Wyrażenia regularne mogą zawierać wiele reguł, od znalezienia powtórzeń po dopasowywania tekstu i wiele więcej. Wraz z postępem w Pythonie zobaczysz, że wiele problemów z parsowaniem można …" />
+
+
+    <title>Regular Expressions (pl. wyrażenia regularne) - Around Python</title>
+
+        <link rel="stylesheet" href="/theme/css/bootstrap.slate.min.css" type="text/css"/>
+
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/theme/css/pygments/default.css" rel="stylesheet" />
+    
+    <link href="/theme/css/pelican-twitchy.min.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Feeds -->
+</head>
+<body data-spy="scroll" data-target="#scrollspy">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper-small" class="twitchy-background">
+            <ul id="accordion-small" class="sidebar-nav sidebar-nav-small">
+                <li>
+        <a href="" title="Around Python" class="collapsed">
+            <span class="glyphicon glyphicon-home"></span>
+        </a>
+    </li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="/archives.html" title="Recent Articles" class="collapsed">
+            <span class="glyphicon glyphicon-th-list"></span>
+        </a>
+    </li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion-small" href="#collapse-social-small" title="Social" class="collapsed">
+                        <i class="fa fa-users padding-small"></i>
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social-small" class="collapse ">
+                    <li>
+                        <a href="https://bitbucket.org/ccenzura/" title="Bitbucket"><i class="fa fa-bitbucket-square fa-lg padding-small"></i></a>
+                    </li>
+                </ul></li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="#" title="Back to top" class="collapsed">
+            <span class="fa fa-arrow-up"></span>
+        </a>
+    </li>
+            </ul>
+        </div>
+        <div id="sidebar-wrapper" class="twitchy-background">
+            <ul id="accordion" class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="/">
+                            <span class="glyphicon glyphicon-home padding-small"></span>
+                            Around Python
+                    </a>
+                </li>
+                    <li class="nav-divider"></li>
+                    <li>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-latest">
+                            <span class="glyphicon glyphicon-th-list padding-small"></span>
+                            Recent Articles
+                        </a>
+                    </li>
+                    <li class="panel anti-panel"><ul id="collapse-latest" class="sidebar_submenu collapse in">
+                        <li class="">
+                            <a class="hide-overflow" href="/articles/python/liczy-zaawansowane.html" title="Liczy - zaawansowane">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Liczy - zaawansowane
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="hide-overflow" href="/articles/python/stringio.html" title="StringIO">
+                                <i class="fa fa-file-text padding-small"></i>
+                                StringIO
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a class="hide-overflow" href="/articles/python/regular-expressions-pl-wyrazenia-regularne.html" title="Regular Expressions (pl. wyrażenia regularne)">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Regular Expressions (pl. wyrażenia regularne)
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="hide-overflow" href="/articles/python/modul-timeit.html" title="Moduł timeit">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Moduł timeit
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="hide-overflow" href="/articles/python/modul-collections.html" title="Moduł collections">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Moduł collections
+                            </a>
+                        </li>
+                    <li>
+                        <a href="/archives.html">
+                            <i class="fa fa-arrow-right padding-small"></i>
+                            More
+                        </a>
+                    </li>
+                    </ul></li>
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-social">
+                        <i class="fa fa-users padding-small"></i>
+                        Contact
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="https://bitbucket.org/ccenzura/" title="Bitbucket">
+                            <i class="fa fa-bitbucket-square fa-lg padding-small"></i>
+                            Bitbucket
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-pages">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Pages
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-pages" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="/pages/about-me.html">
+                            <i class="fa fa-file-text padding-small"></i>
+                            About Me
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-categories">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Categories
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-categories" class="sidebar_submenu collapse ">
+                    <li class="active">
+                        <a href="/category/python.html">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            python
+                            <span class="badge pull-right categorybadge">51</span>
+                        </a>
+                    </li>
+                </ul></li>
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- open/close sidebar -->
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+            <span id="right-arrow" class="glyphicon glyphicon-chevron-right"  title="expand sidebar"></span>
+            <span id="left-arrow" class="glyphicon glyphicon-chevron-left" title="minimize sidebar"></span>
+        </a>
+       <!-- /open/close sidebar -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+<section id="content">
+    <article>
+        <div class="row">
+            <div class="col-lg-9">
+                <header class="page-header">
+                    <h1>
+                        <a href="/articles/python/regular-expressions-pl-wyrazenia-regularne.html"
+                           rel="bookmark"
+                           title="Permalink to Regular Expressions (pl. wyrażenia regularne)">
+                            Regular Expressions (pl. wyrażenia regularne)
+                        </a>
+                        <small>
+<div class="post-info">
+    <div class="publish-info-block">
+        <small>
+            <span class="published">
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-29T00:00:00+01:00"> pon 29 styczeń 2018</time>
+            </span>
+            <span class="category">
+                <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
+            </span>
+            <span class="tags">
+                <i class="fa fa-tags padding-small"></i>
+                <a href="/tag/regular-expressions.html">regular expressions</a> /                 <a href="/tag/regular.html">regular</a> /                 <a href="/tag/expressions.html">expressions</a>            </span>
+        </small>
+    </div>
+</div><!-- /.post-info -->                        </small>
+                    </h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="entry-content">
+                    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Wyrażenia regularne to wzorce pasujące do tekstu opisane za pomocą formalnej składni. W rozmowach zapewne często słyszałeś wyrażenia regularne, nazywane "regex" lub "regexp". Wyrażenia regularne mogą zawierać wiele reguł, od znalezienia powtórzeń po dopasowywania tekstu i wiele więcej. Wraz z postępem w Pythonie zobaczysz, że wiele problemów z parsowaniem można rozwiązać za pomocą wyrażeń regularnych (są to również zwykłe pytania dotyczące rozmowy o pracę!).</p>
+<p>Jeśli znasz Perl, zauważysz, że składnia wyrażeń regularnych jest bardzo podobna w Pythonie. Do tego wykładu użyjemy modułu re z Pythona.</p>
+<p>Zaczynajmy!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Wyszukiwanie-wzor&#243;w-(ang.-patterns)-w-tek&#347;cie">Wyszukiwanie wzor&#243;w (ang. <em>patterns</em>) w tek&#347;cie<a class="anchor-link" href="#Wyszukiwanie-wzor&#243;w-(ang.-patterns)-w-tek&#347;cie">&#182;</a></h2><p>Jednym z najczęstszych zastosowań modułu re jest wyszukiwanie wzorców w tekście. Poniżej szybki przykład zastosowania metody wyszukiwania w module re w celu znalezienia tekstu:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="c1"># Lista wzorów do wyszukania</span>
+<span class="n">patterns</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;slowo1&#39;</span><span class="p">,</span> <span class="s1">&#39;slowo2&#39;</span> <span class="p">]</span>
+
+<span class="c1"># Tekst do analizy</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Jest to string, który zawiera słowo1, lecz nie zawiera slowo2&#39;</span>
+
+<span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">patterns</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s1">&#39;Szukam &quot;</span><span class="si">%s</span><span class="s1">&quot; w: </span><span class="se">\n</span><span class="s1">&quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">text</span><span class="p">),</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span>  <span class="n">text</span><span class="p">)</span>
+    <span class="c1"># Weryfikacja dopasowania</span>
+    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span>  <span class="n">text</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">print</span> <span class="s1">&#39;Znaleziono dopasowanie. </span><span class="se">\n</span><span class="s1">&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">print</span> <span class="s1">&#39;Brak dopasowania.</span><span class="se">\n</span><span class="s1">&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Szukam &#34;slowo1&#34; w: 
+&#34;Jest to string, który zawiera słowo1, lecz nie zawiera slowo2&#34; 
+
+Brak dopasowania.
+
+Szukam &#34;slowo2&#34; w: 
+&#34;Jest to string, który zawiera słowo1, lecz nie zawiera slowo2&#34; 
+
+Znaleziono dopasowanie. 
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Wwidzimy, że re.search() pobiera wzór, skanuje tekst, a następnie zwraca <strong>Znaleziono dopasowanie</strong>. Jeśli nie znajduje żadenego wzorca, zwraca  <strong>Brak dopasowania</strong>. Aby uzyskać jaśniejszy obraz tego obiektu dopasowania, sprawdź poniżej:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Lista wzorów do wyszukania</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="s1">&#39;slowo1&#39;</span>
+
+<span class="c1"># Tekst do analizy</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Jest to string, który zawiera slowo1, lecz nie zawiera slowo2.&#39;</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span>  <span class="n">text</span><span class="p">)</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[44]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>_sre.SRE_Match</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ten <strong>dopasowany</strong> zwracany przez metodę search() jest czymś więcej niż tylko Boolean lub None, zawiera informacje o dopasowaniu, w tym oryginalny string wejściowy, użyte wyrażenie regularne i położenie match. Zobaczmy metody, których możemy użyć na obiekcie match:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Pokaż początek match</span>
+<span class="n">match</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[45]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>22</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Pokaż koniec</span>
+<span class="n">match</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[47]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>27</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Split-z-wykorzystaniem-wyra&#380;e&#324;-regularnych">Split z wykorzystaniem wyra&#380;e&#324; regularnych<a class="anchor-link" href="#Split-z-wykorzystaniem-wyra&#380;e&#324;-regularnych">&#182;</a></h2><p>Zobaczmy jak możemy wykonać split za pomocą składni moduły re. Powinno to wyglądać podobnie jak metoda split() string.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Znak po którym dzielimy</span>
+<span class="n">split_term</span> <span class="o">=</span> <span class="s1">&#39;@&#39;</span>
+<span class="c1"># String który dzielimy</span>
+<span class="n">phrase</span> <span class="o">=</span> <span class="s1">&#39;Jaka jest domena adresu email: hello@gmail.com&#39;</span>
+
+<span class="c1"># Split stringu</span>
+<span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">split_term</span><span class="p">,</span> <span class="n">phrase</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[49]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;Jaka jest domena adresu email: hello&#39;, &#39;gmail.com&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Zwróć uwagę, jak re.split() zwraca listę stringów, podzieloną w miejscu wystąpienia '@' (split_term), który zostaje pominięty w liście. Stwórz kilka przykładów, aby się upewnić że rozumiesz!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Wyszukanie-wszytkich-wyst&#261;pie&#324;-wzorca">Wyszukanie wszytkich wyst&#261;pie&#324; wzorca<a class="anchor-link" href="#Wyszukanie-wszytkich-wyst&#261;pie&#324;-wzorca">&#182;</a></h2><p>Możemy użyć re.findall() aby znaleźć wszystkie wystąpienia w stringu, np:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Zwraca listę wszystkich match</span>
+<span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;match&#39;</span><span class="p">,</span><span class="s1">&#39;test phrase match is in middle&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[50]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;match&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Sk&#322;adnia-wyra&#380;e&#324;-regularnych-z-u&#380;yciem-modu&#322;u-re">Sk&#322;adnia wyra&#380;e&#324; regularnych z u&#380;yciem modu&#322;u re<a class="anchor-link" href="#Sk&#322;adnia-wyra&#380;e&#324;-regularnych-z-u&#380;yciem-modu&#322;u-re">&#182;</a></h2><p>Większą część tej lekcji poświęcimy sposobie użycia re z Pythonem. Wyrażenia regularne obsługują ogromną różnorodność wzorów, po prostu znajdując miejsce, w którym wystąpił pojedynczy ciąg znaków.</p>
+<p>Możemy użyć <em>metacharacters</em> razem z re, aby znaleźć określone typy wzorów.</p>
+<p>Ponieważ będziemy testować wiele form składni wielokrotnych, stwórzmy funkcję, która wydrukuje wyniki, z podaniem listy różnych wyrażeń regularnych i frazy do przeanalizowania:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">multi_re_find</span><span class="p">(</span><span class="n">patterns</span><span class="p">,</span><span class="n">phrase</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Pobiera listę wzorów regex</span>
+<span class="sd">    Drukuje listę wszystkich dopasowań</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">patterns</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s1">&#39;Przeszukaj frazę wykorzystując re: </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">pattern</span>
+        <span class="k">print</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">phrase</span><span class="p">)</span>
+        <span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Sk&#322;adnia-powt&#243;rze&#324;">Sk&#322;adnia powt&#243;rze&#324;<a class="anchor-link" href="#Sk&#322;adnia-powt&#243;rze&#324;">&#182;</a></h3><p>Istneieje pięć sposobów na wyrażenie powtórzeń we wzorcu:
+There are five ways to express repetition in a pattern:</p>
+
+<pre><code>1.) Wzorzec, po którym następuje meta-charecter '*', jest powtarzany zero lub więcej razy.
+</code></pre>
+<p>    2.) Zmiana '*' na '+', powoduje że wzorzec musi pojawić się co najmniej raz.
+    3.) Wykorzystanie '?' oznacza, że worzec pojawia się zero lub jeden raz.
+    4.) Jeżeli chcesz określić liczbę wystąpień, użyj '{m}' po wzorcu, gdzie m określa liczbę powtórzeń wzorca.
+    5.) Użyj {m, n} gdzie m określa minimalną liczbą powtórzeń, a n maksymalną. Pominięcie n ({m,}) oznacza, że wartość pojawia się co najmniej m razy, bez maksimum.</p>
+<p>Now we will see an example of each of these using our multi_re_find function:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">test_phrase</span> <span class="o">=</span> <span class="s1">&#39;sdsd..sssddd...sdddsddd...dsds...dsssss...sdddd&#39;</span>
+
+<span class="n">test_patterns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sd*&#39;</span><span class="p">,</span>         <span class="c1"># s bez lub wieloma d</span>
+                <span class="s1">&#39;sd+&#39;</span><span class="p">,</span>          <span class="c1"># s z jednym lub wieloma d</span>
+                <span class="s1">&#39;sd?&#39;</span><span class="p">,</span>          <span class="c1"># s bez lub z jednym d</span>
+                <span class="s1">&#39;sd{3}&#39;</span><span class="p">,</span>        <span class="c1"># s z trzema d</span>
+                <span class="s1">&#39;sd{2,3}&#39;</span><span class="p">,</span>      <span class="c1"># s z dwoma lub trzema d</span>
+                <span class="p">]</span>
+
+<span class="n">multi_re_find</span><span class="p">(</span><span class="n">test_patterns</span><span class="p">,</span> <span class="n">test_phrase</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Przeszukaj frazę wykorzystując re: &#39;sd*&#39;
+[&#39;sd&#39;, &#39;sd&#39;, &#39;s&#39;, &#39;s&#39;, &#39;sddd&#39;, &#39;sddd&#39;, &#39;sddd&#39;, &#39;sd&#39;, &#39;s&#39;, &#39;s&#39;, &#39;s&#39;, &#39;s&#39;, &#39;s&#39;, &#39;s&#39;, &#39;sdddd&#39;]
+
+
+Przeszukaj frazę wykorzystując re: &#39;sd+&#39;
+[&#39;sd&#39;, &#39;sd&#39;, &#39;sddd&#39;, &#39;sddd&#39;, &#39;sddd&#39;, &#39;sd&#39;, &#39;sdddd&#39;]
+
+
+Przeszukaj frazę wykorzystując re: &#39;sd?&#39;
+[&#39;sd&#39;, &#39;sd&#39;, &#39;s&#39;, &#39;s&#39;, &#39;sd&#39;, &#39;sd&#39;, &#39;sd&#39;, &#39;sd&#39;, &#39;s&#39;, &#39;s&#39;, &#39;s&#39;, &#39;s&#39;, &#39;s&#39;, &#39;s&#39;, &#39;sd&#39;]
+
+
+Przeszukaj frazę wykorzystując re: &#39;sd{3}&#39;
+[&#39;sddd&#39;, &#39;sddd&#39;, &#39;sddd&#39;, &#39;sddd&#39;]
+
+
+Przeszukaj frazę wykorzystując re: &#39;sd{2,3}&#39;
+[&#39;sddd&#39;, &#39;sddd&#39;, &#39;sddd&#39;, &#39;sddd&#39;]
+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Zestawy-znak&#243;w">Zestawy znak&#243;w<a class="anchor-link" href="#Zestawy-znak&#243;w">&#182;</a></h2><p>Zestawy znaków są używane, gdy chcesz dopasować dowolną grupę znaków w punkcie wejścia. Nawiasy służą do konstruowania danych zestawu znaków. Na przykład: [ab] wyszukuje wystąpienia a lub b.
+Zobaczmy kilka przykładów:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">test_phrase</span> <span class="o">=</span> <span class="s1">&#39;sdsd..sssddd...sdddsddd...dsds...dsssss...sdddd&#39;</span>
+
+<span class="n">test_patterns</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;[sd]&#39;</span><span class="p">,</span>    <span class="c1"># wystąpienie s lub d</span>
+                 <span class="s1">&#39;s[sd]+&#39;</span><span class="p">]</span>   <span class="c1"># s z jednym lub więcej s lub d</span>
+            
+
+<span class="n">multi_re_find</span><span class="p">(</span><span class="n">test_patterns</span><span class="p">,</span><span class="n">test_phrase</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Przeszukaj frazę wykorzystując re: &#39;[sd]&#39;
+[&#39;s&#39;, &#39;d&#39;, &#39;s&#39;, &#39;d&#39;, &#39;s&#39;, &#39;s&#39;, &#39;s&#39;, &#39;d&#39;, &#39;d&#39;, &#39;d&#39;, &#39;s&#39;, &#39;d&#39;, &#39;d&#39;, &#39;d&#39;, &#39;s&#39;, &#39;d&#39;, &#39;d&#39;, &#39;d&#39;, &#39;d&#39;, &#39;s&#39;, &#39;d&#39;, &#39;s&#39;, &#39;d&#39;, &#39;s&#39;, &#39;s&#39;, &#39;s&#39;, &#39;s&#39;, &#39;s&#39;, &#39;s&#39;, &#39;d&#39;, &#39;d&#39;, &#39;d&#39;, &#39;d&#39;]
+
+
+Przeszukaj frazę wykorzystując re: &#39;s[sd]+&#39;
+[&#39;sdsd&#39;, &#39;sssddd&#39;, &#39;sdddsddd&#39;, &#39;sds&#39;, &#39;sssss&#39;, &#39;sdddd&#39;]
+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pierwsze [sd] zwraca każdą instancję. Drugie s[sd]+ po prostu zwraca wszystko zaczynające się od s, a drugim znakiem jest s lub d.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Wyukluczenia">Wyukluczenia<a class="anchor-link" href="#Wyukluczenia">&#182;</a></h2><p>Możemy użyć ^, aby wykluczyć terminy, włączając je do notacji składni nawiasów. Na przykład: [^ ...] dopasuje dowolny pojedynczy znak, który nie znajduje się w nawiasie. Zobaczmy kilka przykładów:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">test_phrase</span> <span class="o">=</span> <span class="s1">&#39;To jest ciag! Ale ma interpunkcje. Jak mozemy ja usunac?&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Użyj [^!.? ], aby sprawdzić zgodność, zwraca te znaki które nie są!,.,? lub spacją. Dodaj +, aby sprawdzić, czy dopasowanie pojawia się co najmniej raz, co w zasadzie zwraca same słówa.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;[^!.? ]+&#39;</span><span class="p">,</span><span class="n">test_phrase</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;To&#39;,
+ &#39;jest&#39;,
+ &#39;ciag&#39;,
+ &#39;Ale&#39;,
+ &#39;ma&#39;,
+ &#39;interpunkcje&#39;,
+ &#39;Jak&#39;,
+ &#39;mozemy&#39;,
+ &#39;ja&#39;,
+ &#39;usunac&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Zakresy-znak&#243;w">Zakresy znak&#243;w<a class="anchor-link" href="#Zakresy-znak&#243;w">&#182;</a></h2><p>W miarę jak zestawy znaków stają się większe, wpisywanie każdego znaku, który powinien (lub nie powinien) pasować, może stać się bardzo uciążliwe. Bardziej kompaktowy format przy użyciu zakresów znaków pozwala zdefiniować zestaw znaków obejmujący wszystkie sąsiadujące znaki między punktem początkowym i końcowym. Używany format to [początek-koniec].</p>
+<p>Typowe przypadki użycia to wyszukanie określonego zakresu liter w alfabecie, na przykład [a-f] zwróci wyniki z literami od a do f.</p>
+<p>Przejdźmy przez kilka przykładów:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">test_phrase</span> <span class="o">=</span> <span class="s1">&#39;To jest przykladowe zdanie. Sprawdzmy czy znajdziemy przykladowe fragmenty tekstu.&#39;</span>
+
+<span class="n">test_patterns</span><span class="o">=</span><span class="p">[</span> <span class="s1">&#39;[a-z]+&#39;</span><span class="p">,</span>      <span class="c1"># sekwencja małych liter</span>
+                <span class="s1">&#39;[A-Z]+&#39;</span><span class="p">,</span>      <span class="c1"># sekwencja wielkich liter</span>
+                <span class="s1">&#39;[a-zA-Z]+&#39;</span><span class="p">,</span>   <span class="c1"># sekwencja małych i wielkich liter</span>
+                <span class="s1">&#39;[A-Z][a-z]+&#39;</span><span class="p">]</span> <span class="c1"># jedna wielka litera z pozostałymi małymi literami</span>
+                
+<span class="n">multi_re_find</span><span class="p">(</span><span class="n">test_patterns</span><span class="p">,</span><span class="n">test_phrase</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Przeszukaj frazę wykorzystując re: &#39;[a-z]+&#39;
+[&#39;o&#39;, &#39;jest&#39;, &#39;przykladowe&#39;, &#39;zdanie&#39;, &#39;prawdzmy&#39;, &#39;czy&#39;, &#39;znajdziemy&#39;, &#39;przykladowe&#39;, &#39;fragmenty&#39;, &#39;tekstu&#39;]
+
+
+Przeszukaj frazę wykorzystując re: &#39;[A-Z]+&#39;
+[&#39;T&#39;, &#39;S&#39;]
+
+
+Przeszukaj frazę wykorzystując re: &#39;[a-zA-Z]+&#39;
+[&#39;To&#39;, &#39;jest&#39;, &#39;przykladowe&#39;, &#39;zdanie&#39;, &#39;Sprawdzmy&#39;, &#39;czy&#39;, &#39;znajdziemy&#39;, &#39;przykladowe&#39;, &#39;fragmenty&#39;, &#39;tekstu&#39;]
+
+
+Przeszukaj frazę wykorzystując re: &#39;[A-Z][a-z]+&#39;
+[&#39;To&#39;, &#39;Sprawdzmy&#39;]
+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Escape-Codes">Escape Codes<a class="anchor-link" href="#Escape-Codes">&#182;</a></h2><p>Możesz użyć specjalnych escape codes, aby znaleźć określone typy wzorców w danych, takie jak cyfry, "nie cyfry", spacje i wiele innych. Na przykład:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Kod</th>
+<th class="head">Znaczenie</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">\d</span></tt></td>
+<td>cyfra</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">\D</span></tt></td>
+<td>nie cyfra</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">\s</span></tt></td>
+<td>white space (tab, space, nowa linia, etc.)</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">\S</span></tt></td>
+<td>nie white space</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">\w</span></tt></td>
+<td>alfanumeryczny</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">\W</span></tt></td>
+<td>nie alfanumeryczny</td>
+</tr>
+</tbody>
+</table><p>Escapes są oznaczone prefiksem znaku z backslash (). Niestety, backslash jest znakiem escape w normalnych w normalnych łańcuchach napisanych w Pythonie, co skutkuje trudnościami w odczytania wyrażeń. Używanie nieprzetworzonych łańcuchów, możliwe jest poprzez użycie prefiksu r, które przy tworzeniu wyrażeń regularnych eliminuje ten problem i zapewnia czytelność.</p>
+<p>Uważam, że użycie prefiksu r do uniknięcia backshlash jest prawdopodobnie jedną z rzeczy, które początkującym uniemożliwiają odczyt kodu regex. Mam nadzieję, że po przeanalizowaniu poniższych przykładów ta składnia stanie się jasna.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">test_phrase</span> <span class="o">=</span> <span class="s1">&#39;Ten string zawiera kilka liczb 1233 oraz symbol #hashtag&#39;</span>
+
+<span class="n">test_patterns</span><span class="o">=</span><span class="p">[</span> <span class="sa">r</span><span class="s1">&#39;\d+&#39;</span><span class="p">,</span> <span class="c1"># sekwencja cyfr</span>
+                <span class="sa">r</span><span class="s1">&#39;\D+&#39;</span><span class="p">,</span> <span class="c1"># sekwencja nie cyfr</span>
+                <span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="c1"># sekwencja white space</span>
+                <span class="sa">r</span><span class="s1">&#39;\S+&#39;</span><span class="p">,</span> <span class="c1"># sekwencja nie white space</span>
+                <span class="sa">r</span><span class="s1">&#39;\w+&#39;</span><span class="p">,</span> <span class="c1"># sekwencja znaków alfanumerycznych</span>
+                <span class="sa">r</span><span class="s1">&#39;\W+&#39;</span><span class="p">,</span> <span class="c1"># sekwencja znaków nie alfanumerycznych</span>
+                <span class="p">]</span>
+
+<span class="n">multi_re_find</span><span class="p">(</span><span class="n">test_patterns</span><span class="p">,</span><span class="n">test_phrase</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Przeszukaj frazę wykorzystując re: &#39;\\d+&#39;
+[&#39;1233&#39;]
+
+
+Przeszukaj frazę wykorzystując re: &#39;\\D+&#39;
+[&#39;Ten string zawiera kilka liczb &#39;, &#39; oraz symbol #hashtag&#39;]
+
+
+Przeszukaj frazę wykorzystując re: &#39;\\s+&#39;
+[&#39; &#39;, &#39; &#39;, &#39; &#39;, &#39; &#39;, &#39; &#39;, &#39; &#39;, &#39; &#39;, &#39; &#39;]
+
+
+Przeszukaj frazę wykorzystując re: &#39;\\S+&#39;
+[&#39;Ten&#39;, &#39;string&#39;, &#39;zawiera&#39;, &#39;kilka&#39;, &#39;liczb&#39;, &#39;1233&#39;, &#39;oraz&#39;, &#39;symbol&#39;, &#39;#hashtag&#39;]
+
+
+Przeszukaj frazę wykorzystując re: &#39;\\w+&#39;
+[&#39;Ten&#39;, &#39;string&#39;, &#39;zawiera&#39;, &#39;kilka&#39;, &#39;liczb&#39;, &#39;1233&#39;, &#39;oraz&#39;, &#39;symbol&#39;, &#39;hashtag&#39;]
+
+
+Przeszukaj frazę wykorzystując re: &#39;\\W+&#39;
+[&#39; &#39;, &#39; &#39;, &#39; &#39;, &#39; &#39;, &#39; &#39;, &#39; &#39;, &#39; &#39;, &#39; #&#39;]
+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Podsumowanie">Podsumowanie<a class="anchor-link" href="#Podsumowanie">&#182;</a></h2><p>Powinieneś teraz dobrze rozumieć, jak używać modułu wyrażeń regularnych w Pythonie. Jest mnóstwo bardziej skomplikowanych zastosowań, ale byłoby nierozsądnie przejść przez każdy przypadek użycia. Zamiast tego spójrz na pełną [dokumentację] (<a href="https://docs.python.org/2/library/re.html#regular-expression-syntax">https://docs.python.org/2/library/re.html#regular-expression-syntax</a>), jeśli zajdzie potrzeba sprawdzenia konkretnego przypadku.</p>
+<p>Możesz również sprawdzić ładne tabele podsumowań w tym <a href="http://www.tutorialspoint.com/python/python_reg_expressions.htm">po angielsku</a> oraz inny <a href="http://home.agh.edu.pl/~mkuta/tk/WyrazeniaRegularne.html">opis po polsku</a></p>
+
+</div>
+</div>
+</div>
+ 
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        processEnvironments: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+                </div>
+                <footer class="text-right">
+                    <p>- ccenzura</p>
+                </footer>
+            </div>
+        </div>
+    </article>
+</section>
+<footer>
+    <hr>
+    <div class="row">
+        <div class="col-lg-9 text-center">
+            <p><small>
+                Built by <a href="http://docs.getpelican.com/en/latest">Pelican</a> / <a href="https://github.com/ingwinlu/pelican-twitchy">pelican-twitchy</a>
+                &middot;                    &copy; 2018 ccenzura
+            </small></p>
+        </div>
+    </div>
+</footer>            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery Version 1.11.2 -->
+    <script src="/theme/js/jquery-1.11.2.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/theme/js/bootstrap.min.js"></script>
+    <!-- twitchy Script -->
+    <script src="/theme/js/pelican_twitchy.min.js"></script>
+
+</body>
+</html>

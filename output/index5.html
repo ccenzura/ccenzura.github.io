@@ -80,6 +80,18 @@
                     </li>
                     <li class="panel anti-panel"><ul id="collapse-latest" class="sidebar_submenu collapse in">
                         <li class="">
+                            <a class="hide-overflow" href="/articles/python/liczy-zaawansowane.html" title="Liczy - zaawansowane">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Liczy - zaawansowane
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="hide-overflow" href="/articles/python/stringio.html" title="StringIO">
+                                <i class="fa fa-file-text padding-small"></i>
+                                StringIO
+                            </a>
+                        </li>
+                        <li class="">
                             <a class="hide-overflow" href="/articles/python/regular-expressions-pl-wyrazenia-regularne.html" title="Regular Expressions (pl. wyrażenia regularne)">
                                 <i class="fa fa-file-text padding-small"></i>
                                 Regular Expressions (pl. wyrażenia regularne)
@@ -95,18 +107,6 @@
                             <a class="hide-overflow" href="/articles/python/modul-collections.html" title="Moduł collections">
                                 <i class="fa fa-file-text padding-small"></i>
                                 Moduł collections
-                            </a>
-                        </li>
-                        <li class="">
-                            <a class="hide-overflow" href="/articles/python/modul-datetime.html" title="Moduł datetime">
-                                <i class="fa fa-file-text padding-small"></i>
-                                Moduł datetime
-                            </a>
-                        </li>
-                        <li class="">
-                            <a class="hide-overflow" href="/articles/python/iteratory-i-generatory-praca-domowa.html" title="Iteratory i generatory - praca domowa">
-                                <i class="fa fa-file-text padding-small"></i>
-                                Iteratory i generatory - praca domowa
                             </a>
                         </li>
                     <li>
@@ -160,7 +160,7 @@
                         <a href="/category/python.html">
                             <i class="fa fa-folder-open padding-small"></i>
                             python
-                            <span class="badge pull-right categorybadge">49</span>
+                            <span class="badge pull-right categorybadge">51</span>
                         </a>
                     </li>
                 </ul></li>
@@ -199,6 +199,184 @@
 </section>
 <div class="row">
     <div class="col-lg-9">
+            <article>
+                <h2>
+                    <a href="/articles/python/liczy-zaawansowane.html">Liczy - zaawansowane</a>
+<div class="post-info">
+    <div class="publish-info-block">
+        <small>
+            <span class="published">
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-31T00:00:00+01:00"> śro 31 styczeń 2018</time>
+            </span>
+            <span class="category">
+                <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
+            </span>
+            <span class="tags">
+                <i class="fa fa-tags padding-small"></i>
+                <a href="/tag/numer.html">numer</a> /                 <a href="/tag/numbers.html">numbers</a> /                 <a href="/tag/liczby.html">liczby</a>            </span>
+        </small>
+    </div>
+</div><!-- /.post-info -->                </h2>
+                <div class="summary">
+                    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Podczas tej lekcji poznamy kilka więcej sposobów reprezentowania liczby w Pythonie</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hexadecimal-(pl.-System-szesnastkowy)">Hexadecimal (pl. <em>System szesnastkowy</em>)<a class="anchor-link" href="#Hexadecimal-(pl.-System-szesnastkowy)">&#182;</a></h2><p>Używając funkcji hex() mamy możliwość konwertowania liczb do systemu <a href="https://pl.wikipedia.org/wiki/Szesnastkowy_system_liczbowy">szesnastkowego</a>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">hex</span><span class="p">(</span><span class="mi">246</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[1]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;0xf6&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">hex</span><span class="p">(</span><span class="mi">512</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[2]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;0x200&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Binary-(pl.--system-dw&#243;jkowy)">Binary (pl. <em> system dw&#243;jkowy</em>)<a class="anchor-link" href="#Binary-(pl.--system-dw&#243;jkowy)">&#182;</a></h2><p>Używając funkcji bin() mamy możliwośc konwertowania liczb …</p></div></div></div>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2>
+                    <a href="/articles/python/stringio.html">StringIO</a>
+<div class="post-info">
+    <div class="publish-info-block">
+        <small>
+            <span class="published">
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-31T00:00:00+01:00"> śro 31 styczeń 2018</time>
+            </span>
+            <span class="category">
+                <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
+            </span>
+            <span class="tags">
+                <i class="fa fa-tags padding-small"></i>
+                <a href="/tag/stringio.html">stringio</a> /                 <a href="/tag/string.html">string</a>            </span>
+        </small>
+    </div>
+</div><!-- /.post-info -->                </h2>
+                <div class="summary">
+                    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>StringIO to moduł implemenetujący w pamięci pliki jako obiekty. Ten obiekt może być użyty jako input lub output większości funkcji, które wymagałyby standardowego obiektu pliku.</p>
+<p>Najlepszym sposobem na zrozumienie tego jest analiza kilku przykładów.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">StringIO</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Arbitralny string</span>
+<span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;To jest normalny string.&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Użycie …</span></pre></div></div></div></div></div>
+                </div>
+            </article>
+            <hr/>
             <article>
                 <h2>
                     <a href="/articles/python/regular-expressions-pl-wyrazenia-regularne.html">Regular Expressions (pl. wyrażenia regularne)</a>
@@ -291,135 +469,6 @@
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Counter">Counter<a class="anchor-link" href="#Counter">&#182;</a></h2><p><em>Counter</em> jest podklasą <em>dictionary</em>, która pomaga liczyć obiekty. Wewnątrz tego elementu elementy są …</p></div></div></div>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2>
-                    <a href="/articles/python/modul-datetime.html">Moduł datetime</a>
-<div class="post-info">
-    <div class="publish-info-block">
-        <small>
-            <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-12T00:00:00+01:00"> pią 12 styczeń 2018</time>
-            </span>
-            <span class="category">
-                <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
-            </span>
-            <span class="tags">
-                <i class="fa fa-tags padding-small"></i>
-                <a href="/tag/datetime.html">datetime</a> /                 <a href="/tag/module.html">module</a>            </span>
-        </small>
-    </div>
-</div><!-- /.post-info -->                </h2>
-                <div class="summary">
-                    
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Python ma moduł datetime, który pomaga w radzeniu sobie z oznaczeniami czasu w kodzie. Wartości czasu są reprezentowane przez klasę time. Time ma atrybuty: godzina, minuta, sekunda i mikrosekunda. Mogą również zawierać informacje o strefie czasowej. Argumenty inicjujące instancję czasu są opcjonalne, ale domyślna wartość 0 jest mało prawdopodobna.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="time">time …</h2></div></div></div>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2>
-                    <a href="/articles/python/iteratory-i-generatory-praca-domowa.html">Iteratory i generatory - praca domowa</a>
-<div class="post-info">
-    <div class="publish-info-block">
-        <small>
-            <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-11T00:00:00+01:00"> czw 11 styczeń 2018</time>
-            </span>
-            <span class="category">
-                <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
-            </span>
-            <span class="tags">
-                <i class="fa fa-tags padding-small"></i>
-                <a href="/tag/iterator.html">iterator</a> /                 <a href="/tag/generator.html">generator</a>            </span>
-        </small>
-    </div>
-</div><!-- /.post-info -->                </h2>
-                <div class="summary">
-                    
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zadanie-1">Zadanie 1<a class="anchor-link" href="#Zadanie-1">&#182;</a></h2><p>Stwórz generetor, który generuje sekwencję liczb do liczy N.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">gen_sekwencji</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="k">pass</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">gen_sekwencji</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="k">print</span> <span class="n">x</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0
-2
-4
-6
-8
-10
-12
-14
-16
-18
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zadanie-2">Zadanie 2<a class="anchor-link" href="#Zadanie-2">&#182;</a></h2><p>Stwórz generator, który wygenruje "n" losowych liczbę pomiędzy minimalną a maksymalną liczbą …</p></div></div></div>
                 </div>
             </article>
         <div class="btn-more text-right">

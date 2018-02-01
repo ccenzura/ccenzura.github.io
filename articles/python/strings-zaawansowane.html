@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="ccenzura" />
-        <meta name="keywords" content="python,list,comprehension" />
-        <meta name="description" content="Oprócz operacji sekwencyjnych i metod list, Python zawiera bardziej zaawansowaną operację zwaną list comprehensions. List comprehensions umożliwia budowanie list przy użyciu innej notacji. Możesz przyjąć, że jest to jedna linia pętli for wbudowanej w nawiasy. Przykład poniżej: Przykład 1¶ In [1]: # Wciągnij każdą literę ze string lst = [x for x …" />
+        <meta name="keywords" content="string" />
+        <meta name="description" content="Obiekty typu string obsługują wiele metod, które mogą zaoszczędzić czas bądź dodać nowe funkcjonalności. Zapoznajmy się z kilkoma z nich. In [2]: s = &#39;hello world&#39; Zmiana wielkości liter¶Możemy wykorzystać metodę do zmiany wielkości liter w stringu, np wszystkie na wielkie, wszystkie na małe, lub pierwsza wielka a pozostałe małe …" />
 
 
-    <title>List comprehensions (pl. *wyrażenia listowe*) - Around Python</title>
+    <title>Strings - zaawansowane - Around Python</title>
 
         <link rel="stylesheet" href="/theme/css/bootstrap.slate.min.css" type="text/css"/>
 
@@ -86,7 +86,7 @@
                                 Sets - zaawansowane
                             </a>
                         </li>
-                        <li class="">
+                        <li class="active">
                             <a class="hide-overflow" href="/articles/python/strings-zaawansowane.html" title="Strings - zaawansowane">
                                 <i class="fa fa-file-text padding-small"></i>
                                 Strings - zaawansowane
@@ -185,24 +185,24 @@
             <div class="col-lg-9">
                 <header class="page-header">
                     <h1>
-                        <a href="/articles/python/list-comprehensions-pl-wyrazenia-listowe.html"
+                        <a href="/articles/python/strings-zaawansowane.html"
                            rel="bookmark"
-                           title="Permalink to List comprehensions (pl. *wyrażenia listowe*)">
-                            List comprehensions (pl. *wyrażenia listowe*)
+                           title="Permalink to Strings - zaawansowane">
+                            Strings - zaawansowane
                         </a>
                         <small>
 <div class="post-info">
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2017-11-28T00:00:00+01:00"> wto 28 listopad 2017</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-02-01T00:00:00+01:00"> czw 01 luty 2018</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
             </span>
             <span class="tags">
                 <i class="fa fa-tags padding-small"></i>
-                <a href="/tag/python.html">python</a> /                 <a href="/tag/list.html">list</a> /                 <a href="/tag/comprehension.html">comprehension</a>            </span>
+                <a href="/tag/string.html">string</a>            </span>
         </small>
     </div>
 </div><!-- /.post-info -->                        </small>
@@ -218,56 +218,20 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Oprócz operacji sekwencyjnych i metod list, Python zawiera bardziej zaawansowaną operację zwaną list comprehensions.</p>
-<p>List comprehensions umożliwia budowanie list przy użyciu innej notacji. Możesz przyjąć, że jest to jedna linia pętli <strong>for</strong> wbudowanej w nawiasy. Przykład poniżej:</p>
-<h2 id="Przyk&#322;ad-1">Przyk&#322;ad 1<a class="anchor-link" href="#Przyk&#322;ad-1">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Wciągnij każdą literę ze string</span>
-<span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="s1">&#39;word&#39;</span><span class="p">]</span>
-</pre></div>
+<p>Obiekty typu string obsługują wiele metod, które mogą zaoszczędzić czas bądź dodać nowe funkcjonalności. Zapoznajmy się z kilkoma z nich.</p>
 
 </div>
 </div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># sprawdź</span>
-<span class="n">lst</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;hello world&#39;</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[2]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;w&#39;, &#39;o&#39;, &#39;r&#39;, &#39;d&#39;]</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -276,9 +240,8 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To jest podstawowe założenie list comprehension.</p>
-<p>Poniżej jeszcze kilka przykładów list comprehension.</p>
-<h2 id="Przyk&#322;ad-2">Przyk&#322;ad 2<a class="anchor-link" href="#Przyk&#322;ad-2">&#182;</a></h2>
+<h2 id="Zmiana-wielko&#347;ci-liter">Zmiana wielko&#347;ci liter<a class="anchor-link" href="#Zmiana-wielko&#347;ci-liter">&#182;</a></h2><p>Możemy wykorzystać metodę do zmiany wielkości liter w stringu, np wszystkie na wielkie, wszystkie na małe, lub pierwsza wielka a pozostałe małe.</p>
+
 </div>
 </div>
 </div>
@@ -287,21 +250,8 @@
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Przypisz kwadrat liczb z funkcji range do listy</span>
-<span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">11</span><span class="p">)]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">lst</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Zmiana wielkości liter na wielkie</span>
+<span class="n">s</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -314,13 +264,13 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[2]:</div>
+<div class="prompt output_prompt">Out[3]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</pre>
+<pre>&#39;Hello world&#39;</pre>
 </div>
 
 </div>
@@ -328,26 +278,36 @@
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Przyk&#322;ad-3">Przyk&#322;ad 3<a class="anchor-link" href="#Przyk&#322;ad-3">&#182;</a></h2><p>Zobaczmy co się stanie kiedy dodamy instrukcję if:</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Wyciągnij liczby parzyste z funkcji range</span>
-<span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;HELLO WORLD&#39;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -357,7 +317,7 @@
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">lst</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -376,7 +336,7 @@
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[0, 2, 4, 6, 8, 10]</pre>
+<pre>&#39;hello world&#39;</pre>
 </div>
 
 </div>
@@ -389,7 +349,355 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Przyk&#322;ad-4">Przyk&#322;ad 4<a class="anchor-link" href="#Przyk&#322;ad-4">&#182;</a></h2><p>Można budować też znacznie bardziej skomplikowane wyrażenia arytmetyczne:</p>
+<h2 id="Lokalizacja-znaku-oraz-zliczanie-znak&#243;w">Lokalizacja znaku oraz zliczanie znak&#243;w<a class="anchor-link" href="#Lokalizacja-znaku-oraz-zliczanie-znak&#243;w">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">)</span> <span class="c1"># zlicza ile razy w danym string występuje dany znak</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">)</span> <span class="c1"># zwraca pozycję pierwszego wystąpienia danego znaku</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Formatowanie">Formatowanie<a class="anchor-link" href="#Formatowanie">&#182;</a></h2><p>Metoda center() umożliwia umieszczenie dane go string pomiędzy podanym znakiem oraz umożliwia określenie jaką łączną długość nowego stringu chcemy. Metoda rzadko używana w podczas kodowania...</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="s1">&#39;z&#39;</span><span class="p">)</span> <span class="c1"># string s zostaje otoczony taką ilością &#39;z&#39; aby łączna ilość znajków w zwróconym string wynosiła 20</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;zzzzhello worldzzzzz&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Mtoda expandtabs() umożliwia wykorzystanie notacji \t:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="s1">&#39;hello</span><span class="se">\t</span><span class="s1">hi&#39;</span><span class="o">.</span><span class="n">expandtabs</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;hello   hi&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Metody-is-something,-sprawdzaj&#261;ce-dany-string">Metody is something, sprawdzaj&#261;ce dany string<a class="anchor-link" href="#Metody-is-something,-sprawdzaj&#261;ce-dany-string">&#182;</a></h2><p>Poniższe metody sprawdzają czy dany string spełnia jakiś warunek. Sprawdźmy ich zastosowanie:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Metoda isalnum() zwraca True jeżeli wszystkie znaki w string są alfanumeryczne.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Metoda isalpha() zwraca True jeżeli wszystkie znaki w stringu są alfabetyczne.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Metoda islower() zwraca True jeżeli wszystkie znaki w stringu są małymi literami.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Metoda isspace() zwraca True jeżeli wszystkie znaki w stringu są white spaces.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Metoda istitle() zwraca True jeżeli w stringu pierwszy znak jest wielką literą a pozostałe znakim małymi, np. Gdańsk, Ilona</p>
 
 </div>
 </div>
@@ -399,12 +707,7 @@
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Konwertuj Celsius do Fahrenheit</span>
-<span class="n">celsius</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mf">20.1</span><span class="p">,</span><span class="mf">34.5</span><span class="p">]</span>
-
-<span class="n">fahrenheit</span> <span class="o">=</span> <span class="p">[((</span><span class="nb">float</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="n">temp</span> <span class="o">+</span> <span class="mi">32</span><span class="p">)</span> <span class="k">for</span> <span class="n">temp</span> <span class="ow">in</span> <span class="n">celsius</span><span class="p">]</span>
-
-<span class="n">fahrenheit</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">istitle</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -423,7 +726,7 @@
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[32.0, 50.0, 68.18, 94.1]</pre>
+<pre>False</pre>
 </div>
 
 </div>
@@ -436,7 +739,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Przyk&#322;ad-5">Przyk&#322;ad 5<a class="anchor-link" href="#Przyk&#322;ad-5">&#182;</a></h2><p>Można także wykorzystać zagnieżdżanie list comprehensions, na przykład:</p>
+<p>Metoda isupper() zwraca True jeżeli wszystkie znaki w stringu są wielkimi literami.</p>
 
 </div>
 </div>
@@ -446,8 +749,7 @@
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)]]</span>
-<span class="n">lst</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -466,7 +768,7 @@
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[0, 1, 16, 81, 256, 625, 1296, 2401, 4096, 6561, 10000]</pre>
+<pre>False</pre>
 </div>
 
 </div>
@@ -479,7 +781,159 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>W dalszej częsci kursu będziemy uczyć się na temt generatorów. Po tej lekcji powinieneś swobodnie czytać i budować proste list comprehensions.</p>
+<p>Metoda endwish() z wraca True jeżeli string kończy się określonym znakiem. Działa to podobie jak s[-1], tyle że zwraca wartość boolean.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Built-in-Reg.-Expressions">Built-in Reg. Expressions<a class="anchor-link" href="#Built-in-Reg.-Expressions">&#182;</a></h2><p>Obiekty string maja wbudowane metody, które mogę przypominać wyrażenia regularne.
+Możemy użyć split() aby podzielić string za pomocą jakiegoś znaku dany string na elementy i zwrócić listę wyników.
+Możemy także użyć partition(), które zwraca tuple zawierającą pierwszą część string, definiowany jako parametr separator, oraz pozostałą część string.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;h&#39;, &#39;llo&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[19]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(&#39;h&#39;, &#39;e&#39;, &#39;llo&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[20]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;hello&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Teraz powinieneś swobodnie korzystać z rożnych wbudowanych metod dla obiektów typu string.</strong></p>
 
 </div>
 </div>

@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="ccenzura" />
-        <meta name="keywords" content="python,comparison,operator" />
-        <meta name="description" content="Podczas tej lekcji będziemy uczyć się o Operatorach porównania w Pythonie. Umożliwiają nam one porównanie zmiennych oraz wyników otrzumując wartość logiczną (True lub False). Jeżeli znasz podstawy matematyki to zagadnienie to, nie powinno być dla Ciebie obce. Najpierw przyjrzyjmy się tabeli z operatorami porównania, a potem przejdziemy kilka przykładów: Tabela …" />
+        <meta name="keywords" content="dictionary" />
+        <meta name="description" content="W przeciwieństwie do innych struktur danych, które poznaliśmy, większość naprawdę użytecznych metod dostępnych dla słowników została już omówiona podczas kursu. W tym miejscu dotkniemy jeszcze tylko kilku: In [1]: d = {&#39;k1&#39;:1,&#39;k2&#39;:2} Dictionary Comprehensions¶Podobnie jak w przypadku List Comprehensions, słownikowe typy danych obsługują również własną wersję szybkiego …" />
 
 
-    <title>Operatory porównania - Around Python</title>
+    <title>Dictionaries - zaawansowane - Around Python</title>
 
         <link rel="stylesheet" href="/theme/css/bootstrap.slate.min.css" type="text/css"/>
 
@@ -80,7 +80,7 @@
                         </a>
                     </li>
                     <li class="panel anti-panel"><ul id="collapse-latest" class="sidebar_submenu collapse in">
-                        <li class="">
+                        <li class="active">
                             <a class="hide-overflow" href="/articles/python/dictionaries-zaawansowane.html" title="Dictionaries - zaawansowane">
                                 <i class="fa fa-file-text padding-small"></i>
                                 Dictionaries - zaawansowane
@@ -185,24 +185,24 @@
             <div class="col-lg-9">
                 <header class="page-header">
                     <h1>
-                        <a href="/articles/python/operatory-porownania.html"
+                        <a href="/articles/python/dictionaries-zaawansowane.html"
                            rel="bookmark"
-                           title="Permalink to Operatory porównania">
-                            Operatory porównania
+                           title="Permalink to Dictionaries - zaawansowane">
+                            Dictionaries - zaawansowane
                         </a>
                         <small>
 <div class="post-info">
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2017-11-22T00:00:00+01:00"> śro 22 listopad 2017</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-02-02T00:00:00+01:00"> pią 02 luty 2018</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
             </span>
             <span class="tags">
                 <i class="fa fa-tags padding-small"></i>
-                <a href="/tag/python.html">python</a> /                 <a href="/tag/comparison.html">comparison</a> /                 <a href="/tag/operator.html">operator</a>            </span>
+                <a href="/tag/dictionary.html">dictionary</a>            </span>
         </small>
     </div>
 </div><!-- /.post-info -->                        </small>
@@ -218,67 +218,39 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Podczas tej lekcji będziemy uczyć się o Operatorach porównania w Pythonie. Umożliwiają nam one porównanie zmiennych oraz wyników otrzumując wartość logiczną (True lub False).</p>
-<p>Jeżeli znasz podstawy matematyki to zagadnienie to, nie powinno być dla Ciebie obce.</p>
-<p>Najpierw przyjrzyjmy się tabeli z operatorami porównania, a potem przejdziemy kilka przykładów:</p>
-<h2 id="Tabela-Operator&#243;w-por&#243;wnania">Tabela Operator&#243;w por&#243;wnania<a class="anchor-link" href="#Tabela-Operator&#243;w-por&#243;wnania">&#182;</a></h2><table class="table table-bordered">
-<tr>
-<th style="width:10%">Operator</th><th style="width:45%">Opis</th><th>Przykład</th>
-</tr>
-<tr>
-<td>==</td>
-<td>Jeżeli wartości dwóch argumentów są równe to warunek jest True.</td>
-<td> (a == b) nie jest True.</td>
-</tr>
-<tr>
-<td>!=</td>
-<td>Jeżeli wartośći dwóch argumentów nie są równe to warunek jest True.</td>
-<td>(a != b) jest True</td>
-</tr>
-<tr>
-<td>&lt;&gt;</td>
-<td>Jeżeli wartośći dwóch argumentów nie są równe to warunek jest True.</td>
-<td> (a &lt;&gt; b) jest True. Jest to podobne operatora != .</td>
-</tr>
-<tr>
-<td>&gt;</td>
-<td>Jeżeli wartość argumentu po lewej stronie jest większa niż po prawej to warunek jest True.</td>
-<td> (a &gt; b) nie jest True.</td>
-</tr>
-<tr>
-<td>&lt;</td>
-<td>Jeżeli wartość argumentu po lewej stronie jest mniejsza niż po prawej to warunek jest True.</td>
-<td> (a &lt; b) jest True.</td>
-</tr>
-<tr>
-<td>&gt;=</td>
-<td>Jeżeli wartość argumentu po lewej stronie jest większa lub równa niż po prawej to warunek jest True.</td>
-<td> (a &gt;= b) nie jest True. </td>
-</tr>
-<tr>
-<td>&lt;=</td>
-<td>Jeżeli wartość argumentu po lewej stronie jest mniejsza lub równa niż po prawej to warunek jest True.</td>
-<td> (a &lt;= b) jest True. </td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Poniżej kilka przykładów dla każdego z operatorów:</p>
-<h3 id="R&#243;wne">R&#243;wne<a class="anchor-link" href="#R&#243;wne">&#182;</a></h3>
+<p>W przeciwieństwie do innych struktur danych, które poznaliśmy, większość naprawdę użytecznych metod dostępnych dla słowników została już omówiona podczas kursu. W tym miejscu dotkniemy jeszcze tylko kilku:</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">2</span> <span class="o">==</span> <span class="mi">2</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;k1&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;k2&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dictionary-Comprehensions">Dictionary Comprehensions<a class="anchor-link" href="#Dictionary-Comprehensions">&#182;</a></h2><p>Podobnie jak w przypadku List Comprehensions, słownikowe typy danych obsługują również własną wersję szybkiego tworzenia. Nie jest to tak powszechnie używane, jak List Comprehensions, a składnia jest następująca:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)}</span>
 </pre></div>
 
 </div>
@@ -291,15 +263,66 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[3]:</div>
+<div class="prompt output_prompt">Out[2]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<pre>{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}</pre>
 </div>
 
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Jednym z powodów, dla których nie jest to tak powszechnie stosowane, jest trudność w ustrukturyzowaniu kluczowych nazw, które nie są oparte na wartościach.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Iteracja-po-kluczach,-warto&#347;ciach-i-elementach">Iteracja po kluczach, warto&#347;ciach i elementach<a class="anchor-link" href="#Iteracja-po-kluczach,-warto&#347;ciach-i-elementach">&#182;</a></h2><p>Dictionaries mogą być iterowane przy użyciu dedykowanej dla nich metody, np:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">iterkeys</span><span class="p">():</span>
+    <span class="k">print</span> <span class="n">k</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>k2
+k1
+</pre>
+</div>
 </div>
 
 </div>
@@ -311,7 +334,8 @@
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">1</span> <span class="o">==</span> <span class="mi">0</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">itervalues</span><span class="p">():</span>
+    <span class="k">print</span> <span class="n">v</span>
 </pre></div>
 
 </div>
@@ -324,15 +348,47 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[4]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2
+1
+</pre>
+</div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+    <span class="k">print</span> <span class="n">item</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(&#39;k2&#39;, 2)
+(&#39;k1&#39;, 1)
+</pre>
+</div>
 </div>
 
 </div>
@@ -343,49 +399,17 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Nie-r&#243;wne">Nie r&#243;wne<a class="anchor-link" href="#Nie-r&#243;wne">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">2</span> <span class="o">!=</span> <span class="mi">1</span>
-</pre></div>
+<h1 id="Podgl&#261;d-kluczy,-warto&#347;ci-i-element&#243;w">Podgl&#261;d kluczy, warto&#347;ci i element&#243;w<a class="anchor-link" href="#Podgl&#261;d-kluczy,-warto&#347;ci-i-element&#243;w">&#182;</a></h1><p>Możemy użyć metody view aby podejrzeć klucze, wartości czy elementy, np:</p>
 
 </div>
 </div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[5]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">2</span> <span class="o">!=</span> <span class="mi">2</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">viewitems</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -404,7 +428,7 @@
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
+<pre>dict_items([(&#39;k2&#39;, 2), (&#39;k1&#39;, 1)])</pre>
 </div>
 
 </div>
@@ -418,7 +442,7 @@
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">2</span> <span class="o">&lt;&gt;</span> <span class="mi">1</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">viewkeys</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -437,7 +461,7 @@
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<pre>dict_keys([&#39;k2&#39;, &#39;k1&#39;])</pre>
 </div>
 
 </div>
@@ -451,7 +475,7 @@
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">2</span> <span class="o">&lt;&gt;</span> <span class="mi">2</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">viewvalues</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -470,7 +494,7 @@
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
+<pre>dict_values([2, 1])</pre>
 </div>
 
 </div>
@@ -478,310 +502,6 @@
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Wi&#281;ksze-ni&#380;">Wi&#281;ksze ni&#380;<a class="anchor-link" href="#Wi&#281;ksze-ni&#380;">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">1</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[9]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">4</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[10]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Mniejsze-ni&#380;">Mniejsze ni&#380;<a class="anchor-link" href="#Mniejsze-ni&#380;">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">4</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[11]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[12]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Wi&#281;ksze-lub-r&#243;wne-ni&#380;">Wi&#281;ksze lub r&#243;wne ni&#380;<a class="anchor-link" href="#Wi&#281;ksze-lub-r&#243;wne-ni&#380;">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">2</span> <span class="o">&gt;=</span> <span class="mi">2</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[13]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">2</span> <span class="o">&gt;=</span> <span class="mi">1</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[14]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Mniejsze-lub-r&#243;wne-ni&#380;">Mniejsze lub r&#243;wne ni&#380;<a class="anchor-link" href="#Mniejsze-lub-r&#243;wne-ni&#380;">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">2</span> <span class="o">&lt;=</span> <span class="mi">2</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[15]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">2</span> <span class="o">&lt;=</span> <span class="mi">4</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[16]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Next-&#321;&#261;czenie-operator&#243;w-por&#243;wania">Next &#321;&#261;czenie operator&#243;w por&#243;wania<a class="anchor-link" href="#Next-&#321;&#261;czenie-operator&#243;w-por&#243;wania">&#182;</a></h2>
-</div>
-</div>
 </div>
  
 

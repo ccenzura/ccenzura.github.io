@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="ccenzura" />
-        <meta name="keywords" content="homework,oop" />
-        <meta name="description" content="Zadanie 1¶Wypełnij metody klasy Linia, aby przyjmowała współrzędne jako parę krotek, zwracała nachylenie oraz długość linii. In [11]: class Linia(object): def __init__(self, wsp1, wsp2): pass def dlugosc(self): pass def nachylenie(self): pass In [12]: # PRZYKŁAD OUTPUT wspolrzedne1 = (3,2) wspolrzedne2 = (8,10) li = Linia(wspolrzedne1,wspolrzedne2 …" />
+        <meta name="keywords" content="modules,packages" />
+        <meta name="description" content="Nie ma tu kodu, ponieważ sekcja ta nie miałaby większego sensu. Sprawdź wykłady wideo, aby uzyskać więcej informacji i zasoby na ten temat. Oto najlepsze źródło oficjalnych dokumentów! https://docs.python.org/2/tutorial/modules.html#packages Ale bardzo fajnie jest to omówione tutaj: https://python4astronomers.github.io/installation/packages …" />
 
 
-    <title>Programowanie obiektowe - praca domowa - Around Python</title>
+    <title>Modules and Packages (pl. *Moduły i Pakiety*) - Around Python</title>
 
         <link rel="stylesheet" href="/theme/css/bootstrap.slate.min.css" type="text/css"/>
 
@@ -185,24 +185,24 @@
             <div class="col-lg-9">
                 <header class="page-header">
                     <h1>
-                        <a href="/articles/python/programowanie-obiektowe-praca-domowa.html"
+                        <a href="/articles/python/modules-and-packages-pl-moduly-i-pakiety.html"
                            rel="bookmark"
-                           title="Permalink to Programowanie obiektowe - praca domowa">
-                            Programowanie obiektowe - praca domowa
+                           title="Permalink to Modules and Packages (pl. *Moduły i Pakiety*)">
+                            Modules and Packages (pl. *Moduły i Pakiety*)
                         </a>
                         <small>
 <div class="post-info">
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-02T00:00:00+01:00"> wto 02 styczeń 2018</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-03T00:00:00+01:00"> śro 03 styczeń 2018</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
             </span>
             <span class="tags">
                 <i class="fa fa-tags padding-small"></i>
-                <a href="/tag/homework.html">homework</a> /                 <a href="/tag/oop.html">oop</a>            </span>
+                <a href="/tag/modules.html">modules</a> /                 <a href="/tag/packages.html">packages</a>            </span>
         </small>
     </div>
 </div><!-- /.post-info -->                        </small>
@@ -218,57 +218,36 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Zadanie-1">Zadanie 1<a class="anchor-link" href="#Zadanie-1">&#182;</a></h3><p>Wypełnij metody klasy Linia, aby przyjmowała współrzędne jako parę krotek, zwracała nachylenie oraz długość linii.</p>
+<p>Nie ma tu kodu, ponieważ sekcja ta nie miałaby większego sensu. Sprawdź wykłady wideo, aby uzyskać więcej informacji i zasoby na ten temat.</p>
+<p>Oto najlepsze źródło oficjalnych dokumentów!
+<a href="https://docs.python.org/2/tutorial/modules.html#packages">https://docs.python.org/2/tutorial/modules.html#packages</a></p>
+<p>Ale bardzo fajnie jest to omówione tutaj: <a href="https://python4astronomers.github.io/installation/packages.html">https://python4astronomers.github.io/installation/packages.html</a></p>
+<p>Oto przykładowe polskie źródło:
+<a href="http://www.learnpython.org/pl/Moduly_i_pakiety">http://www.learnpython.org/pl/Moduly_i_pakiety</a></p>
+<p>Poniżej kilka dodatkowych informacji, które mogą pomóc:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Moduły w Pythonie to po prostu pliki Pythona z rozszerzeniem .py, które implementują zestaw funkcji. Moduły są importowane z innych modułów za pomocą polecenia import.</p>
+<p>Aby zaimportować moduł, używamy polecenia <em>import</em>. Sprawdź pełną listę wbudowanych modułów w standardowej bibliotece Pythona <a href="https://docs.python.org/2/library/index.html">tutaj</a>.</p>
+<p>Przy pierwszym załadowaniu modułu do działającego skryptu w języku Python jest on inicjalizowany przez jednorazowe uruchomienie kodu w module. Jeśli inny moduł w twoim kodzie ponownie zaimportuje ten sam moduł, nie zostanie załadowany dwa razy, ale tylko jeden raz - więc zmienne lokalne w module działają jak "singleton" - są inicjowane tylko raz.</p>
+<p>Jeśli chcemy zaimportować moduł math, po prostu importujemy moduł:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">Linia</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wsp1</span><span class="p">,</span> <span class="n">wsp2</span><span class="p">):</span>
-        <span class="k">pass</span>
-    
-    <span class="k">def</span> <span class="nf">dlugosc</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">pass</span>
-    
-    <span class="k">def</span> <span class="nf">nachylenie</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">pass</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># PRZYKŁAD OUTPUT</span>
-
-<span class="n">wspolrzedne1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">wspolrzedne2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
-
-<span class="n">li</span> <span class="o">=</span> <span class="n">Linia</span><span class="p">(</span><span class="n">wspolrzedne1</span><span class="p">,</span><span class="n">wspolrzedne2</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">li</span><span class="o">.</span><span class="n">dlugosc</span><span class="p">()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># wykorzystanie jej (ceiling rounding)</span>
+<span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="mf">2.4</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -281,46 +260,13 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[13]:</div>
+<div class="prompt output_prompt">Out[2]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>9.433981132056603</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">li</span><span class="o">.</span><span class="n">nachylenie</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[14]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1.6</pre>
+<pre>3.0</pre>
 </div>
 
 </div>
@@ -333,53 +279,18 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Zadanie-2">Zadanie 2<a class="anchor-link" href="#Zadanie-2">&#182;</a></h3><p>Uzypełnij klasę</p>
+<h2 id="Przegl&#261;d-wbudowanych-modu&#322;&#243;w">Przegl&#261;d wbudowanych modu&#322;&#243;w<a class="anchor-link" href="#Przegl&#261;d-wbudowanych-modu&#322;&#243;w">&#182;</a></h2><p>Dwie bardzo ważne funkcje ułatwiają zapoznanie się i pracę z modułami w Pythonie - funkcje <strong>dir</strong> oraz <strong>help</strong>.</p>
+<p>Możemy sprawdzić jakie funkcje są zaimplementowane w każdy moduł wykorzystując funkcję <strong>dir</strong>:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">Cylinder</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">wysokosc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">promien</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">pass</span>
-        
-    <span class="k">def</span> <span class="nf">objetosc</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">pass</span>
-    
-    <span class="k">def</span> <span class="nf">powierzchnia</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">pass</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># EXAMPLE OUTPUT</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">Cylinder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">objetosc</span><span class="p">()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">math</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -392,27 +303,34 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[34]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>56.52</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;__doc__&#39;, &#39;__file__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;acos&#39;, &#39;acosh&#39;, &#39;asin&#39;, &#39;asinh&#39;, &#39;atan&#39;, &#39;atan2&#39;, &#39;atanh&#39;, &#39;ceil&#39;, &#39;copysign&#39;, &#39;cos&#39;, &#39;cosh&#39;, &#39;degrees&#39;, &#39;e&#39;, &#39;erf&#39;, &#39;erfc&#39;, &#39;exp&#39;, &#39;expm1&#39;, &#39;fabs&#39;, &#39;factorial&#39;, &#39;floor&#39;, &#39;fmod&#39;, &#39;frexp&#39;, &#39;fsum&#39;, &#39;gamma&#39;, &#39;hypot&#39;, &#39;isinf&#39;, &#39;isnan&#39;, &#39;ldexp&#39;, &#39;lgamma&#39;, &#39;log&#39;, &#39;log10&#39;, &#39;log1p&#39;, &#39;modf&#39;, &#39;pi&#39;, &#39;pow&#39;, &#39;radians&#39;, &#39;sin&#39;, &#39;sinh&#39;, &#39;sqrt&#39;, &#39;tan&#39;, &#39;tanh&#39;, &#39;trunc&#39;]
+</pre>
 </div>
-
 </div>
 
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Kiedy znajdziemy interesującą nas funkcję, możemy przeczytać o niej więcej szczegółów wykorzystując funkcję <strong>help</strong>:</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">powierzchnia</span><span class="p">()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -425,17 +343,88 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[35]:</div>
+<div class="prompt"></div>
 
 
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on built-in function ceil in module math:
 
+ceil(...)
+    ceil(x)
+    
+    Return the ceiling of x as a float.
+    This is the smallest integral value &gt;= x.
 
-<div class="output_text output_subarea output_execute_result">
-<pre>94.2</pre>
+</pre>
+</div>
 </div>
 
 </div>
+</div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Pisanie-modu&#322;&#243;w">Pisanie modu&#322;&#243;w<a class="anchor-link" href="#Pisanie-modu&#322;&#243;w">&#182;</a></h2><p>Pisanie modułów Pythona jest bardzo proste. Aby utworzyć własny moduł, po prostu utwórz nowy plik .py z nazwą modułu, a następnie zaimportuj go przy użyciu nazwy pliku Python (bez rozszerzenia .py) za pomocą polecenia import.</p>
+<h2 id="Pisanie-pakiet&#243;w">Pisanie pakiet&#243;w<a class="anchor-link" href="#Pisanie-pakiet&#243;w">&#182;</a></h2><p>Pakiety to przestrzenie nazw zawierające wiele pakietów i samych modułów. Są to po prostu katalogi, ale z niespodzianką.</p>
+<p>Każdy pakiet w Pythonie jest katalogiem, który MUSI zawierać specjalny plik o nazwie <strong>__ init__.py </strong>. Ten plik może być pusty, wskazuje on, że katalog, który zawiera, jest pakietem Pythona, więc można go importować w ten sam sposób, w jaki można zaimportować moduł.</p>
+<p>Jeśli utworzymy katalog o nazwie foo, który oznacza nazwę pakietu, możemy utworzyć moduł wewnątrz tego pakietu o nazwie bar. Nie możemy również zapomnieć o dodaniu pliku <strong>__init__.py </strong> wewnątrz katalogu foo.</p>
+<p>Aby korzystać z modułu bar, należy go zaimportować na jeden z dwóch sposobów:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># To tylko przykład, który nie zadziała</span>
+<span class="kn">import</span> <span class="nn">foo.bar</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># lub możemy zrobić to w ten sposób</span>
+<span class="kn">from</span> <span class="nn">foo</span> <span class="kn">import</span> <span class="n">bar</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>W pierwszej metodzie musimy użyć prefiksu foo za każdym razem, gdy wchodzimy w moduł bar. W drugiej metodzie tego nie robimy, ponieważ importujemy moduł do przestrzeni nazw naszego modułu.</p>
+<p>Plik <strong>__init__.py </strong> może również decydować, które moduły pakiet eksportuje jako interfejs API, zachowując inne moduły wewnętrzne, zastępując zmienną <strong>__all__</strong>, jak na przykład:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;bar&quot;</span><span class="p">]</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 

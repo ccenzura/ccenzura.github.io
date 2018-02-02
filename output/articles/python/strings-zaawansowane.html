@@ -1,0 +1,1004 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="ccenzura" />
+        <meta name="keywords" content="string" />
+        <meta name="description" content="Obiekty typu string obsługują wiele metod, które mogą zaoszczędzić czas bądź dodać nowe funkcjonalności. Zapoznajmy się z kilkoma z nich. In [2]: s = &#39;hello world&#39; Zmiana wielkości liter¶Możemy wykorzystać metodę do zmiany wielkości liter w stringu, np wszystkie na wielkie, wszystkie na małe, lub pierwsza wielka a pozostałe małe …" />
+
+
+    <title>Strings - zaawansowane - Around Python</title>
+
+        <link rel="stylesheet" href="/theme/css/bootstrap.slate.min.css" type="text/css"/>
+
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/theme/css/pygments/default.css" rel="stylesheet" />
+    
+    <link href="/theme/css/pelican-twitchy.min.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Feeds -->
+</head>
+<body data-spy="scroll" data-target="#scrollspy">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper-small" class="twitchy-background">
+            <ul id="accordion-small" class="sidebar-nav sidebar-nav-small">
+                <li>
+        <a href="" title="Around Python" class="collapsed">
+            <span class="glyphicon glyphicon-home"></span>
+        </a>
+    </li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="/archives.html" title="Recent Articles" class="collapsed">
+            <span class="glyphicon glyphicon-th-list"></span>
+        </a>
+    </li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion-small" href="#collapse-social-small" title="Social" class="collapsed">
+                        <i class="fa fa-users padding-small"></i>
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social-small" class="collapse ">
+                    <li>
+                        <a href="https://bitbucket.org/ccenzura/" title="Bitbucket"><i class="fa fa-bitbucket-square fa-lg padding-small"></i></a>
+                    </li>
+                </ul></li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="#" title="Back to top" class="collapsed">
+            <span class="fa fa-arrow-up"></span>
+        </a>
+    </li>
+            </ul>
+        </div>
+        <div id="sidebar-wrapper" class="twitchy-background">
+            <ul id="accordion" class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="/">
+                            <span class="glyphicon glyphicon-home padding-small"></span>
+                            Around Python
+                    </a>
+                </li>
+                    <li class="nav-divider"></li>
+                    <li>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-latest">
+                            <span class="glyphicon glyphicon-th-list padding-small"></span>
+                            Recent Articles
+                        </a>
+                    </li>
+                    <li class="panel anti-panel"><ul id="collapse-latest" class="sidebar_submenu collapse in">
+                        <li class="">
+                            <a class="hide-overflow" href="/articles/python/dictionaries-zaawansowane.html" title="Dictionaries - zaawansowane">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Dictionaries - zaawansowane
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="hide-overflow" href="/articles/python/lists-zaawansowane.html" title="Lists - zaawansowane">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Lists - zaawansowane
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="hide-overflow" href="/articles/python/sets-zaawansowane.html" title="Sets - zaawansowane">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Sets - zaawansowane
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a class="hide-overflow" href="/articles/python/strings-zaawansowane.html" title="Strings - zaawansowane">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Strings - zaawansowane
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="hide-overflow" href="/articles/python/liczby-zaawansowane.html" title="Liczby - zaawansowane">
+                                <i class="fa fa-file-text padding-small"></i>
+                                Liczby - zaawansowane
+                            </a>
+                        </li>
+                    <li>
+                        <a href="/archives.html">
+                            <i class="fa fa-arrow-right padding-small"></i>
+                            More
+                        </a>
+                    </li>
+                    </ul></li>
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-social">
+                        <i class="fa fa-users padding-small"></i>
+                        Contact
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="https://bitbucket.org/ccenzura/" title="Bitbucket">
+                            <i class="fa fa-bitbucket-square fa-lg padding-small"></i>
+                            Bitbucket
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-pages">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Pages
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-pages" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="/pages/about-me.html">
+                            <i class="fa fa-file-text padding-small"></i>
+                            About Me
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-categories">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Categories
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-categories" class="sidebar_submenu collapse ">
+                    <li class="active">
+                        <a href="/category/python.html">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            python
+                            <span class="badge pull-right categorybadge">56</span>
+                        </a>
+                    </li>
+                </ul></li>
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- open/close sidebar -->
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+            <span id="right-arrow" class="glyphicon glyphicon-chevron-right"  title="expand sidebar"></span>
+            <span id="left-arrow" class="glyphicon glyphicon-chevron-left" title="minimize sidebar"></span>
+        </a>
+       <!-- /open/close sidebar -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+<section id="content">
+    <article>
+        <div class="row">
+            <div class="col-lg-9">
+                <header class="page-header">
+                    <h1>
+                        <a href="/articles/python/strings-zaawansowane.html"
+                           rel="bookmark"
+                           title="Permalink to Strings - zaawansowane">
+                            Strings - zaawansowane
+                        </a>
+                        <small>
+<div class="post-info">
+    <div class="publish-info-block">
+        <small>
+            <span class="published">
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-02-01T00:00:00+01:00"> czw 01 luty 2018</time>
+            </span>
+            <span class="category">
+                <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
+            </span>
+            <span class="tags">
+                <i class="fa fa-tags padding-small"></i>
+                <a href="/tag/string.html">string</a>            </span>
+        </small>
+    </div>
+</div><!-- /.post-info -->                        </small>
+                    </h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="entry-content">
+                    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Obiekty typu string obsługują wiele metod, które mogą zaoszczędzić czas bądź dodać nowe funkcjonalności. Zapoznajmy się z kilkoma z nich.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;hello world&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Zmiana-wielko&#347;ci-liter">Zmiana wielko&#347;ci liter<a class="anchor-link" href="#Zmiana-wielko&#347;ci-liter">&#182;</a></h2><p>Możemy wykorzystać metodę do zmiany wielkości liter w stringu, np wszystkie na wielkie, wszystkie na małe, lub pierwsza wielka a pozostałe małe.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Zmiana wielkości liter na wielkie</span>
+<span class="n">s</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Hello world&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;HELLO WORLD&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;hello world&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Lokalizacja-znaku-oraz-zliczanie-znak&#243;w">Lokalizacja znaku oraz zliczanie znak&#243;w<a class="anchor-link" href="#Lokalizacja-znaku-oraz-zliczanie-znak&#243;w">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">)</span> <span class="c1"># zlicza ile razy w danym string występuje dany znak</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">)</span> <span class="c1"># zwraca pozycję pierwszego wystąpienia danego znaku</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Formatowanie">Formatowanie<a class="anchor-link" href="#Formatowanie">&#182;</a></h2><p>Metoda center() umożliwia umieszczenie dane go string pomiędzy podanym znakiem oraz umożliwia określenie jaką łączną długość nowego stringu chcemy. Metoda rzadko używana w podczas kodowania...</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="s1">&#39;z&#39;</span><span class="p">)</span> <span class="c1"># string s zostaje otoczony taką ilością &#39;z&#39; aby łączna ilość znajków w zwróconym string wynosiła 20</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;zzzzhello worldzzzzz&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Mtoda expandtabs() umożliwia wykorzystanie notacji \t:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="s1">&#39;hello</span><span class="se">\t</span><span class="s1">hi&#39;</span><span class="o">.</span><span class="n">expandtabs</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;hello   hi&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Metody-is-something,-sprawdzaj&#261;ce-dany-string">Metody is something, sprawdzaj&#261;ce dany string<a class="anchor-link" href="#Metody-is-something,-sprawdzaj&#261;ce-dany-string">&#182;</a></h2><p>Poniższe metody sprawdzają czy dany string spełnia jakiś warunek. Sprawdźmy ich zastosowanie:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Metoda isalnum() zwraca True jeżeli wszystkie znaki w string są alfanumeryczne.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Metoda isalpha() zwraca True jeżeli wszystkie znaki w stringu są alfabetyczne.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Metoda islower() zwraca True jeżeli wszystkie znaki w stringu są małymi literami.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Metoda isspace() zwraca True jeżeli wszystkie znaki w stringu są white spaces.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Metoda istitle() zwraca True jeżeli w stringu pierwszy znak jest wielką literą a pozostałe znakim małymi, np. Gdańsk, Ilona</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">istitle</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[15]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Metoda isupper() zwraca True jeżeli wszystkie znaki w stringu są wielkimi literami.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Metoda endwish() z wraca True jeżeli string kończy się określonym znakiem. Działa to podobie jak s[-1], tyle że zwraca wartość boolean.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Built-in-Reg.-Expressions">Built-in Reg. Expressions<a class="anchor-link" href="#Built-in-Reg.-Expressions">&#182;</a></h2><p>Obiekty string maja wbudowane metody, które mogę przypominać wyrażenia regularne.
+Możemy użyć split() aby podzielić string za pomocą jakiegoś znaku dany string na elementy i zwrócić listę wyników.
+Możemy także użyć partition(), które zwraca tuple zawierającą pierwszą część string, definiowany jako parametr separator, oraz pozostałą część string.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;h&#39;, &#39;llo&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[19]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(&#39;h&#39;, &#39;e&#39;, &#39;llo&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[20]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;hello&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Teraz powinieneś swobodnie korzystać z rożnych wbudowanych metod dla obiektów typu string.</strong></p>
+
+</div>
+</div>
+</div>
+ 
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        processEnvironments: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+                </div>
+                <footer class="text-right">
+                    <p>- ccenzura</p>
+                </footer>
+            </div>
+        </div>
+    </article>
+</section>
+<footer>
+    <hr>
+    <div class="row">
+        <div class="col-lg-9 text-center">
+            <p><small>
+                Built by <a href="http://docs.getpelican.com/en/latest">Pelican</a> / <a href="https://github.com/ingwinlu/pelican-twitchy">pelican-twitchy</a>
+                &middot;                    &copy; 2018 ccenzura
+            </small></p>
+        </div>
+    </div>
+</footer>            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery Version 1.11.2 -->
+    <script src="/theme/js/jquery-1.11.2.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/theme/js/bootstrap.min.js"></script>
+    <!-- twitchy Script -->
+    <script src="/theme/js/pelican_twitchy.min.js"></script>
+
+</body>
+</html>

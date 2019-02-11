@@ -195,7 +195,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-08T00:00:00+01:00"> pon 08 styczeń 2018</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-08T00:00:00+01:00"> pon 08 stycznia 2018</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -215,8 +215,7 @@
                 <div class="entry-content">
                     
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="zip">zip<a class="anchor-link" href="#zip">&#182;</a></h2><p>zip() tworzy sekwencję, który agreguje elementy z każdej sekwencji.</p>
 <p>Zwraca sekwencję krotek, gdzie n-ta krotka zawiera n-ty element z każdej z sekwencji argumentów lub iteratorów. Iterator zatrzymuje się, gdy najkrótsza sekwencja jest już wyczerpana. Z pojedynczym argumentem iteracyjnym zwraca iterator z 1 krotką. Bez argumentów zwraca pusty iterator.</p>
@@ -254,7 +253,7 @@
 <span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -264,7 +263,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[1]:</div>
+    <div class="prompt output_prompt">Out[1]:</div>
 
 
 
@@ -280,8 +279,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Zwróć w jaki sposób są utworzone krotki (ang. <em>tuples</em>). co się stanie jeżeli jedna z sekwencji będzie dłuża od drugiej?</p>
 
@@ -299,7 +297,7 @@
 <span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -309,7 +307,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -325,8 +323,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Zwróć uwagę, jak zip jest definiowany zgodnie z najkrótszą sekwencją, tj. liczba krotek odpowiada liczbie elementów krótszej sewencji. Generalnie zaleca się, aby nie stosować zip() do różnej długości iteracji, chyba że masz pewność, że potrzebujesz tylko część krotek.</p>
 <p>Co się stanie, jeśli spróbujemy użyć zip() z dictionaries?</p>
@@ -345,7 +342,7 @@
 <span class="nb">zip</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span><span class="n">d2</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -355,7 +352,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -371,8 +368,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Ma to sens, ponieważ iterując dictionary w wyniku otrzymujemy tylko klucze. Musimy użyć metody aby wymienić klucza i wartości:</p>
 
@@ -387,7 +383,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="nb">zip</span><span class="p">(</span><span class="n">d2</span><span class="p">,</span><span class="n">d1</span><span class="o">.</span><span class="n">itervalues</span><span class="p">())</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -397,7 +393,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -413,8 +409,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Super! Zamieńmy teraz klucze i wartości w dwóch dictionaries:</p>
 
@@ -435,7 +430,7 @@
     <span class="k">return</span> <span class="n">dout</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -448,7 +443,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">switcharoo</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span><span class="n">d2</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -458,7 +453,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -474,8 +469,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Świetnie! Już wiesz jak używać funkcji zip() i możesz zaoszczędzić masę czasu w niektórych przypadkach!</p>
 

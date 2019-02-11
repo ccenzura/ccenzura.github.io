@@ -195,7 +195,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-16T00:00:00+01:00"> wto 16 styczeń 2018</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-16T00:00:00+01:00"> wto 16 stycznia 2018</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -215,8 +215,7 @@
                 <div class="entry-content">
                     
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Czas-twojego-kodu">Czas twojego kodu<a class="anchor-link" href="#Czas-twojego-kodu">&#182;</a></h2><p>Czasami ważne jest, aby wiedzieć, jak długo trwa wykonywanie kodu, lub przynajmniej wiedzieć, czy konkretna linia kodu spowalnia cały projekt. W tym celu Python ma wbudowany moduł czasowy.</p>
 <p>Ten moduł zapewnia prosty sposób na pomiar czasu małych bitów kodu Pythona. Ma zarówno interfejs wiersza poleceń, jak i wywoływany. Pozwala to uniknąć wielu typowych pułapek przy mierzeniu czasów wykonania.</p>
@@ -233,14 +232,13 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">timeit</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Użyjmy timeit do pomiaru czasu wykonania stringu '0-1-2-3-.....-99' za pomocą różnych metod.</p>
 <p>Przekażemy dwa argumenty, które przetestujemy, faktyczną linię kodu w postaci enkapsulowanej jako ciąg znaków oraz liczbę określającą ile raz chcemy uruchomić nasz kod w stringu. Tutaj wybieramy 10 000 razy, aby uzyskać wystarczająco wysokie liczby umożliwiające porównanie różnych metod.</p>
@@ -257,7 +255,7 @@
 <span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;&quot;-&quot;.join(str(n) for n in range(100))&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -267,7 +265,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -291,7 +289,7 @@
 <span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;&quot;-&quot;.join([str(n) for n in range(100)])&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -301,7 +299,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -325,7 +323,7 @@
 <span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;&quot;-&quot;.join(map(str, range(100)))&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -335,7 +333,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -351,8 +349,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Ekstra! <strong>Widzimy znaczną poprawę czasu przy wykorzystaniu funkcji map()! Dobrze o tym wiedzieć i powinniśmy o tym pamiętać.</strong></p>
 <p>Teraz wykorzystamy magiczną funkcję iPythona %timeit.</p>
@@ -370,7 +367,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">timeit</span> &quot;-&quot;.join(str(n) for n in range(100))
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -380,7 +377,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -401,7 +398,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">timeit</span> &quot;-&quot;.join([str(n) for n in range(100)])
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -411,7 +408,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -432,7 +429,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">timeit</span> &quot;-&quot;.join(map(str, range(100)))
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -442,7 +439,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -456,8 +453,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Super! Ważne jest również, aby pamiętać, że iPython ogranicza ilość <em>czasu rzeczywistego</em> wydanego na procedurę timeit. Na przykład, jeśli uruchomienie 100000 pętli zajęło 10 minut, iPython automatycznie zmniejszyłby liczbę pętli do czegoś bardziej sensownego, np. 100 lub 1000.</p>
 <p>Powinieneś teraz czuć się komfortowo w pracy z pomiarę czasu, zarówno w iPythonie, jak i poza nim. Sprawdź dokumentację, aby uzyskać więcej informacji:

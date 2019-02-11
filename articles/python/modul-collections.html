@@ -195,7 +195,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-12T00:00:00+01:00"> pią 12 styczeń 2018</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-12T00:00:00+01:00"> pią 12 stycznia 2018</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -215,8 +215,7 @@
                 <div class="entry-content">
                     
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Moduł collections jest wbudowanym modułem, który implementuje wyspecjalizowane typy danych kontenera, zapewniając alternatywę dla wbudowanych kontenerów ogólnego przeznaczenia Pythona. Poznaliśmy już podstawowe: dictionary, list, set and tuple.</p>
 <p>Teraz dowiemy się o alternatywach dostarczanych przez moduł collections.</p>
@@ -225,8 +224,7 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Counter">Counter<a class="anchor-link" href="#Counter">&#182;</a></h2><p><em>Counter</em> jest podklasą <em>dictionary</em>, która pomaga liczyć obiekty. Wewnątrz tego elementu elementy są przechowywane jako key, a liczba obiektów jest zapisywana jako value.</p>
 <p>Zobaczmy, jak można go użyć:</p>
@@ -242,14 +240,13 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Counter() with lists</strong></p>
 
@@ -257,8 +254,7 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Counter with strings</strong></p>
 
@@ -273,7 +269,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">Counter</span><span class="p">(</span><span class="s1">&#39;aabsbsbsbhshhbbsbs&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -283,7 +279,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -299,8 +295,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Counter with words in a sentence</strong></p>
 
@@ -319,7 +314,7 @@
 <span class="n">Counter</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -329,7 +324,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -365,7 +360,7 @@
 <span class="n">c</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -375,7 +370,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -391,8 +386,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Typowe-wzorce-podczas-u&#380;ywania-obiektu-Counter()">Typowe wzorce podczas u&#380;ywania obiektu Counter()<a class="anchor-link" href="#Typowe-wzorce-podczas-u&#380;ywania-obiektu-Counter()">&#182;</a></h2>
 </div>
@@ -412,14 +406,13 @@
 <span class="n">Counter</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">list_of_pairs</span><span class="p">))</span>    <span class="c1"># konwertowanie z listy z parami (elem, zliczenie)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="defaultdict">defaultdict<a class="anchor-link" href="#defaultdict">&#182;</a></h2><p>defaultdict jest słownikiem podobnym do obiektu, który dostarcza wszystkich metod dostępnych w słowniku, ale przyjmuje pierwszy argument (default_factory) jako domyślny typ danych dla słownika. Używanie defaultdict jest szybsze niż wykonanie tego samego przy pomocy metody dict.set_default.</p>
 <p><strong> Defaultdict nigdy nie podniesie KeyError. Każdy klucz, który nie istnieje, otrzymuje wartość zwróconą przez default_factory. </strong></p>
@@ -435,7 +428,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -448,7 +441,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -461,7 +454,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">]</span> 
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -471,7 +464,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_text output_error">
@@ -497,7 +490,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">d</span>  <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -510,7 +503,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">]</span> 
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -520,7 +513,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -544,7 +537,7 @@
     <span class="k">print</span> <span class="n">item</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -554,7 +547,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -568,8 +561,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Można również zainicjować za pomocą wrtości domyślnych:</p>
 
@@ -584,7 +576,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -597,7 +589,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -607,7 +599,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -623,8 +615,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="OrderedDict">OrderedDict<a class="anchor-link" href="#OrderedDict">&#182;</a></h2><p>OrderedDict jest podklasą dictionary, która zapamiętuje kolejność, w której dodano jej zawartość.</p>
 <p>Na przykład zwykły słownik:</p>
@@ -640,7 +631,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -664,7 +655,7 @@
     <span class="k">print</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -674,7 +665,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -693,8 +684,7 @@ d D
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>An Ordered Dictionary:</p>
 
@@ -720,7 +710,7 @@ d D
     <span class="k">print</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -730,7 +720,7 @@ d D
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -749,8 +739,7 @@ e E
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="R&#243;wno&#347;&#263;-z-Ordered-Dictionary">R&#243;wno&#347;&#263; z Ordered Dictionary<a class="anchor-link" href="#R&#243;wno&#347;&#263;-z-Ordered-Dictionary">&#182;</a></h2><p>Normalny dictionary analizuje jego zawartość podczas testowania pod kątem równości. OrderedDict uwzględnia także kolejność dodawania elementów.</p>
 
@@ -775,7 +764,7 @@ e E
 <span class="k">print</span> <span class="n">d1</span> <span class="o">==</span> <span class="n">d2</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -785,7 +774,7 @@ e E
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -800,8 +789,7 @@ True
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Ordered Dictionary:</p>
 
@@ -828,7 +816,7 @@ True
 <span class="k">print</span> <span class="n">d1</span> <span class="o">==</span> <span class="n">d2</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -838,7 +826,7 @@ True
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -853,8 +841,7 @@ False
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="namedtuple">namedtuple<a class="anchor-link" href="#namedtuple">&#182;</a></h2><p>Standardowa krotka używa indeksów numerycznych, aby uzyskać dostęp do jej elemntów, na przykład:</p>
 
@@ -869,7 +856,7 @@ False
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -882,7 +869,7 @@ False
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -892,7 +879,7 @@ False
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[32]:</div>
+    <div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -908,8 +895,7 @@ False
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>W prostych przypadkach to zazwyczaj wystarcza. Z drugiej strony, pamiętanie, który indeks powinien być użyty dla każdej wartości, może prowadzić do błędów, szczególnie jeśli krotka ma wiele pól i jest skonstruowana z dala od miejsca, w którym jest używana. <strong>Namedtuple</strong> przypisuje imiona, a także indeks numeryczny do każdego elementu.</p>
 <p>Każdy rodzaj nazwanego pakietu jest reprezentowany przez jego własną klasę, utworzoną przy użyciu funkcji fabryki namedtuple(). Argumenty są nazwą nowej klasy i ciągiem zawierającym nazwy elementów.</p>
@@ -927,7 +913,7 @@ False
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -944,14 +930,13 @@ False
 <span class="n">frank</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="n">age</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">breed</span><span class="o">=</span><span class="s1">&#39;Shepard&#39;</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Frankie&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Skonstuowaliśmy namedtuple, najpierw przekazując nazwę typu obiektu (Dog), a następnie przekazując ciąg znaków z różnymi polami jako ciąg z odstępami między nazwami pól. Możemy wtedy wywołać różne atrybuty:</p>
 
@@ -966,7 +951,7 @@ False
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">sam</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -976,7 +961,7 @@ False
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[35]:</div>
+    <div class="prompt output_prompt">Out[35]:</div>
 
 
 
@@ -999,7 +984,7 @@ False
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">sam</span><span class="o">.</span><span class="n">age</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1009,7 +994,7 @@ False
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[36]:</div>
+    <div class="prompt output_prompt">Out[36]:</div>
 
 
 
@@ -1032,7 +1017,7 @@ False
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">sam</span><span class="o">.</span><span class="n">breed</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1042,7 +1027,7 @@ False
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[37]:</div>
+    <div class="prompt output_prompt">Out[37]:</div>
 
 
 
@@ -1065,7 +1050,7 @@ False
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">sam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1075,7 +1060,7 @@ False
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[38]:</div>
+    <div class="prompt output_prompt">Out[38]:</div>
 
 
 
@@ -1091,8 +1076,7 @@ False
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Podsumowanie">Podsumowanie<a class="anchor-link" href="#Podsumowanie">&#182;</a></h2><p>Mam nadzieję, że teraz przekonaliście się, jak niesamowicie przydatny jest moduł collections w Pythonie i powinien to być wasz moduł do wielu typowych zadań!</p>
 

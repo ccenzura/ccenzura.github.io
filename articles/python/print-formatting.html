@@ -195,7 +195,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2017-11-16T00:00:00+01:00"> czw 16 listopad 2017</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2017-11-16T00:00:00+01:00"> czw 16 listopada 2017</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -215,8 +215,7 @@
                 <div class="entry-content">
                     
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>W tej lekcji krótko omówimy różne sposoby formatowania instrukcji wywołania. W miarę jak będziesz kodował coraz więcej, prawdopodobnie będziesz potrzebował mieć instrukcje wywołania, które mogą przyjmować zmienną do wywoływanej instrukcji string.</p>
 <p>Najprostszym przykładem polecenia print jest:</p>
@@ -232,7 +231,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;To jest string&#39;</span> <span class="c1"># pamiętaj, że w python 3 print jest funkcją print(&#39;To jest string&#39;)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -242,7 +241,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -256,8 +255,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Strings">Strings<a class="anchor-link" href="#Strings">&#182;</a></h2><p>Możesz użyć %s aby sformatować string w instrukcji wywołania.</p>
 
@@ -273,7 +271,7 @@
 <span class="k">print</span> <span class="s1">&#39;Umieść kolejny string za pomocą procent i s: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -283,7 +281,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -297,8 +295,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Floating-Point-Numbers">Floating Point Numbers<a class="anchor-link" href="#Floating-Point-Numbers">&#182;</a></h2><p>Liczby zmiennoprzecinkowe używają formatu %n1.n2f, gdzie n1 jest całkowitą minimalną liczbą cyfr, które powinien zawierać ciąg znaków (mogą one być wypełnione białymi spacjami, jeśli cały numer nie ma tak wielu cyfr). Symbol n2 oznacza ilość liczb po przecinku odzielającym wartości całkowite od wartości dziesiętnych (ułamkowych). Zobaczmy kilka przykładów:</p>
 
@@ -313,7 +310,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%1.2f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -323,7 +320,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -344,7 +341,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%1.0f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -354,7 +351,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -375,7 +372,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%1.5f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -385,7 +382,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -407,7 +404,7 @@
 <span class="k">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%10.2f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span> 
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -417,7 +414,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -438,7 +435,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%25.2f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -448,7 +445,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -462,8 +459,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Metody-konwersji">Metody konwersji<a class="anchor-link" href="#Metody-konwersji">&#182;</a></h2><p>Zwróć uwagę, że dwie metody %s i %r faktycznie konwertują dowolny obiekt Pythona na ciąg znaków przy użyciu dwóch oddzielnych metod: str() i repr(). Dowiesz się więcej o tych funkcjach w dalszej części kursu, ale powinieneś zauważyć, że możesz przekazać prawie każdy obiekt w Pythonie za pomocą tych dwóch metod:</p>
 
@@ -478,7 +474,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Tu jest liczba: </span><span class="si">%s</span><span class="s1">. Tu jest string: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">123.1</span><span class="p">,</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -488,7 +484,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -509,7 +505,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Tu jest liczba: </span><span class="si">%r</span><span class="s1">. Tu jest string: </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">123.1</span><span class="p">,</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -519,7 +515,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -533,8 +529,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Formatowanie-wielokrotne">Formatowanie wielokrotne<a class="anchor-link" href="#Formatowanie-wielokrotne">&#182;</a></h2><p>Aby zastosować formatowanie wielokrotne po string w ( ) (tuple pl. <em>krotka</em>, lecz o tym później), poniższy przykład wyjaśni sposób działania.</p>
 
@@ -549,7 +544,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Pierwszy: </span><span class="si">%s</span><span class="s1">, Drugi: </span><span class="si">%1.2f</span><span class="s1">, Trzeci: </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="s1">&#39;hi!&#39;</span><span class="p">,</span><span class="mf">3.14</span><span class="p">,</span><span class="mi">22</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -559,7 +554,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -573,8 +568,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Stosowanie-metody-string-.format()">Stosowanie metody string .format()<a class="anchor-link" href="#Stosowanie-metody-string-.format()">&#182;</a></h2><p>Najlepszym sposobem do wstawienia zawartości obiektu do string przy użyciu print jest zastosowanie metody .format(). Składnia przedstawia się następująco:</p>
 
@@ -596,7 +590,7 @@ lub
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;To jest string z {p}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="s1">&#39;insert&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -606,7 +600,7 @@ lub
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -628,7 +622,7 @@ lub
 <span class="k">print</span> <span class="s1">&#39;Pierwszy: {p}, Drugi: {p}, Trzeci: {p}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="s1">&#39;Hi!&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -638,7 +632,7 @@ lub
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -660,7 +654,7 @@ lub
 <span class="k">print</span> <span class="s1">&#39;Obiekt 1: {a}, Obiekt 2: {b}, Obiekt 3: {c}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="s1">&#39;two&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="mf">12.3</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -670,7 +664,7 @@ lub
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -692,7 +686,7 @@ lub
 <span class="k">print</span> <span class="s1">&#39;Pierwszy {}, Drugi {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;raz&#39;</span><span class="p">,</span> <span class="s1">&#39;dwa&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -702,7 +696,7 @@ lub
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -725,7 +719,7 @@ lub
 <span class="k">print</span> <span class="s1">&#39;Ala ma {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">zmienna</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -735,7 +729,7 @@ lub
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -758,7 +752,7 @@ lub
 <span class="k">print</span> <span class="s1">&#39;Ala ma {a}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">zmienna</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -768,7 +762,7 @@ lub
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -782,8 +776,7 @@ lub
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>To są podstawy formatowania print. Pamiętaj, że w Pythonie 3 print jest metodą i stosuje się ją print().
 <a href="https://pyformat.info/">Nieco więcej o formatowaniu print</a></p>

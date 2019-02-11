@@ -195,7 +195,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-10T00:00:00+01:00"> śro 10 styczeń 2018</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-10T00:00:00+01:00"> śro 10 stycznia 2018</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -215,8 +215,7 @@
                 <div class="entry-content">
                     
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Dekoratory można uważać za funkcje, które mogą modyfikować <em>funkcjonalność</em> innej funkcji. POmoagaja one skrócić kod i zpodkeślić charakter pythona.</p>
 
@@ -224,8 +223,7 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Przegl&#261;d-funkcji">Przegl&#261;d funkcji<a class="anchor-link" href="#Przegl&#261;d-funkcji">&#182;</a></h2>
 </div>
@@ -240,7 +238,7 @@
     <span class="k">return</span> <span class="mi">1</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -253,7 +251,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">func</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -263,7 +261,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -279,8 +277,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Przegl&#261;d-zasi&#281;gu">Przegl&#261;d zasi&#281;gu<a class="anchor-link" href="#Przegl&#261;d-zasi&#281;gu">&#182;</a></h2><p>Przypomnienie z instrukcji zagnieżdżonych i zasięgu, pamiętaj o etykietach.</p>
 
@@ -298,14 +295,13 @@
     <span class="k">print</span> <span class="nb">locals</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Pmiętaj, że funkcje Pythona tworzą nowy zasięg, co oznacza, że funkcja ma własny obszar nazw umożliwiający znaleźć nazwy zmiennych w przypadku ich użycia w funkcji. Możemy sprawdzić zmienne lokalne i zmienne globalne poprze użycie funkcji locals() i globals().</p>
 
@@ -320,7 +316,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="nb">globals</span><span class="p">()</span> <span class="c1"># pamiętaj, że otrzymujesz słownik</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -330,7 +326,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -344,8 +340,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Here we get back a dictionary of all the global variables, many of them are predefined in Python. So let's go ahead and look at the keys:</p>
 
@@ -353,8 +348,7 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Otrzymaliśmy w odpowiedzi słownik wszystkich zmiennych globalnych, wiele z nich jest predefiniowanych w Pythonie. Dalej, sprawdźmy teraz klucze.</p>
 
@@ -369,7 +363,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="nb">globals</span><span class="p">()</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -379,7 +373,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -393,8 +387,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Zwróc uwagę na zmienną <strong>s</strong>, zmienną globalną zdefiniowaną przez nas jako string:</p>
 
@@ -409,7 +402,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="nb">globals</span><span class="p">()[</span><span class="s1">&#39;s&#39;</span><span class="p">]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -419,7 +412,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -435,8 +428,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Czas uruchomić naszą funkcję, aby sprawdzić zmienne lokalne w func().</p>
 
@@ -451,7 +443,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">func</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -461,7 +453,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -475,8 +467,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Extra! Kontynuujmy budowanie logiki tego, czym jest dekorator. W Pythonie <strong>wszystko jest obiektem</strong>. To oznacza, że funkcje są obiektami, którym można przypisać etykietyi wykorzystać w innej funkcji. Czas na proste przykłady:</p>
 
@@ -492,7 +483,7 @@
     <span class="k">return</span> <span class="s1">&#39;Czesc &#39;</span><span class="o">+</span> <span class="n">name</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -505,7 +496,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">hej</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -515,7 +506,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -531,8 +522,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Przypisanie etykiety funkcji. Zwróć uwagę, że nie używamy tutaj nawiasów, ponieważ nie wywołujemy funkcji hej lecz wyłącznie przypisujemy ją do zmiennej greet.</p>
 
@@ -547,7 +537,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">czesc</span> <span class="o">=</span> <span class="n">hej</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -560,7 +550,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">czesc</span> <span class="c1"># w odpowiedzi uzyskujemy informację, że do tej zmiennej jest przypisana funkcja hej</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -570,7 +560,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -593,7 +583,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">hej</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -603,7 +593,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -619,8 +609,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>To przypisanie nie ma wpływu na oryginalną funkcję:</p>
 
@@ -635,7 +624,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">del</span> <span class="n">hej</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -648,7 +637,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">hej</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -658,7 +647,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_text output_error">
@@ -684,7 +673,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">czesc</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -694,7 +683,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[29]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -710,8 +699,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Functions-within-functions">Functions within functions<a class="anchor-link" href="#Functions-within-functions">&#182;</a></h2><p>Właśnie dowiedziałeś się w jaki sposób możesz przypisać funkcję do zmiennej, aby móc ją wykorzystać jako obiekt. Teraz dowiemy się jak zdefiniować funkcję wewnątrz innej funkcji:</p>
 
@@ -737,7 +725,7 @@
     <span class="k">print</span> <span class="s2">&quot;Teraz jesteśmy ponownie w funkcji hej()&quot;</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -750,7 +738,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">hej</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -760,7 +748,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -784,7 +772,7 @@ Teraz jesteśmy ponownie w funkcji hej()
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">welcome</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -794,7 +782,7 @@ Teraz jesteśmy ponownie w funkcji hej()
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_text output_error">
@@ -813,8 +801,7 @@ Teraz jesteśmy ponownie w funkcji hej()
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Zauważ, że ze względu na zasięg funkcja welcome() nie jest zdefiniowana poza funkcją hej(). Teraz nauczmy się o zwracaniu funkcji z funkcji wewnętrznej:</p>
 
@@ -822,8 +809,7 @@ Teraz jesteśmy ponownie w funkcji hej()
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Returning-Functions">Returning Functions<a class="anchor-link" href="#Returning-Functions">&#182;</a></h2>
 </div>
@@ -848,7 +834,7 @@ Teraz jesteśmy ponownie w funkcji hej()
         <span class="k">return</span> <span class="n">welcome</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -861,14 +847,13 @@ Teraz jesteśmy ponownie w funkcji hej()
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">hej</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Zobaczmy co zwróci funkcji jeżeli przypiszemy x = hej(), użyłem zamkniętych nawiasów więc zostanie użyty domyślnie Janek.</p>
 
@@ -876,8 +861,7 @@ Teraz jesteśmy ponownie w funkcji hej()
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Super! Teraz możemy zobaczyć, w jaki sposób x wskazuje na na funkcję czesc wewnatrz funkcji hej(). Jest tak, ponieważ domyslnie użyto Janek, a to oznacza true warunku z dunkcji i uruchomienie funkcji czesc.</p>
 
@@ -892,7 +876,7 @@ Teraz jesteśmy ponownie w funkcji hej()
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">x</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -902,7 +886,7 @@ Teraz jesteśmy ponownie w funkcji hej()
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -916,8 +900,7 @@ Teraz jesteśmy ponownie w funkcji hej()
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Przejrzyjmy jeszcze raz szybko kod.</p>
 <p>W instrukcji if/else zwracamy czesc i welcome, nie czesc() i welcome()</p>
@@ -928,8 +911,7 @@ Teraz jesteśmy ponownie w funkcji hej()
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Funkcja-jako-argument">Funkcja jako argument<a class="anchor-link" href="#Funkcja-jako-argument">&#182;</a></h2><p>Teraz zobaczmy jak możemy przekazać funkcję jako argument innej funkcji:</p>
 
@@ -949,7 +931,7 @@ Teraz jesteśmy ponownie w funkcji hej()
     <span class="k">print</span> <span class="n">func</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -962,7 +944,7 @@ Teraz jesteśmy ponownie w funkcji hej()
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">other</span><span class="p">(</span><span class="n">hej</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -972,7 +954,7 @@ Teraz jesteśmy ponownie w funkcji hej()
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -987,8 +969,7 @@ Hej Janek!
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Super! Zauważ, że możemy przekazać funkcje jako obiekt i wtedy użyć ich wewnątrz innych funkcji. Czas napisać własny dekorator:</p>
 
@@ -996,8 +977,7 @@ Hej Janek!
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Tworzenie-dekoratora">Tworzenie dekoratora<a class="anchor-link" href="#Tworzenie-dekoratora">&#182;</a></h2><p>W poprzednim przukładzie ręczni stworzyliśmy dekorator. Teraz go zmodyfikujemy aby wszystko było jasne:</p>
 
@@ -1024,7 +1004,7 @@ Hej Janek!
     <span class="k">print</span> <span class="s2">&quot;Ta funkcja potrzebuje dekoratora&quot;</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1037,7 +1017,7 @@ Hej Janek!
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">func_potrzebuje_dekoratora</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1047,7 +1027,7 @@ Hej Janek!
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -1069,7 +1049,7 @@ Hej Janek!
 <span class="n">func_potrzebuje_dekoratora</span> <span class="o">=</span> <span class="n">nowy_dekorator</span><span class="p">(</span><span class="n">func_potrzebuje_dekoratora</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1082,7 +1062,7 @@ Hej Janek!
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">func_potrzebuje_dekoratora</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1092,7 +1072,7 @@ Hej Janek!
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -1108,8 +1088,7 @@ Kod ten jest wywołany po func()
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Co się tutaj wydarzyło? Prosty dekorator owinął funkcję i zmodyfikował jej zachowanie. Teraz możemy dowiedzieć się jak przepisać ten kod z wykorzystaniem symbolu @, którego Python używa do dekoratorów.</p>
 
@@ -1126,7 +1105,7 @@ Kod ten jest wywołany po func()
     <span class="k">print</span> <span class="s2">&quot;Ta funkcja potrzebuje dekoratora&quot;</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1139,7 +1118,7 @@ Kod ten jest wywołany po func()
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">func_potrzebuje_dekoratora</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1149,7 +1128,7 @@ Kod ten jest wywołany po func()
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -1165,8 +1144,7 @@ Kod ten jest wywołany po func()
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Super! Zbudowałeś ręczni dekorator a później dowiedziałeś się jak użyć symbolu @ w Pythonie aby to zautomatyzować i oczyścić swój kod. Będziesz wykorzystywać dekoratory bardzo często, szczególnie przy web development, np. w pracy z Flask lub Django Framework.</strong></p>
 

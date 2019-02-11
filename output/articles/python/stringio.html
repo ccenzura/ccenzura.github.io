@@ -195,7 +195,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-31T00:00:00+01:00"> śro 31 styczeń 2018</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-31T00:00:00+01:00"> śro 31 stycznia 2018</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -215,8 +215,7 @@
                 <div class="entry-content">
                     
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>StringIO to moduł implemenetujący w pamięci pliki jako obiekty. Ten obiekt może być użyty jako input lub output większości funkcji, które wymagałyby standardowego obiektu pliku.</p>
 <p>Najlepszym sposobem na zrozumienie tego jest analiza kilku przykładów.</p>
@@ -232,7 +231,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">StringIO</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -246,7 +245,7 @@
 <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;To jest normalny string.&#39;</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -260,14 +259,13 @@
 <span class="n">f</span> <span class="o">=</span> <span class="n">StringIO</span><span class="o">.</span><span class="n">StringIO</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Teraz mamy obiekt <em>f</em>, który możemy wykorzystać jak plik, np:</p>
 
@@ -282,7 +280,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -292,7 +290,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[19]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -308,8 +306,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Mamy możliwość także zapisania czegoś wewnątrz niego:</p>
 
@@ -324,7 +321,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39; Druga linia wpisana do message.&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -338,7 +335,7 @@
 <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -352,7 +349,7 @@
 <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -362,7 +359,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -378,8 +375,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Extra! Teraz już wiesz jak wykorzystać StringIO aby zamienić zwykły string w in-memory file object. Tego typu czynności mają zastosowanie w różnych przypadkach, szczególnie w web scraping gdzie chcemy odczytać string scraped (pl. <em>wyskrobany</em>) jako plik.</p>
 <p><a href="https://docs.python.org/2/library/stringio.html">Dokumentacja StringIO</a></p>

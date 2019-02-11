@@ -195,7 +195,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-12T00:00:00+01:00"> pią 12 styczeń 2018</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-12T00:00:00+01:00"> pią 12 stycznia 2018</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -215,8 +215,7 @@
                 <div class="entry-content">
                     
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Python ma moduł datetime, który pomaga w radzeniu sobie z oznaczeniami czasu w kodzie. Wartości czasu są reprezentowane przez klasę time. Time ma atrybuty: godzina, minuta, sekunda i mikrosekunda. Mogą również zawierać informacje o strefie czasowej. Argumenty inicjujące instancję czasu są opcjonalne, ale domyślna wartość 0 jest mało prawdopodobna.</p>
 
@@ -224,8 +223,7 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="time">time<a class="anchor-link" href="#time">&#182;</a></h2><p>Przyjrzyjmy się, jak możemy wyodrębnić informacje o czasie z modułu datetime. Możemy stworzyć znacznik czasu, określając datetime.time(hour, minute, second, microsecond)</p>
 
@@ -250,7 +248,7 @@
 <span class="k">print</span> <span class="s1">&#39;tzinfo:&#39;</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">tzinfo</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -260,7 +258,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -279,8 +277,7 @@ tzinfo: None
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Uwaga: Instancja time przechowuje wyłącznie wartości czasu, nie jest związana z datą.</p>
 <p>Możemy takżę sprawdzić wartość mnimalną i maksymalną czasu dnia:</p>
@@ -298,7 +295,7 @@ tzinfo: None
 <span class="k">print</span> <span class="s1">&#39;Resolution  :&#39;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">resolution</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -308,7 +305,7 @@ tzinfo: None
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -324,8 +321,7 @@ Resolution  : 0:00:00.000001
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Atrybuty klasy min i max odzwierciedlają prawidłowy zakres czasu w ciągu jednego dnia.</p>
 
@@ -333,8 +329,7 @@ Resolution  : 0:00:00.000001
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Daty">Daty<a class="anchor-link" href="#Daty">&#182;</a></h2><p>datetime (tak jak podejrzewasz) pozwala nam także pracować z datą. Wartość daty kalendarzowej jest reprezentowana przez klasę date. Instancje posiadają atrybuty: year, month i day. W prosty sposób możemy wykorzystać aktualną datę korzystając z metody today().</p>
 <p>Zobaczmy przykłady:</p>
@@ -357,7 +352,7 @@ Resolution  : 0:00:00.000001
 <span class="k">print</span> <span class="s1">&#39;Day :&#39;</span><span class="p">,</span> <span class="n">today</span><span class="o">.</span><span class="n">day</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -367,7 +362,7 @@ Resolution  : 0:00:00.000001
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -387,8 +382,7 @@ Day : 16
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Tak jak w przypadku czasu, możemy poznać zakres dat używając atrybutów min i max.</p>
 
@@ -405,7 +399,7 @@ Day : 16
 <span class="k">print</span> <span class="s1">&#39;Resolution:&#39;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">resolution</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -415,7 +409,7 @@ Day : 16
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -431,8 +425,7 @@ Resolution: 1 day, 0:00:00
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Innym sposobem utworzenie nowej instancji daty jest wykorzystanie metody replace() na istniejącej dacie. Na przykład, możesz zmienić rok, pozostawiając dzień i miesiąc bez zmian.</p>
 
@@ -451,7 +444,7 @@ Resolution: 1 day, 0:00:00
 <span class="k">print</span> <span class="s1">&#39;d2:&#39;</span><span class="p">,</span> <span class="n">d2</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -461,7 +454,7 @@ Resolution: 1 day, 0:00:00
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -476,8 +469,7 @@ d2: 1990-03-11
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Arytmetyka">Arytmetyka<a class="anchor-link" href="#Arytmetyka">&#182;</a></h1><p>Możemy zastosować arytmetykę na obiektach daty aby srpawdzić różnicę w czasie. 
 Przykłady:</p>
@@ -493,7 +485,7 @@ Przykłady:</p>
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">d1</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -503,7 +495,7 @@ Przykłady:</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -526,7 +518,7 @@ Przykłady:</p>
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">d2</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -536,7 +528,7 @@ Przykłady:</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -559,7 +551,7 @@ Przykłady:</p>
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">d1</span><span class="o">-</span><span class="n">d2</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -569,7 +561,7 @@ Przykłady:</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -585,8 +577,7 @@ Przykłady:</p>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Jako wynik otrzymujemy różnicę w ilości dni pomiędzy dwoma datami. Możesz skorzystać z metody timedelta do sprecyzowania jednostek czasu (day, minutes, hours itp.)</p>
 <p>Super! Teraz powinieneś już rozumieć podstawy wykorzsytania modułu datetime!</p>

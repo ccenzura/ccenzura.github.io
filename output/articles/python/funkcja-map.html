@@ -195,7 +195,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-03T00:00:00+01:00"> śro 03 styczeń 2018</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-03T00:00:00+01:00"> śro 03 stycznia 2018</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -215,8 +215,7 @@
                 <div class="entry-content">
                     
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="map()">map()<a class="anchor-link" href="#map()">&#182;</a></h1><p>map () jest funkcją, która przyjmuje dwa argumenty: funkcję i sekwencję iterowalną. W formie:
      map(funkcja, sekwencja)
@@ -241,14 +240,13 @@ Pierwszym argumentem jest nazwa funkcji, a drugim sekwencja (na przykład lista)
 <span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">22.5</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span><span class="mi">100</span><span class="p">]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Zobaczmy funkcję map() w akcji:</p>
 
@@ -266,7 +264,7 @@ Pierwszym argumentem jest nazwa funkcji, a drugim sekwencja (na przykład lista)
 <span class="n">F_temps</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -276,7 +274,7 @@ Pierwszym argumentem jest nazwa funkcji, a drugim sekwencja (na przykład lista)
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -300,7 +298,7 @@ Pierwszym argumentem jest nazwa funkcji, a drugim sekwencja (na przykład lista)
 <span class="nb">map</span><span class="p">(</span><span class="n">celsius</span><span class="p">,</span> <span class="n">F_temps</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -310,7 +308,7 @@ Pierwszym argumentem jest nazwa funkcji, a drugim sekwencja (na przykład lista)
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -326,8 +324,7 @@ Pierwszym argumentem jest nazwa funkcji, a drugim sekwencja (na przykład lista)
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>W przykładzie powyżej nie użyliśmy wyrażenia lambda. Używając lambda, nie musielibyśmy definiować i nazywać funkcji fahrenheit() i celsius().</p>
 
@@ -342,7 +339,7 @@ Pierwszym argumentem jest nazwa funkcji, a drugim sekwencja (na przykład lista)
 <div class=" highlight hl-ipython2"><pre><span></span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="mf">5.0</span><span class="o">/</span><span class="mi">9</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">32</span><span class="p">),</span> <span class="n">F_temps</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -352,7 +349,7 @@ Pierwszym argumentem jest nazwa funkcji, a drugim sekwencja (na przykład lista)
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -368,8 +365,7 @@ Pierwszym argumentem jest nazwa funkcji, a drugim sekwencja (na przykład lista)
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Super! Mamy ten sam wynik! Funkcja map() jest znacznie częściej używana z wyrażeniami lambda, ponieważ cała idea map() ma na celu zaoszczędzenie wysiłku na konieczności tworzenia specjalnie pętli.</p>
 
@@ -377,8 +373,7 @@ Pierwszym argumentem jest nazwa funkcji, a drugim sekwencja (na przykład lista)
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>map() może być wykorzsytywane na więcej niż jednej iterowalnej sekwencji. Jednakże sekwencje muszą mieć tę samą długość/ilość elmentów.</p>
 <p>Na przykład, jeśli pracujemy z dwiema listami - map() zastosuje funkcję lambda do elementów list argumentów, tj. najpierw zastosujemy ją do elementów o indeksie 0, a następnie do elementów o indeksie 1, aż do n - osiągnięto indeks.</p>
@@ -399,7 +394,7 @@ Pierwszym argumentem jest nazwa funkcji, a drugim sekwencja (na przykład lista)
 <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -409,7 +404,7 @@ Pierwszym argumentem jest nazwa funkcji, a drugim sekwencja (na przykład lista)
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -433,7 +428,7 @@ Pierwszym argumentem jest nazwa funkcji, a drugim sekwencja (na przykład lista)
 <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">:</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="n">z</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -443,7 +438,7 @@ Pierwszym argumentem jest nazwa funkcji, a drugim sekwencja (na przykład lista)
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -459,8 +454,7 @@ Pierwszym argumentem jest nazwa funkcji, a drugim sekwencja (na przykład lista)
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>W powyższym przykładzie widać, że parametr x otrzymuje swoje wartości z listy a, podczas gdy y otrzymuje jego wartości z b i z z listy c. Śmiało sprawdź na własnym przykładzie czy poprawnie zrozumiałeś funkcję map().</p>
 <p>Dobra robota! Powinieneś teraz mieć podstawową wiedzę na temat funkcji map ().</p>

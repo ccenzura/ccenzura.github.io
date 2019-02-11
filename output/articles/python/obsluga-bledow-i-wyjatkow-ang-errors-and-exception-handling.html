@@ -195,7 +195,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-02T00:00:00+01:00"> wto 02 styczeń 2018</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-02T00:00:00+01:00"> wto 02 stycznia 2018</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -215,8 +215,7 @@
                 <div class="entry-content">
                     
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Podczas tej lekcji nauczymy się jak obsługiwać błędy i wyjątki w Pythonie. Na pewno w czasie tego kursu miałeś już styczność z errors, np.:</p>
 
@@ -231,7 +230,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Hello</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -241,7 +240,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_text output_error">
@@ -259,8 +258,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Zwróć uwagę, w jaki sposób otrzymujemy błąd SyntaxError, z dalszym opisem, że był to błąd EOL (błąd końca linii) wywołany podczas skanowania string. Jest to wystarczająco szczegółowe, abyśmy mogli zauważyć, że zapomnieliśmy o pojedynczym cudzysłowie na końcu linii. Zrozumienie różnych typów błędów pomoże znacznie szybciej debugować kod.</p>
 <p>Ten typ błędu i opis jest znany jako wyjątek. Nawet jeśli instrukcja lub wyrażenie jest poprawne pod względem składni, może spowodować błąd podczas próby wykonania. Błędy wykryte podczas wykonywania są nazywane Exceptions i nie powodują przerwania działania kodu.</p>
@@ -270,8 +268,7 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="try-and-except">try and except<a class="anchor-link" href="#try-and-except">&#182;</a></h2><p>Podstawową terminologią i składnią używaną do obsługi błędów w Pythonie są instrukcje <strong>try</strong> i <strong>except</strong>. Kod, który może powodować wyjątek, jest umieszczany w bloku <strong>try</strong>, a obsługa wyjątku jest zaimplementowana w bloku <strong>except</strong> kodu. Składnia to:</p>
 
@@ -308,7 +305,7 @@ else:
    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -318,7 +315,7 @@ else:
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -332,8 +329,7 @@ else:
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Zobaczmy co się stanie, kiedy nie będziemy mieli dostępu do zapisu pliku (otwarcie pliku w trybie 'r'):</p>
 
@@ -356,7 +352,7 @@ else:
    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -366,7 +362,7 @@ else:
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -380,8 +376,7 @@ else:
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Wspaniale! Zwróć uwagę, jak wywołaliśmy komnunikat! Kod nadal działał i mogliśmy kontynuować działania i uruchamiać bloki kodu. Jest to niezwykle przydatne, gdy musisz uwzględnić możliwe błędy podczas wprowadzania kodu. Możesz przygotować się na błąd i nie przrywać kodu, tak jak widzieliśmy to powyżej.</p>
 <p>Moglibyśmy też po prostu powiedzieć z wyjątkiem: gdybyśmy nie byli pewni, jaki wyjątek się pojawi. Na przykład:</p>
@@ -405,7 +400,7 @@ else:
    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -415,7 +410,7 @@ else:
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -429,8 +424,7 @@ else:
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Swietnie! Teraz nie musimy zapamiętywać listy wszystkich typów wyjątków! Co się stanie, jeśli będziemy chcieli uruchomić kod po wystąpieniu wyjątku? Tutaj zastosowanie ma <strong>finally</strong>.</p>
 <h3 id="finally">finally<a class="anchor-link" href="#finally">&#182;</a></h3><p><strong>Finally</strong>: kod znajdujący się w tym bloku zostanie zawsze wywołany, nawet w przypadku wystąpienia wyjątku w bloku <strong>try</strong>
@@ -457,7 +451,7 @@ else:
    <span class="k">print</span> <span class="s2">&quot;Kod bloku finally zawsze jest wykonywany&quot;</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -467,7 +461,7 @@ else:
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -481,8 +475,7 @@ else:
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Możemy użyć tego połączenia z except. Przanalizujmy przykład, który pobiera informację od użytkownika i może zostać błednie podana:</p>
 
@@ -505,7 +498,7 @@ else:
         <span class="k">print</span> <span class="n">val</span>       
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -518,7 +511,7 @@ else:
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">askint</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -528,7 +521,7 @@ else:
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -551,7 +544,7 @@ Finally, wykonane!
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">askint</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -561,7 +554,7 @@ Finally, wykonane!
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -574,7 +567,7 @@ Finally, wykonane!
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_text output_error">
@@ -598,8 +591,7 @@ Finally, wykonane!
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Zwróć uwagę na błąd, który wystąpił podczas próby wywołania wartości val (ponieważ nigdy nie została poprawnie przypisana). Zwrócmy się do użytkownika i sprawdźmy, czy typ wejściowy jest liczbą całkowitą:</p>
 
@@ -622,7 +614,7 @@ Finally, wykonane!
         <span class="k">print</span> <span class="n">val</span> 
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -635,7 +627,7 @@ Finally, wykonane!
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">askint</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -645,7 +637,7 @@ Finally, wykonane!
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -659,7 +651,7 @@ Finally, wykonane
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_text output_error">
@@ -685,8 +677,7 @@ Finally, wykonane
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Hmmm... weryfikacja podawanej wartości zmiennej jest tylko raz. Jak możemy kontynuować weryfikację do momentu podania poprawnej wartości? Możemy oczywiście zastoswać pętlę <strong>while</strong>!</p>
 
@@ -714,7 +705,7 @@ Finally, wykonane
             <span class="k">print</span> <span class="n">val</span> 
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -727,7 +718,7 @@ Finally, wykonane
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">askint</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -737,7 +728,7 @@ Finally, wykonane
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -765,8 +756,7 @@ Finally, wykonane
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Wspaniale! Teraz już wiesz jak posługiwać się błedami i wyjątkami w Pythonie z wykorzystaniem notacji try, except, else i finally!</strong></p>
 

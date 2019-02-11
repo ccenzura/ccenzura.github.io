@@ -195,7 +195,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-03T00:00:00+01:00"> śro 03 styczeń 2018</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-03T00:00:00+01:00"> śro 03 stycznia 2018</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -215,8 +215,7 @@
                 <div class="entry-content">
                     
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Nie ma tu kodu, ponieważ sekcja ta nie miałaby większego sensu. Sprawdź wykłady wideo, aby uzyskać więcej informacji i zasoby na ten temat.</p>
 <p>Oto najlepsze źródło oficjalnych dokumentów!
@@ -230,8 +229,7 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Moduły w Pythonie to po prostu pliki Pythona z rozszerzeniem .py, które implementują zestaw funkcji. Moduły są importowane z innych modułów za pomocą polecenia import.</p>
 <p>Aby zaimportować moduł, używamy polecenia <em>import</em>. Sprawdź pełną listę wbudowanych modułów w standardowej bibliotece Pythona <a href="https://docs.python.org/2/library/index.html">tutaj</a>.</p>
@@ -250,7 +248,7 @@
 <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="mf">2.4</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -260,7 +258,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -276,8 +274,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Przegl&#261;d-wbudowanych-modu&#322;&#243;w">Przegl&#261;d wbudowanych modu&#322;&#243;w<a class="anchor-link" href="#Przegl&#261;d-wbudowanych-modu&#322;&#243;w">&#182;</a></h2><p>Dwie bardzo ważne funkcje ułatwiają zapoznanie się i pracę z modułami w Pythonie - funkcje <strong>dir</strong> oraz <strong>help</strong>.</p>
 <p>Możemy sprawdzić jakie funkcje są zaimplementowane w każdy moduł wykorzystując funkcję <strong>dir</strong>:</p>
@@ -293,7 +290,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">math</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -303,7 +300,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -317,8 +314,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Kiedy znajdziemy interesującą nas funkcję, możemy przeczytać o niej więcej szczegółów wykorzystując funkcję <strong>help</strong>:</p>
 
@@ -333,7 +329,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -343,7 +339,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -364,8 +360,7 @@ ceil(...)
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Pisanie-modu&#322;&#243;w">Pisanie modu&#322;&#243;w<a class="anchor-link" href="#Pisanie-modu&#322;&#243;w">&#182;</a></h2><p>Pisanie modułów Pythona jest bardzo proste. Aby utworzyć własny moduł, po prostu utwórz nowy plik .py z nazwą modułu, a następnie zaimportuj go przy użyciu nazwy pliku Python (bez rozszerzenia .py) za pomocą polecenia import.</p>
 <h2 id="Pisanie-pakiet&#243;w">Pisanie pakiet&#243;w<a class="anchor-link" href="#Pisanie-pakiet&#243;w">&#182;</a></h2><p>Pakiety to przestrzenie nazw zawierające wiele pakietów i samych modułów. Są to po prostu katalogi, ale z niespodzianką.</p>
@@ -385,7 +380,7 @@ ceil(...)
 <span class="kn">import</span> <span class="nn">foo.bar</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -399,14 +394,13 @@ ceil(...)
 <span class="kn">from</span> <span class="nn">foo</span> <span class="kn">import</span> <span class="n">bar</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>W pierwszej metodzie musimy użyć prefiksu foo za każdym razem, gdy wchodzimy w moduł bar. W drugiej metodzie tego nie robimy, ponieważ importujemy moduł do przestrzeni nazw naszego modułu.</p>
 <p>Plik <strong>__init__.py </strong> może również decydować, które moduły pakiet eksportuje jako interfejs API, zachowując inne moduły wewnętrzne, zastępując zmienną <strong>__all__</strong>, jak na przykład:</p>
@@ -424,7 +418,7 @@ ceil(...)
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;bar&quot;</span><span class="p">]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 

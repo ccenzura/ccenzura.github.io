@@ -195,7 +195,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-29T00:00:00+01:00"> pon 29 styczeń 2018</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-29T00:00:00+01:00"> pon 29 stycznia 2018</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -215,8 +215,7 @@
                 <div class="entry-content">
                     
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Wyrażenia regularne to wzorce pasujące do tekstu opisane za pomocą formalnej składni. W rozmowach zapewne często słyszałeś wyrażenia regularne, nazywane "regex" lub "regexp". Wyrażenia regularne mogą zawierać wiele reguł, od znalezienia powtórzeń po dopasowywania tekstu i wiele więcej. Wraz z postępem w Pythonie zobaczysz, że wiele problemów z parsowaniem można rozwiązać za pomocą wyrażeń regularnych (są to również zwykłe pytania dotyczące rozmowy o pracę!).</p>
 <p>Jeśli znasz Perl, zauważysz, że składnia wyrażeń regularnych jest bardzo podobna w Pythonie. Do tego wykładu użyjemy modułu re z Pythona.</p>
@@ -226,8 +225,7 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Wyszukiwanie-wzor&#243;w-(ang.-patterns)-w-tek&#347;cie">Wyszukiwanie wzor&#243;w (ang. <em>patterns</em>) w tek&#347;cie<a class="anchor-link" href="#Wyszukiwanie-wzor&#243;w-(ang.-patterns)-w-tek&#347;cie">&#182;</a></h2><p>Jednym z najczęstszych zastosowań modułu re jest wyszukiwanie wzorców w tekście. Poniżej szybki przykład zastosowania metody wyszukiwania w module re w celu znalezienia tekstu:</p>
 
@@ -259,7 +257,7 @@
         <span class="k">print</span> <span class="s1">&#39;Brak dopasowania.</span><span class="se">\n</span><span class="s1">&#39;</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -269,7 +267,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -292,8 +290,7 @@ Znaleziono dopasowanie.
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Wwidzimy, że re.search() pobiera wzór, skanuje tekst, a następnie zwraca <strong>Znaleziono dopasowanie</strong>. Jeśli nie znajduje żadenego wzorca, zwraca  <strong>Brak dopasowania</strong>. Aby uzyskać jaśniejszy obraz tego obiektu dopasowania, sprawdź poniżej:</p>
 
@@ -316,7 +313,7 @@ Znaleziono dopasowanie.
 <span class="nb">type</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -326,7 +323,7 @@ Znaleziono dopasowanie.
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[44]:</div>
+    <div class="prompt output_prompt">Out[44]:</div>
 
 
 
@@ -342,8 +339,7 @@ Znaleziono dopasowanie.
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Ten <strong>dopasowany</strong> zwracany przez metodę search() jest czymś więcej niż tylko Boolean lub None, zawiera informacje o dopasowaniu, w tym oryginalny string wejściowy, użyte wyrażenie regularne i położenie match. Zobaczmy metody, których możemy użyć na obiekcie match:</p>
 
@@ -359,7 +355,7 @@ Znaleziono dopasowanie.
 <span class="n">match</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -369,7 +365,7 @@ Znaleziono dopasowanie.
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[45]:</div>
+    <div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -393,7 +389,7 @@ Znaleziono dopasowanie.
 <span class="n">match</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -403,7 +399,7 @@ Znaleziono dopasowanie.
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[47]:</div>
+    <div class="prompt output_prompt">Out[47]:</div>
 
 
 
@@ -419,8 +415,7 @@ Znaleziono dopasowanie.
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Split-z-wykorzystaniem-wyra&#380;e&#324;-regularnych">Split z wykorzystaniem wyra&#380;e&#324; regularnych<a class="anchor-link" href="#Split-z-wykorzystaniem-wyra&#380;e&#324;-regularnych">&#182;</a></h2><p>Zobaczmy jak możemy wykonać split za pomocą składni moduły re. Powinno to wyglądać podobnie jak metoda split() string.</p>
 
@@ -441,7 +436,7 @@ Znaleziono dopasowanie.
 <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">split_term</span><span class="p">,</span> <span class="n">phrase</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -451,7 +446,7 @@ Znaleziono dopasowanie.
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[49]:</div>
+    <div class="prompt output_prompt">Out[49]:</div>
 
 
 
@@ -467,8 +462,7 @@ Znaleziono dopasowanie.
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Zwróć uwagę, jak re.split() zwraca listę stringów, podzieloną w miejscu wystąpienia '@' (split_term), który zostaje pominięty w liście. Stwórz kilka przykładów, aby się upewnić że rozumiesz!</p>
 
@@ -476,8 +470,7 @@ Znaleziono dopasowanie.
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Wyszukanie-wszytkich-wyst&#261;pie&#324;-wzorca">Wyszukanie wszytkich wyst&#261;pie&#324; wzorca<a class="anchor-link" href="#Wyszukanie-wszytkich-wyst&#261;pie&#324;-wzorca">&#182;</a></h2><p>Możemy użyć re.findall() aby znaleźć wszystkie wystąpienia w stringu, np:</p>
 
@@ -493,7 +486,7 @@ Znaleziono dopasowanie.
 <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;match&#39;</span><span class="p">,</span><span class="s1">&#39;test phrase match is in middle&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -503,7 +496,7 @@ Znaleziono dopasowanie.
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[50]:</div>
+    <div class="prompt output_prompt">Out[50]:</div>
 
 
 
@@ -519,8 +512,7 @@ Znaleziono dopasowanie.
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Sk&#322;adnia-wyra&#380;e&#324;-regularnych-z-u&#380;yciem-modu&#322;u-re">Sk&#322;adnia wyra&#380;e&#324; regularnych z u&#380;yciem modu&#322;u re<a class="anchor-link" href="#Sk&#322;adnia-wyra&#380;e&#324;-regularnych-z-u&#380;yciem-modu&#322;u-re">&#182;</a></h2><p>Większą część tej lekcji poświęcimy sposobie użycia re z Pythonem. Wyrażenia regularne obsługują ogromną różnorodność wzorów, po prostu znajdując miejsce, w którym wystąpił pojedynczy ciąg znaków.</p>
 <p>Możemy użyć <em>metacharacters</em> razem z re, aby znaleźć określone typy wzorów.</p>
@@ -545,14 +537,13 @@ Znaleziono dopasowanie.
         <span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Sk&#322;adnia-powt&#243;rze&#324;">Sk&#322;adnia powt&#243;rze&#324;<a class="anchor-link" href="#Sk&#322;adnia-powt&#243;rze&#324;">&#182;</a></h3><p>Istneieje pięć sposobów na wyrażenie powtórzeń we wzorcu:
 There are five ways to express repetition in a pattern:</p>
@@ -585,7 +576,7 @@ There are five ways to express repetition in a pattern:</p>
 <span class="n">multi_re_find</span><span class="p">(</span><span class="n">test_patterns</span><span class="p">,</span> <span class="n">test_phrase</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -595,7 +586,7 @@ There are five ways to express repetition in a pattern:</p>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -628,8 +619,7 @@ Przeszukaj frazę wykorzystując re: &#39;sd{2,3}&#39;
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Zestawy-znak&#243;w">Zestawy znak&#243;w<a class="anchor-link" href="#Zestawy-znak&#243;w">&#182;</a></h2><p>Zestawy znaków są używane, gdy chcesz dopasować dowolną grupę znaków w punkcie wejścia. Nawiasy służą do konstruowania danych zestawu znaków. Na przykład: [ab] wyszukuje wystąpienia a lub b.
 Zobaczmy kilka przykładów:</p>
@@ -651,7 +641,7 @@ Zobaczmy kilka przykładów:</p>
 <span class="n">multi_re_find</span><span class="p">(</span><span class="n">test_patterns</span><span class="p">,</span><span class="n">test_phrase</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -661,7 +651,7 @@ Zobaczmy kilka przykładów:</p>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -682,8 +672,7 @@ Przeszukaj frazę wykorzystując re: &#39;s[sd]+&#39;
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Pierwsze [sd] zwraca każdą instancję. Drugie s[sd]+ po prostu zwraca wszystko zaczynające się od s, a drugim znakiem jest s lub d.</p>
 
@@ -691,8 +680,7 @@ Przeszukaj frazę wykorzystując re: &#39;s[sd]+&#39;
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Wyukluczenia">Wyukluczenia<a class="anchor-link" href="#Wyukluczenia">&#182;</a></h2><p>Możemy użyć ^, aby wykluczyć terminy, włączając je do notacji składni nawiasów. Na przykład: [^ ...] dopasuje dowolny pojedynczy znak, który nie znajduje się w nawiasie. Zobaczmy kilka przykładów:</p>
 
@@ -707,14 +695,13 @@ Przeszukaj frazę wykorzystując re: &#39;s[sd]+&#39;
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">test_phrase</span> <span class="o">=</span> <span class="s1">&#39;To jest ciag! Ale ma interpunkcje. Jak mozemy ja usunac?&#39;</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Użyj [^!.? ], aby sprawdzić zgodność, zwraca te znaki które nie są!,.,? lub spacją. Dodaj +, aby sprawdzić, czy dopasowanie pojawia się co najmniej raz, co w zasadzie zwraca same słówa.</p>
 
@@ -729,7 +716,7 @@ Przeszukaj frazę wykorzystując re: &#39;s[sd]+&#39;
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;[^!.? ]+&#39;</span><span class="p">,</span><span class="n">test_phrase</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -739,7 +726,7 @@ Przeszukaj frazę wykorzystując re: &#39;s[sd]+&#39;
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -764,8 +751,7 @@ Przeszukaj frazę wykorzystując re: &#39;s[sd]+&#39;
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Zakresy-znak&#243;w">Zakresy znak&#243;w<a class="anchor-link" href="#Zakresy-znak&#243;w">&#182;</a></h2><p>W miarę jak zestawy znaków stają się większe, wpisywanie każdego znaku, który powinien (lub nie powinien) pasować, może stać się bardzo uciążliwe. Bardziej kompaktowy format przy użyciu zakresów znaków pozwala zdefiniować zestaw znaków obejmujący wszystkie sąsiadujące znaki między punktem początkowym i końcowym. Używany format to [początek-koniec].</p>
 <p>Typowe przypadki użycia to wyszukanie określonego zakresu liter w alfabecie, na przykład [a-f] zwróci wyniki z literami od a do f.</p>
@@ -789,7 +775,7 @@ Przeszukaj frazę wykorzystując re: &#39;s[sd]+&#39;
 <span class="n">multi_re_find</span><span class="p">(</span><span class="n">test_patterns</span><span class="p">,</span><span class="n">test_phrase</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -799,7 +785,7 @@ Przeszukaj frazę wykorzystując re: &#39;s[sd]+&#39;
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -828,8 +814,7 @@ Przeszukaj frazę wykorzystując re: &#39;[A-Z][a-z]+&#39;
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Escape-Codes">Escape Codes<a class="anchor-link" href="#Escape-Codes">&#182;</a></h2><p>Możesz użyć specjalnych escape codes, aby znaleźć określone typy wzorców w danych, takie jak cyfry, "nie cyfry", spacje i wiele innych. Na przykład:</p>
 <table border="1" class="docutils">
@@ -886,7 +871,7 @@ Przeszukaj frazę wykorzystując re: &#39;[A-Z][a-z]+&#39;
 <span class="n">multi_re_find</span><span class="p">(</span><span class="n">test_patterns</span><span class="p">,</span><span class="n">test_phrase</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -896,7 +881,7 @@ Przeszukaj frazę wykorzystując re: &#39;[A-Z][a-z]+&#39;
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -933,8 +918,7 @@ Przeszukaj frazę wykorzystując re: &#39;\\W+&#39;
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Podsumowanie">Podsumowanie<a class="anchor-link" href="#Podsumowanie">&#182;</a></h2><p>Powinieneś teraz dobrze rozumieć, jak używać modułu wyrażeń regularnych w Pythonie. Jest mnóstwo bardziej skomplikowanych zastosowań, ale byłoby nierozsądnie przejść przez każdy przypadek użycia. Zamiast tego spójrz na pełną [dokumentację] (<a href="https://docs.python.org/2/library/re.html#regular-expression-syntax">https://docs.python.org/2/library/re.html#regular-expression-syntax</a>), jeśli zajdzie potrzeba sprawdzenia konkretnego przypadku.</p>
 <p>Możesz również sprawdzić ładne tabele podsumowań w tym <a href="http://www.tutorialspoint.com/python/python_reg_expressions.htm">po angielsku</a> oraz inny <a href="http://home.agh.edu.pl/~mkuta/tk/WyrazeniaRegularne.html">opis po polsku</a></p>

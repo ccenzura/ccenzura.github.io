@@ -195,7 +195,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2017-12-14T00:00:00+01:00"> czw 14 grudzień 2017</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2017-12-14T00:00:00+01:00"> czw 14 grudnia 2017</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -215,8 +215,7 @@
                 <div class="entry-content">
                     
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Teraz, kiedy już wiemy jak tworzyć własne funkcje, ważne jest, aby zrozumieć, w jaki sposób Python radzi sobie z przypisanymi im nazwami zmiennych. Kiedy tworzysz nazwę zmiennej w Pythonie, nazwa jest przechowywana w <em>name-space</em>. Nazwy zmiennych mają także <em>zasięg</em>, zakres określa widoczność nazwy tej zmiennej w innych częściach kodu.</p>
 <p>Zacznijmy od szybkiego eksperymentu, wyobraź sobie następujący kod:</p>
@@ -237,7 +236,7 @@
 <span class="k">print</span> <span class="n">printer</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -247,7 +246,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -262,8 +261,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Co zwraca funkcja printer(), 25 czy 50? Co zwraca print x, 25 czy 50?</p>
 
@@ -278,7 +276,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">x</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -288,7 +286,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -309,7 +307,7 @@
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">printer</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -319,7 +317,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -333,8 +331,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Ciekawe! Skąd Python wie, do którego <strong>x</strong> chcesz się odwołać w swoim kodzie? Tutaj ma zastosowanie idea scope. Python posiada zestaw zasad określających, do której zmiennej (jak w naszym przypadku <em>x</em>) możemy się odwołać.</p>
 <p>Poznajmy te reguły:</p>
@@ -343,8 +340,7 @@
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Idea scope w tworzonym kodzie jest bardzo ważne aby zrozumieć jak prawidłowo przypisywać i wywoływać nazwy zmiennych.</p>
 <p>W uproszczeniu pojęcie scope można opisać za pomocą 3 ogólnych reguł:</p>
@@ -370,8 +366,7 @@ L: Local - Nazwy przypisane w jakikolwiek sposób w ramach funkcji (def lub lamb
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Szybkie-przyk&#322;&#261;dy-LEGB">Szybkie przyk&#322;&#261;dy LEGB<a class="anchor-link" href="#Szybkie-przyk&#322;&#261;dy-LEGB">&#182;</a></h2><h3 id="Local">Local<a class="anchor-link" href="#Local">&#182;</a></h3>
 </div>
@@ -386,14 +381,13 @@ L: Local - Nazwy przypisane w jakikolwiek sposób w ramach funkcji (def lub lamb
 <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Obudowane-zmienne-lokalne-przez-funkcje">Obudowane zmienne lokalne przez funkcje<a class="anchor-link" href="#Obudowane-zmienne-lokalne-przez-funkcje">&#182;</a></h3><p>Dzieję się tak kiedy mamy funkcję wewnątrz funkcji (zagnieżdzone funkcje)</p>
 
@@ -419,7 +413,7 @@ L: Local - Nazwy przypisane w jakikolwiek sposób w ramach funkcji (def lub lamb
 <span class="n">pozdrow</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -429,7 +423,7 @@ L: Local - Nazwy przypisane w jakikolwiek sposób w ramach funkcji (def lub lamb
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -443,8 +437,7 @@ L: Local - Nazwy przypisane w jakikolwiek sposób w ramach funkcji (def lub lamb
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Zwróć uwagę dlaczego został wywołany Sammy. Jest tak ponieważ funkcja hello jest obudowana przez funkcję pozdrow!
 Tak więc, pierwsza zmienna name zostaje nadpisana w funkcji pozdrow na 'Sammy'. Nastepnie funkcja hello wykorzystuje wartość zmiennej name z funkcji obudowującej pozdrow.</p>
@@ -453,8 +446,7 @@ Tak więc, pierwsza zmienna name zostaje nadpisana w funkcji pozdrow na 'Sammy'.
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Global">Global<a class="anchor-link" href="#Global">&#182;</a></h3><p>Na szczęście w Jupyter szybką metodą sprawdzenia zmiennych globalnych jest sprawdzenie, czy inna komórka rozpoznaje zmienną!</p>
 
@@ -469,7 +461,7 @@ Tak więc, pierwsza zmienna name zostaje nadpisana w funkcji pozdrow na 'Sammy'.
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">name</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -479,7 +471,7 @@ Tak więc, pierwsza zmienna name zostaje nadpisana w funkcji pozdrow na 'Sammy'.
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -493,8 +485,7 @@ Tak więc, pierwsza zmienna name zostaje nadpisana w funkcji pozdrow na 'Sammy'.
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Built-in">Built-in<a class="anchor-link" href="#Built-in">&#182;</a></h3><p>Python posiada wiele wbudowanych funkcje, którch nazw nie powinno się wykorzystywać do tworzenia własnych zmiennych!</p>
 
@@ -509,7 +500,7 @@ Tak więc, pierwsza zmienna name zostaje nadpisana w funkcji pozdrow na 'Sammy'.
 <div class=" highlight hl-ipython2"><pre><span></span><span class="nb">len</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -519,7 +510,7 @@ Tak więc, pierwsza zmienna name zostaje nadpisana w funkcji pozdrow na 'Sammy'.
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -535,8 +526,7 @@ Tak więc, pierwsza zmienna name zostaje nadpisana w funkcji pozdrow na 'Sammy'.
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Local-Variables">Local Variables<a class="anchor-link" href="#Local-Variables">&#182;</a></h2><p>Gdy deklarujesz zmienne w definicji funkcji, nie są one w żaden sposób powiązane z innymi zmiennymi o tych samych nazwach, które są używane poza funkcją. Nazwy zmiennych są lokalne wyłącznie wewnątrz funkcji. Nazywa się to zakresem (ang. <em>scope</em>) zmiennej. Wszystkie zmienne mają zakres bloku zdeklarowane od punktu definicji nazwy.</p>
 
@@ -559,7 +549,7 @@ Tak więc, pierwsza zmienna name zostaje nadpisana w funkcji pozdrow na 'Sammy'.
 <span class="k">print</span> <span class="s1">&#39;x nadal wynosi&#39;</span><span class="p">,</span> <span class="n">x</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -569,7 +559,7 @@ Tak więc, pierwsza zmienna name zostaje nadpisana w funkcji pozdrow na 'Sammy'.
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -585,8 +575,7 @@ x nadal wynosi 50
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Za pierwszym razem, gdy wywołujemy wartość nazwy x z pierwszym wierszu funkcji, Python używa wartości parametru zadeklarowanego w głównym bloku, powyżej definicji funkcji.</p>
 <p>Następnie przypisujemy wartość 2 do zmiennej x. Zmienna x jest lokalna dla naszej funkcji. Tak więc, gdy zmienimy wartość x w funkcji, x zdefiniowany w głównym bloku pozostaje niezmieniony.</p>
@@ -596,8 +585,7 @@ x nadal wynosi 50
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="The-global-statement-(pl.-wyra&#380;enie-global)">The global statement (pl. <em>wyra&#380;enie global</em>)<a class="anchor-link" href="#The-global-statement-(pl.-wyra&#380;enie-global)">&#182;</a></h2><p>Jeśli chcesz przypisać wartość do nazwy zdefiniowanej na najwyższym poziomie programu (tj. Nie wewnątrz jakiegokolwiek zakresu, takiego jak funkcji lub klasy), musisz powiedzieć Pythonowi, że nazwa nie jest lokalna, lecz jest globalna. Robimy to za pomocą wyrażenia global. Niemożliwe jest przypisanie wartości do zmiennej zdefiniowanej poza funkcją bez wyrażenia global.</p>
 <p>Możesz użyć wartości takich zmiennych zdefiniowanych poza funkcją (zakładając, że w ramach tej funkcji nie ma zmiennej o tej samej nazwie). Nie jest to jednak zlecane i należy tego unikać, ponieważ osoba czynająca później kod nie wie, skąd się bierze ta zmienna. Korzystanie z wyrażenia gobal wyraźnie stwierdza, że zmienna jest zdefiniowana w najbardziej zewnętrznym bloku.</p>
@@ -622,7 +610,7 @@ x nadal wynosi 50
 <span class="k">print</span> <span class="s1">&#39;Wartość x (poza funkcja()) to &#39;</span><span class="p">,</span> <span class="n">x</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -632,7 +620,7 @@ x nadal wynosi 50
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -650,8 +638,7 @@ Wartość x (poza funkcja()) to  2
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Wyrażenie global jest używane do zdeklarowania x jako zmienna globalna, więc kiedy wewnątrz funkcja() przypiszemy zmiennej x nową wartość, to modyfikujemy także wartość zmiennej x poza blokiem funkcji.</p>
 <p>Wykorzystując wyrażenie global możesz ustawić więcej niż jedną zmienną, np. <em>global x, y, z</em></p>
@@ -660,8 +647,7 @@ Wartość x (poza funkcja()) to  2
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Podsumowanie">Podsumowanie<a class="anchor-link" href="#Podsumowanie">&#182;</a></h2><p>Teraz powinieneś już dobrze rozumieć Scope. Ostatnia informacja jest taka, że możesz użyć funkcji globals() i locals(), aby sprawdzić jakie są twoje bieżące lokalne i globalne zmienne.</p>
 <p>Powinieneś teraz dobrze zrozumieć Scope (możesz już intuicyjnie czuć się dobrze w Scope, co jest świetne!) Ostatnie wspomnienie jest takie, że możesz użyć funkcji globals () i locals (), aby sprawdzić, jakie są twoje bieżące lokalne i globalne zmienne.</p>

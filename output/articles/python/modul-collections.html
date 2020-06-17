@@ -204,7 +204,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-12T00:00:00+01:00"> pią 12 stycznia 2018</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-12T00:00:00+01:00"> Fri 12 January 2018</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -222,8 +222,7 @@
         <div class="row">
             <div class="col-lg-9">
                 <div class="entry-content">
-                    
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+                    <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Moduł collections jest wbudowanym modułem, który implementuje wyspecjalizowane typy danych kontenera, zapewniając alternatywę dla wbudowanych kontenerów ogólnego przeznaczenia Pythona. Poznaliśmy już podstawowe: dictionary, list, set and tuple.</p>
@@ -543,7 +542,7 @@
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
-    <span class="k">print</span> <span class="n">item</span>
+    <span class="nb">print</span> <span class="n">item</span>
 </pre></div>
 
     </div>
@@ -650,7 +649,7 @@
 <div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Normalny dictionary:&#39;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;Normalny dictionary:&#39;</span>
 
 <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -661,7 +660,7 @@
 <span class="n">d</span><span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;E&#39;</span>
 
 <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="k">print</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span>
+    <span class="nb">print</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span>
 </pre></div>
 
     </div>
@@ -705,7 +704,7 @@ d D
 <div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;OrderedDict:&#39;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;OrderedDict:&#39;</span>
 
 <span class="n">d</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
 
@@ -716,7 +715,7 @@ d D
 <span class="n">d</span><span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;E&#39;</span>
 
 <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="k">print</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span>
+    <span class="nb">print</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span>
 </pre></div>
 
     </div>
@@ -760,7 +759,7 @@ e E
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Dictionaries są równe? &#39;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;Dictionaries są równe? &#39;</span>
 
 <span class="n">d1</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">d1</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span>
@@ -770,7 +769,7 @@ e E
 <span class="n">d2</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;B&#39;</span>
 <span class="n">d2</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span>
 
-<span class="k">print</span> <span class="n">d1</span> <span class="o">==</span> <span class="n">d2</span>
+<span class="nb">print</span> <span class="n">d1</span> <span class="o">==</span> <span class="n">d2</span>
 </pre></div>
 
     </div>
@@ -810,7 +809,7 @@ True
 <div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Dictionaries są równe? &#39;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;Dictionaries są równe? &#39;</span>
 
 <span class="n">d1</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
 <span class="n">d1</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span>
@@ -822,7 +821,7 @@ True
 <span class="n">d2</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;B&#39;</span>
 <span class="n">d2</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span>
 
-<span class="k">print</span> <span class="n">d1</span> <span class="o">==</span> <span class="n">d2</span>
+<span class="nb">print</span> <span class="n">d1</span> <span class="o">==</span> <span class="n">d2</span>
 </pre></div>
 
     </div>

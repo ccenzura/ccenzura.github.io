@@ -204,7 +204,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2017-11-16T00:00:00+01:00"> czw 16 listopada 2017</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2017-11-16T00:00:00+01:00"> Thu 16 November 2017</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -222,8 +222,7 @@
         <div class="row">
             <div class="col-lg-9">
                 <div class="entry-content">
-                    
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+                    <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>W tej lekcji krótko omówimy różne sposoby formatowania instrukcji wywołania. W miarę jak będziesz kodował coraz więcej, prawdopodobnie będziesz potrzebował mieć instrukcje wywołania, które mogą przyjmować zmienną do wywoływanej instrukcji string.</p>
@@ -237,7 +236,7 @@
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;To jest string&#39;</span> <span class="c1"># pamiętaj, że w python 3 print jest funkcją print(&#39;To jest string&#39;)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;To jest string&#39;</span> <span class="c1"># pamiętaj, że w python 3 print jest funkcją print(&#39;To jest string&#39;)</span>
 </pre></div>
 
     </div>
@@ -277,7 +276,7 @@
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;STRING&#39;</span>
-<span class="k">print</span> <span class="s1">&#39;Umieść kolejny string za pomocą procent i s: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span> <span class="s1">&#39;Umieść kolejny string za pomocą procent i s: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -316,7 +315,7 @@
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%1.2f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%1.2f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -347,7 +346,7 @@
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%1.0f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%1.0f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -378,7 +377,7 @@
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%1.5f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%1.5f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -410,7 +409,7 @@
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># jeżeli ilość cyfr liczby całkowitej jest mniejsza niż określone w  automatycznie dowane są spacje</span>
-<span class="k">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%10.2f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span> 
+<span class="nb">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%10.2f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span> 
 </pre></div>
 
     </div>
@@ -441,7 +440,7 @@
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%25.2f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;Liczby zmiennoprzecinkowe: </span><span class="si">%25.2f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">13.144</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -480,7 +479,7 @@
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Tu jest liczba: </span><span class="si">%s</span><span class="s1">. Tu jest string: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">123.1</span><span class="p">,</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;Tu jest liczba: </span><span class="si">%s</span><span class="s1">. Tu jest string: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">123.1</span><span class="p">,</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -511,7 +510,7 @@
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Tu jest liczba: </span><span class="si">%r</span><span class="s1">. Tu jest string: </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">123.1</span><span class="p">,</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;Tu jest liczba: </span><span class="si">%r</span><span class="s1">. Tu jest string: </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="mf">123.1</span><span class="p">,</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -550,7 +549,7 @@
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Pierwszy: </span><span class="si">%s</span><span class="s1">, Drugi: </span><span class="si">%1.2f</span><span class="s1">, Trzeci: </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="s1">&#39;hi!&#39;</span><span class="p">,</span><span class="mf">3.14</span><span class="p">,</span><span class="mi">22</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;Pierwszy: </span><span class="si">%s</span><span class="s1">, Drugi: </span><span class="si">%1.2f</span><span class="s1">, Trzeci: </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="s1">&#39;hi!&#39;</span><span class="p">,</span><span class="mf">3.14</span><span class="p">,</span><span class="mi">22</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -596,7 +595,7 @@ lub
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;To jest string z {p}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="s1">&#39;insert&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;To jest string z </span><span class="si">{p}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="s1">&#39;insert&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -628,7 +627,7 @@ lub
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Wileokrotne użycie</span>
-<span class="k">print</span> <span class="s1">&#39;Pierwszy: {p}, Drugi: {p}, Trzeci: {p}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="s1">&#39;Hi!&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="s1">&#39;Pierwszy: </span><span class="si">{p}</span><span class="s1">, Drugi: </span><span class="si">{p}</span><span class="s1">, Trzeci: </span><span class="si">{p}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="s1">&#39;Hi!&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -660,7 +659,7 @@ lub
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Kilka obiektów</span>
-<span class="k">print</span> <span class="s1">&#39;Obiekt 1: {a}, Obiekt 2: {b}, Obiekt 3: {c}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="s1">&#39;two&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="mf">12.3</span><span class="p">)</span>
+<span class="nb">print</span> <span class="s1">&#39;Obiekt 1: </span><span class="si">{a}</span><span class="s1">, Obiekt 2: </span><span class="si">{b}</span><span class="s1">, Obiekt 3: </span><span class="si">{c}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="s1">&#39;two&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="mf">12.3</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -692,7 +691,7 @@ lub
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Bez definiowania formatowia</span>
-<span class="k">print</span> <span class="s1">&#39;Pierwszy {}, Drugi {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;raz&#39;</span><span class="p">,</span> <span class="s1">&#39;dwa&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="s1">&#39;Pierwszy </span><span class="si">{}</span><span class="s1">, Drugi </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;raz&#39;</span><span class="p">,</span> <span class="s1">&#39;dwa&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -725,7 +724,7 @@ lub
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Wykorzystanie w metodzie .format() wcześniej stworzonych zmiennych</span>
 <span class="n">zmienna</span> <span class="o">=</span> <span class="s1">&#39;kota&#39;</span>
-<span class="k">print</span> <span class="s1">&#39;Ala ma {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">zmienna</span><span class="p">)</span>
+<span class="nb">print</span> <span class="s1">&#39;Ala ma </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">zmienna</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -758,7 +757,7 @@ lub
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Wykorzystanie w metodzie .format() wcześniej stworzonych zmiennych</span>
 <span class="n">zmienna</span> <span class="o">=</span> <span class="s1">&#39;kota&#39;</span>
-<span class="k">print</span> <span class="s1">&#39;Ala ma {a}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">zmienna</span><span class="p">)</span>
+<span class="nb">print</span> <span class="s1">&#39;Ala ma </span><span class="si">{a}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">zmienna</span><span class="p">)</span>
 </pre></div>
 
     </div>

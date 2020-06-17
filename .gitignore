@@ -1,0 +1,15 @@
+# idea
+.idea
+
+# Files createt by MacOS after visiting directory using finder
+.DS_Store
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# virtualenv
+.venv
+venv/
+ENV/

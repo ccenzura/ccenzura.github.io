@@ -204,7 +204,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2017-12-22T00:00:00+01:00"> pią 22 grudnia 2017</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2017-12-22T00:00:00+01:00"> Fri 22 December 2017</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -222,8 +222,7 @@
         <div class="row">
             <div class="col-lg-9">
                 <div class="entry-content">
-                    
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+                    <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Object Oriented Programmin (OOP) jest jedną w głównych przeszkód dla poczatkujących, którzy zaczynają przygodę z programowaniem.</p>
@@ -317,10 +316,10 @@
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="k">print</span> <span class="nb">type</span><span class="p">([])</span>
-<span class="k">print</span> <span class="nb">type</span><span class="p">(())</span>
-<span class="k">print</span> <span class="nb">type</span><span class="p">({})</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span> <span class="nb">type</span><span class="p">([])</span>
+<span class="nb">print</span> <span class="nb">type</span><span class="p">(())</span>
+<span class="nb">print</span> <span class="nb">type</span><span class="p">({})</span>
 </pre></div>
 
     </div>
@@ -378,7 +377,7 @@
 <span class="c1"># W ten sposób tworzymy obiekt typu Przyklad</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">Przyklad</span><span class="p">()</span>
 
-<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -705,8 +704,8 @@ Special Method</p>
 
 <span class="n">k</span><span class="o">.</span><span class="n">set_promien</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="k">print</span> <span class="s1">&#39;Promien wynosi: &#39;</span><span class="p">,</span> <span class="n">k</span><span class="o">.</span><span class="n">get_promien</span><span class="p">()</span>
-<span class="k">print</span> <span class="s1">&#39;Powierzchnia wynosi: &#39;</span><span class="p">,</span> <span class="n">k</span><span class="o">.</span><span class="n">powierzchnia</span><span class="p">()</span>
+<span class="nb">print</span> <span class="s1">&#39;Promien wynosi: &#39;</span><span class="p">,</span> <span class="n">k</span><span class="o">.</span><span class="n">get_promien</span><span class="p">()</span>
+<span class="nb">print</span> <span class="s1">&#39;Powierzchnia wynosi: &#39;</span><span class="p">,</span> <span class="n">k</span><span class="o">.</span><span class="n">powierzchnia</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -757,25 +756,25 @@ Powierzchnia wynosi:  12.56
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s2">&quot;Animal created&quot;</span>
+        <span class="nb">print</span> <span class="s2">&quot;Animal created&quot;</span>
 
     <span class="k">def</span> <span class="nf">whoAmI</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s2">&quot;Animal&quot;</span>
+        <span class="nb">print</span> <span class="s2">&quot;Animal&quot;</span>
 
     <span class="k">def</span> <span class="nf">eat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s2">&quot;Eating&quot;</span>
+        <span class="nb">print</span> <span class="s2">&quot;Eating&quot;</span>
 
 
 <span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">Animal</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-        <span class="k">print</span> <span class="s2">&quot;Dog created&quot;</span>
+        <span class="nb">print</span> <span class="s2">&quot;Dog created&quot;</span>
 
     <span class="k">def</span> <span class="nf">whoAmI</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s2">&quot;Dog&quot;</span>
+        <span class="nb">print</span> <span class="s2">&quot;Dog&quot;</span>
 
     <span class="k">def</span> <span class="nf">bark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s2">&quot;Woof!&quot;</span>
+        <span class="nb">print</span> <span class="s2">&quot;Woof!&quot;</span>
 </pre></div>
 
     </div>
@@ -950,7 +949,7 @@ Dog created
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">Book</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">author</span><span class="p">,</span> <span class="n">pages</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s2">&quot;A book is created&quot;</span>
+        <span class="nb">print</span> <span class="s2">&quot;A book is created&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="n">author</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">pages</span> <span class="o">=</span> <span class="n">pages</span>
@@ -962,7 +961,7 @@ Dog created
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pages</span>
 
     <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s2">&quot;A book is destroyed&quot;</span>
+        <span class="nb">print</span> <span class="s2">&quot;A book is destroyed&quot;</span>
 </pre></div>
 
     </div>
@@ -978,8 +977,8 @@ Dog created
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">book</span> <span class="o">=</span> <span class="n">Book</span><span class="p">(</span><span class="s2">&quot;Python!&quot;</span><span class="p">,</span> <span class="s2">&quot;Jan Rosa&quot;</span><span class="p">,</span> <span class="mi">155</span><span class="p">)</span>
 
 <span class="c1">#Special Methods</span>
-<span class="k">print</span> <span class="n">book</span>
-<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">book</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">book</span>
+<span class="nb">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">book</span><span class="p">)</span>
 <span class="k">del</span> <span class="n">book</span>
 </pre></div>
 

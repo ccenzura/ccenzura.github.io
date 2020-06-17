@@ -204,7 +204,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2017-12-14T00:00:00+01:00"> czw 14 grudnia 2017</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2017-12-14T00:00:00+01:00"> Thu 14 December 2017</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -222,8 +222,7 @@
         <div class="row">
             <div class="col-lg-9">
                 <div class="entry-content">
-                    
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+                    <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Teraz, kiedy już wiemy jak tworzyć własne funkcje, ważne jest, aby zrozumieć, w jaki sposób Python radzi sobie z przypisanymi im nazwami zmiennych. Kiedy tworzysz nazwę zmiennej w Pythonie, nazwa jest przechowywana w <em>name-space</em>. Nazwy zmiennych mają także <em>zasięg</em>, zakres określa widoczność nazwy tej zmiennej w innych częściach kodu.</p>
@@ -241,8 +240,8 @@
 <span class="k">def</span> <span class="nf">printer</span><span class="p">():</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">50</span>
     <span class="k">return</span> <span class="n">x</span>
-<span class="k">print</span> <span class="n">x</span>
-<span class="k">print</span> <span class="n">printer</span><span class="p">()</span>
+<span class="nb">print</span> <span class="n">x</span>
+<span class="nb">print</span> <span class="n">printer</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -282,7 +281,7 @@
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">x</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="n">x</span>
 </pre></div>
 
     </div>
@@ -313,7 +312,7 @@
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">printer</span><span class="p">()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="n">printer</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -415,7 +414,7 @@ L: Local - Nazwy przypisane w jakikolwiek sposób w ramach funkcji (def lub lamb
     <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Sammy&#39;</span>
     
     <span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
-        <span class="k">print</span> <span class="s1">&#39;Hello &#39;</span><span class="o">+</span> <span class="n">name</span>
+        <span class="nb">print</span> <span class="s1">&#39;Hello &#39;</span><span class="o">+</span> <span class="n">name</span>
     
     <span class="n">hello</span><span class="p">()</span>
 
@@ -467,7 +466,7 @@ Tak więc, pierwsza zmienna name zostaje nadpisana w funkcji pozdrow na 'Sammy'.
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">name</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="n">name</span>
 </pre></div>
 
     </div>
@@ -550,12 +549,12 @@ Tak więc, pierwsza zmienna name zostaje nadpisana w funkcji pozdrow na 'Sammy'.
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">50</span>
 
 <span class="k">def</span> <span class="nf">funkcja</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">print</span> <span class="s1">&#39;x to&#39;</span><span class="p">,</span> <span class="n">x</span>
+    <span class="nb">print</span> <span class="s1">&#39;x to&#39;</span><span class="p">,</span> <span class="n">x</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
-    <span class="k">print</span> <span class="s1">&#39;Zmieniono zmienną lokalną x na&#39;</span><span class="p">,</span> <span class="n">x</span>
+    <span class="nb">print</span> <span class="s1">&#39;Zmieniono zmienną lokalną x na&#39;</span><span class="p">,</span> <span class="n">x</span>
 
 <span class="n">funkcja</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="k">print</span> <span class="s1">&#39;x nadal wynosi&#39;</span><span class="p">,</span> <span class="n">x</span>
+<span class="nb">print</span> <span class="s1">&#39;x nadal wynosi&#39;</span><span class="p">,</span> <span class="n">x</span>
 </pre></div>
 
     </div>
@@ -610,13 +609,13 @@ x nadal wynosi 50
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">50</span>
 <span class="k">def</span> <span class="nf">funkcja</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">x</span>
-    <span class="k">print</span> <span class="s1">&#39;Teraz ta funkcja wykorzystuje globalną zmienną x!&#39;</span>
-    <span class="k">print</span> <span class="s1">&#39;Globalna zmienna x to &#39;</span><span class="p">,</span> <span class="n">x</span>
+    <span class="nb">print</span> <span class="s1">&#39;Teraz ta funkcja wykorzystuje globalną zmienną x!&#39;</span>
+    <span class="nb">print</span> <span class="s1">&#39;Globalna zmienna x to &#39;</span><span class="p">,</span> <span class="n">x</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
-    <span class="k">print</span> <span class="s1">&#39;Wywołanie funkcji(), zmienia wartość zmiennej globalnej x na &#39;</span><span class="p">,</span> <span class="n">x</span>
-<span class="k">print</span> <span class="s1">&#39;Przed wywołaniem funkcja() x &#39;</span><span class="p">,</span> <span class="n">x</span>
+    <span class="nb">print</span> <span class="s1">&#39;Wywołanie funkcji(), zmienia wartość zmiennej globalnej x na &#39;</span><span class="p">,</span> <span class="n">x</span>
+<span class="nb">print</span> <span class="s1">&#39;Przed wywołaniem funkcja() x &#39;</span><span class="p">,</span> <span class="n">x</span>
 <span class="n">funkcja</span><span class="p">()</span>
-<span class="k">print</span> <span class="s1">&#39;Wartość x (poza funkcja()) to &#39;</span><span class="p">,</span> <span class="n">x</span>
+<span class="nb">print</span> <span class="s1">&#39;Wartość x (poza funkcja()) to &#39;</span><span class="p">,</span> <span class="n">x</span>
 </pre></div>
 
     </div>

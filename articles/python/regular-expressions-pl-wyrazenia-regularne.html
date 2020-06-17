@@ -204,7 +204,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-29T00:00:00+01:00"> pon 29 stycznia 2018</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-29T00:00:00+01:00"> Mon 29 January 2018</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -222,8 +222,7 @@
         <div class="row">
             <div class="col-lg-9">
                 <div class="entry-content">
-                    
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+                    <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Wyrażenia regularne to wzorce pasujące do tekstu opisane za pomocą formalnej składni. W rozmowach zapewne często słyszałeś wyrażenia regularne, nazywane "regex" lub "regexp". Wyrażenia regularne mogą zawierać wiele reguł, od znalezienia powtórzeń po dopasowywania tekstu i wiele więcej. Wraz z postępem w Pythonie zobaczysz, że wiele problemów z parsowaniem można rozwiązać za pomocą wyrażeń regularnych (są to również zwykłe pytania dotyczące rozmowy o pracę!).</p>
@@ -255,15 +254,15 @@
 <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Jest to string, który zawiera słowo1, lecz nie zawiera slowo2&#39;</span>
 
 <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">patterns</span><span class="p">:</span>
-    <span class="k">print</span> <span class="s1">&#39;Szukam &quot;</span><span class="si">%s</span><span class="s1">&quot; w: </span><span class="se">\n</span><span class="s1">&quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">text</span><span class="p">),</span>
+    <span class="nb">print</span> <span class="s1">&#39;Szukam &quot;</span><span class="si">%s</span><span class="s1">&quot; w: </span><span class="se">\n</span><span class="s1">&quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">text</span><span class="p">),</span>
     <span class="n">test</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span>  <span class="n">text</span><span class="p">)</span>
     <span class="c1"># Weryfikacja dopasowania</span>
     <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span>  <span class="n">text</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
-        <span class="k">print</span> <span class="s1">&#39;Znaleziono dopasowanie. </span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="nb">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="nb">print</span> <span class="s1">&#39;Znaleziono dopasowanie. </span><span class="se">\n</span><span class="s1">&#39;</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
-        <span class="k">print</span> <span class="s1">&#39;Brak dopasowania.</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="nb">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="nb">print</span> <span class="s1">&#39;Brak dopasowania.</span><span class="se">\n</span><span class="s1">&#39;</span>
 </pre></div>
 
     </div>
@@ -541,9 +540,9 @@ Znaleziono dopasowanie.
 <span class="sd">    Drukuje listę wszystkich dopasowań</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">patterns</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s1">&#39;Przeszukaj frazę wykorzystując re: </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">pattern</span>
-        <span class="k">print</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">phrase</span><span class="p">)</span>
-        <span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="nb">print</span> <span class="s1">&#39;Przeszukaj frazę wykorzystując re: </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">pattern</span>
+        <span class="nb">print</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">phrase</span><span class="p">)</span>
+        <span class="nb">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
 </pre></div>
 
     </div>
@@ -578,7 +577,7 @@ There are five ways to express repetition in a pattern:</p>
 <span class="n">test_patterns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sd*&#39;</span><span class="p">,</span>         <span class="c1"># s bez lub wieloma d</span>
                 <span class="s1">&#39;sd+&#39;</span><span class="p">,</span>          <span class="c1"># s z jednym lub wieloma d</span>
                 <span class="s1">&#39;sd?&#39;</span><span class="p">,</span>          <span class="c1"># s bez lub z jednym d</span>
-                <span class="s1">&#39;sd{3}&#39;</span><span class="p">,</span>        <span class="c1"># s z trzema d</span>
+                <span class="s1">&#39;sd</span><span class="si">{3}</span><span class="s1">&#39;</span><span class="p">,</span>        <span class="c1"># s z trzema d</span>
                 <span class="s1">&#39;sd{2,3}&#39;</span><span class="p">,</span>      <span class="c1"># s z dwoma lub trzema d</span>
                 <span class="p">]</span>
 

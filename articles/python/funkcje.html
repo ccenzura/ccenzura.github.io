@@ -204,7 +204,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2017-12-11T00:00:00+01:00"> pon 11 grudnia 2017</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2017-12-11T00:00:00+01:00"> Mon 11 December 2017</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -222,8 +222,7 @@
         <div class="row">
             <div class="col-lg-9">
                 <div class="entry-content">
-                    
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+                    <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Wprowadzenie-do-funkcji">Wprowadzenie do funkcji<a class="anchor-link" href="#Wprowadzenie-do-funkcji">&#182;</a></h2><p>Wykład ten będzie zawierał wyjaśnienie, czym jest funkcja w Pythonie i jak ją utworzyć. Podczas tworzenia kodu rozwiązującego nasze problemy bardzo często będziesz korzystać z funkcji.</p>
@@ -286,7 +285,7 @@ Teraz tutaj ważna kwestia, należy stosować indents (ang. <em>wciecia</em>) ab
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">say_hello</span><span class="p">():</span>
-    <span class="k">print</span> <span class="s1">&#39;hello&#39;</span>
+    <span class="nb">print</span> <span class="s1">&#39;hello&#39;</span>
 </pre></div>
 
     </div>
@@ -347,7 +346,7 @@ Teraz tutaj ważna kwestia, należy stosować indents (ang. <em>wciecia</em>) ab
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">pozdrow</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-    <span class="k">print</span> <span class="s1">&#39;Hello </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">name</span>
+    <span class="nb">print</span> <span class="s1">&#39;Hello </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">name</span>
 </pre></div>
 
     </div>
@@ -467,7 +466,7 @@ Teraz tutaj ważna kwestia, należy stosować indents (ang. <em>wciecia</em>) ab
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">result</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="n">result</span>
 </pre></div>
 
     </div>
@@ -506,7 +505,7 @@ Teraz tutaj ważna kwestia, należy stosować indents (ang. <em>wciecia</em>) ab
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">dodaj_num</span><span class="p">(</span><span class="s1">&#39;jeden&#39;</span><span class="p">,</span><span class="s1">&#39;dwa&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="n">dodaj_num</span><span class="p">(</span><span class="s1">&#39;jeden&#39;</span><span class="p">,</span><span class="s1">&#39;dwa&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -554,10 +553,10 @@ Teraz tutaj ważna kwestia, należy stosować indents (ang. <em>wciecia</em>) ab
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">liczba</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">liczba</span> <span class="o">%</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">print</span> <span class="s1">&#39;nie jest to liczba pierwsza&#39;</span>
+            <span class="nb">print</span> <span class="s1">&#39;nie jest to liczba pierwsza&#39;</span>
             <span class="k">break</span>
     <span class="k">else</span><span class="p">:</span> <span class="c1"># Jeżeli modulo ani razu nie wychodzi 0 to jest to liczba pierwsza</span>
-        <span class="k">print</span> <span class="s1">&#39;liczba pierwsza&#39;</span>
+        <span class="nb">print</span> <span class="s1">&#39;liczba pierwsza&#39;</span>
 </pre></div>
 
     </div>
@@ -616,11 +615,11 @@ Teraz tutaj ważna kwestia, należy stosować indents (ang. <em>wciecia</em>) ab
 <span class="sd">    Lepsza funkcja sprawdzająca liczby pierwsze.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="k">if</span> <span class="n">liczba</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">liczba</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span> 
-        <span class="k">return</span> <span class="bp">False</span>
+        <span class="k">return</span> <span class="kc">False</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">lint</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">liczba</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">liczba</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">False</span>
-    <span class="k">return</span> <span class="bp">True</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
 </pre></div>
 
     </div>

@@ -204,7 +204,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-02T00:00:00+01:00"> wto 02 stycznia 2018</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2018-01-02T00:00:00+01:00"> Tue 02 January 2018</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/python.html">python</a>
@@ -222,8 +222,7 @@
         <div class="row">
             <div class="col-lg-9">
                 <div class="entry-content">
-                    
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+                    <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Podczas tej lekcji nauczymy się jak obsługiwać błędy i wyjątki w Pythonie. Na pewno w czasie tego kursu miałeś już styczność z errors, np.:</p>
@@ -236,7 +235,7 @@
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Hello</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;Hello</span>
 </pre></div>
 
     </div>
@@ -308,9 +307,9 @@ else:
     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Test zapisywania tekstu w pliku&#39;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
     <span class="c1"># Ten blok except zostanie aktywowany wyłacznie w przypadku wywołania wyjątku IOError </span>
-    <span class="k">print</span> <span class="s2">&quot;Error: Nie mogę znaleźć pliku lub źródła danych&quot;</span>
+    <span class="nb">print</span> <span class="s2">&quot;Error: Nie mogę znaleźć pliku lub źródła danych&quot;</span>
 <span class="k">else</span><span class="p">:</span>
-   <span class="k">print</span> <span class="s2">&quot;Zapisywanie pliku zakończyło się sukcesem&quot;</span>
+   <span class="nb">print</span> <span class="s2">&quot;Zapisywanie pliku zakończyło się sukcesem&quot;</span>
    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
@@ -355,9 +354,9 @@ else:
     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Test zapisywania tekstu w pliku&#39;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
     <span class="c1"># Ten blok except zostanie aktywowany wyłacznie w przypadku wywołania wyjątku IOError </span>
-   <span class="k">print</span> <span class="s2">&quot;Error: Nie mogę znaleźć pliku lub źródła danych&quot;</span>
+   <span class="nb">print</span> <span class="s2">&quot;Error: Nie mogę znaleźć pliku lub źródła danych&quot;</span>
 <span class="k">else</span><span class="p">:</span>
-   <span class="k">print</span> <span class="s2">&quot;Zapisywanie pliku zakończyło się sukcesem&quot;</span>
+   <span class="nb">print</span> <span class="s2">&quot;Zapisywanie pliku zakończyło się sukcesem&quot;</span>
    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
@@ -403,9 +402,9 @@ else:
     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Test zapisywania tekstu w pliku&#39;</span><span class="p">)</span>
 <span class="k">except</span><span class="p">:</span>
     <span class="c1"># Ten blok except zostanie aktywowany wyłacznie w przypadku wywołania jakiegokolwiek wyjątku </span>
-   <span class="k">print</span> <span class="s2">&quot;Error: Nie mogę znaleźć pliku lub źródła danych&quot;</span>
+   <span class="nb">print</span> <span class="s2">&quot;Error: Nie mogę znaleźć pliku lub źródła danych&quot;</span>
 <span class="k">else</span><span class="p">:</span>
-   <span class="k">print</span> <span class="s2">&quot;Zapisywanie pliku zakończyło się sukcesem&quot;</span>
+   <span class="nb">print</span> <span class="s2">&quot;Zapisywanie pliku zakończyło się sukcesem&quot;</span>
    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
@@ -457,7 +456,7 @@ else:
    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;testfile&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Zdanie testowe&quot;</span><span class="p">)</span>
 <span class="k">finally</span><span class="p">:</span>
-   <span class="k">print</span> <span class="s2">&quot;Kod bloku finally zawsze jest wykonywany&quot;</span>
+   <span class="nb">print</span> <span class="s2">&quot;Kod bloku finally zawsze jest wykonywany&quot;</span>
 </pre></div>
 
     </div>
@@ -498,13 +497,13 @@ else:
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">askint</span><span class="p">():</span>
         <span class="k">try</span><span class="p">:</span>
-            <span class="n">val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;Proszę podać liczbę: &quot;</span><span class="p">))</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">raw_input</span><span class="p">(</span><span class="s2">&quot;Proszę podać liczbę: &quot;</span><span class="p">))</span>
         <span class="k">except</span><span class="p">:</span>
-            <span class="k">print</span> <span class="s2">&quot;Wygląda na to że nie podałeś liczby!&quot;</span>
+            <span class="nb">print</span> <span class="s2">&quot;Wygląda na to że nie podałeś liczby!&quot;</span>
             
         <span class="k">finally</span><span class="p">:</span>
-            <span class="k">print</span> <span class="s2">&quot;Finally, wykonane!&quot;</span>
-        <span class="k">print</span> <span class="n">val</span>       
+            <span class="nb">print</span> <span class="s2">&quot;Finally, wykonane!&quot;</span>
+        <span class="nb">print</span> <span class="n">val</span>       
 </pre></div>
 
     </div>
@@ -614,13 +613,13 @@ Finally, wykonane!
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">askint</span><span class="p">():</span>
         <span class="k">try</span><span class="p">:</span>
-            <span class="n">val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;Proszę podać liczbę: &quot;</span><span class="p">))</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">raw_input</span><span class="p">(</span><span class="s2">&quot;Proszę podać liczbę: &quot;</span><span class="p">))</span>
         <span class="k">except</span><span class="p">:</span>
-            <span class="k">print</span> <span class="s2">&quot;Wygląda na to że nie podałeś liczby!&quot;</span>
-            <span class="n">val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;Try again-Proszę podać liczbę: &quot;</span><span class="p">))</span>
+            <span class="nb">print</span> <span class="s2">&quot;Wygląda na to że nie podałeś liczby!&quot;</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">raw_input</span><span class="p">(</span><span class="s2">&quot;Try again-Proszę podać liczbę: &quot;</span><span class="p">))</span>
         <span class="k">finally</span><span class="p">:</span>
-            <span class="k">print</span> <span class="s2">&quot;Finally, wykonane&quot;</span>
-        <span class="k">print</span> <span class="n">val</span> 
+            <span class="nb">print</span> <span class="s2">&quot;Finally, wykonane&quot;</span>
+        <span class="nb">print</span> <span class="n">val</span> 
 </pre></div>
 
     </div>
@@ -699,19 +698,19 @@ Finally, wykonane
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">askint</span><span class="p">():</span>
-    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>    
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>    
         <span class="k">try</span><span class="p">:</span>
-            <span class="n">val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;Proszę podać liczbę: &quot;</span><span class="p">))</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">raw_input</span><span class="p">(</span><span class="s2">&quot;Proszę podać liczbę: &quot;</span><span class="p">))</span>
         <span class="k">except</span><span class="p">:</span>
-            <span class="k">print</span> <span class="s2">&quot;Wygląda na to że nie podałeś liczby!&quot;</span>
+            <span class="nb">print</span> <span class="s2">&quot;Wygląda na to że nie podałeś liczby!&quot;</span>
             <span class="k">continue</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">print</span> <span class="s1">&#39;Tak, to jest liczba naturalna&#39;</span>
+            <span class="nb">print</span> <span class="s1">&#39;Tak, to jest liczba naturalna&#39;</span>
             <span class="k">break</span>
         <span class="k">finally</span><span class="p">:</span>
-            <span class="k">print</span> <span class="s2">&quot;Finally, wykonane&quot;</span>
+            <span class="nb">print</span> <span class="s2">&quot;Finally, wykonane&quot;</span>
 
-            <span class="k">print</span> <span class="n">val</span> 
+            <span class="nb">print</span> <span class="n">val</span> 
 </pre></div>
 
     </div>
